@@ -1,0 +1,1062 @@
+=========================================
+SESSION: 20260807_010059_53a2bb
+TIME: 2026-08-07 01:00:59
+ROLE: user
+=========================================
+Expand the 3 existing DecastroPT blog posts from ~300 words to 800-1200 words each. Keep same HTML structure and CSS. Add BreadcrumbList schema to each. Italian content about personal training in Rome.
+
+
+=========================================
+SESSION: 20260807_010059_53a2bb
+TIME: 2026-08-07 01:01:08
+ROLE: assistant
+=========================================
+Let me read all three existing files first to understand the exact structure.
+
+
+=========================================
+SESSION: 20260807_010059_53a2bb
+TIME: 2026-08-07 01:02:45
+ROLE: assistant
+=========================================
+All three files read. Same structure: head with Article JSON-LD, inline CSS, `.container` body. I'll rewrite each with identical head/CSS + BreadcrumbList JSON-LD + expanded body. Doing all three in parallel.
+
+
+=========================================
+SESSION: 20260807_010059_53a2bb
+TIME: 2026-08-07 01:02:48
+ROLE: assistant
+=========================================
+Let me verify word counts.
+
+
+=========================================
+SESSION: 20260807_010059_53a2bb
+TIME: 2026-08-07 01:02:51
+ROLE: assistant
+=========================================
+All three hit 800-1200 range. Verify BreadcrumbList present in each:
+
+
+=========================================
+SESSION: 20260807_010059_53a2bb
+TIME: 2026-08-07 01:02:56
+ROLE: assistant
+=========================================
+Done. Summary:
+
+- **Expanded 3 blog posts** to 955-989 words each (target: 800-1200)
+- **Added BreadcrumbList JSON-LD** to each file (3 items: Home → Blog → Article)
+- **Preserved** exact HTML structure, head, inline CSS, Article schema, meta tags — only expanded content inside `.container` with new paragraphs, list items, and sections
+- **Italian content** about personal training in Rome (Trastevere, Prati, Centro Storico mentions, metrò references, etc.)
+
+### Files modified
+- `blog/personal-trainer-roma-come-scegliere.html` (375 → 989 words)
+- `blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html` (291 → 955 words)
+- `blog/allenamento-a-casa-vs-palestra.html` (286 → 972 words)
+
+### Not touched
+`index.html`, `bundle.js`, `vercel.json` — no new files created.
+
+### New sections added per file
+- **Post 1**: "La prima consulenza" extended; red flags expanded; "Prima consulenza" deepened with assessment detail, trainer selection criteria
+- **Post 2**: Added "Il follow-up", "Attrezzatura minima per casa", expanded generic vs technical comparison, follow-up section
+- **Post 3**: Added "Attrezzatura minima per casa", new table rows (feedback tecnico, flessibilità orari), extended ibrido and errori comuni sections
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:01:49
+ROLE: user
+=========================================
+Create 7 NEW static HTML blog posts for DecastroPT. Each 800+ words of real Italian content about personal training in Rome. Use the exact HTML template provided. Must NOT touch existing files.
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:02:01
+ROLE: assistant
+=========================================
+Let me verify the workspace directory first, then create all 7 files.
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:02:03
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:02:10
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:02:43
+ROLE: assistant
+=========================================
+Good, I have the template structure confirmed. Now creating all 7 files in parallel.
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:03:20
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:03:51
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:04:26
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:05:08
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:05:43
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:06:25
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:06:34
+ROLE: assistant
+=========================================
+Now let me verify all 7 files exist and weren't existing files touched:
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:06:40
+ROLE: assistant
+=========================================
+All 7 files created. Word counts are character counts — let me get actual word counts:
+
+
+=========================================
+SESSION: 20260807_010149_07e5c2
+TIME: 2026-08-07 01:06:49
+ROLE: assistant
+=========================================
+All 7 files: 800+ words of content each. Existing files untouched (timestamps 01:02 preserved for the 3 existing posts + index.html).
+
+## Summary
+
+**Created 7 new static HTML blog posts** in `/root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/`:
+
+| File | Words |
+|---|---|
+| personal-trainer-roma-prezzi-2026.html | 1033 |
+| assessment-corporeo-roma-bmi-bfr-bmr.html | 1104 |
+| personal-trainer-online-vs-presenza.html | 906 |
+| programmazione-allenamento-principianti.html | 1064 |
+| allenamento-post-infortunio-roma.html | 1088 |
+| personal-trainer-donna-roma.html | 1058 |
+| nutrizione-sportiva-calcolo-macronutrienti.html | 1239 |
+
+- All 800+ words of real Italian content on personal training in Rome (prices, assessment metrics, online vs presence, beginner programming, post-injury, women-specific, nutrition macros)
+- Each uses the exact HTML template provided (same CSS, meta tags, schema.org JSON-LD for Article + BreadcrumbList)
+- All content is substantive — formulas, protocols, sample weeks, progression models, not padding
+- No existing files modified (3 existing posts + index.html untouched)
+- One template addition: added `h3` and `table` styles for the posts that need them (3-4 of 7), staying within the provided CSS aesthetic
+
+**Skipped:** No sitemap.xml/index.html updates — those files were explicitly off-limits per the task instructions; the blog index will need a separate update to link these new posts.
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:42:11
+ROLE: user
+=========================================
+Add 2-3 internal cross-links to each of the 10 DecastroPT blog posts + cross-link servizi.html and chi-sono.html. Read each file, find natural anchor text, wrap in a href tags. No new paragraphs, no structure changes.
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:42:18
+ROLE: assistant
+=========================================
+Let me read all 12 files in parallel to understand content and find natural anchor text.
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:44:44
+ROLE: assistant
+=========================================
+I have all 12 files. Now I'll add internal cross-links — 3 rounds, one link per file per round to avoid same-file race conditions.
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:45:05
+ROLE: assistant
+=========================================
+Round 1 done — 10 blog posts + servizi.html got their first link. chi-sono.html already had a link to /servizi.html, so I need to add one from servizi→chi-sono (done) and check if chi-sono→servizi already exists (it does, line 74). Now round 2 — second link per file:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:45:27
+ROLE: assistant
+=========================================
+Round 2 done. One patch failed — the text was inside `<strong>` tags. Let me fix that and do round 3 (third links):
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:45:38
+ROLE: assistant
+=========================================
+I introduced a lowercase typo in allenamento-a-casa-vs-palestra.html — "Non" became "non". Fix it:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:45:51
+ROLE: assistant
+=========================================
+Fixed. Now the last 3 blog posts that still need a third link: assessment, online-vs-presenza, programmazione, post-infortunio, nutrizione:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:45:56
+ROLE: assistant
+=========================================
+All 10 blog posts now have 3 links each. Let me verify the final count per file:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:46:28
+ROLE: assistant
+=========================================
+The grep confirms all blog posts have ≥2 new internal links. But I spot two issues:
+1. **come-scegliere** has 2 links to `/servizi.html` (duplicate) — need to fix one
+2. **nutrizione** has only 2 new links (the 3rd count is the existing "Torna al blog") — needs 1 more
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:46:31
+ROLE: assistant
+=========================================
+The nutrizione patch dropped the `<li><strong>Grassi troppo bassi:</strong>` prefix. Fix:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:46:45
+ROLE: assistant
+=========================================
+Fixed. Now let me check programmazione — it now has a duplicate link to nutrizione (one I just added in recupero, one earlier via the post-infortunio link). Let me verify:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:46:56
+ROLE: assistant
+=========================================
+Almost perfect. Three issues to fix:
+1. **allenamento-a-casa** has 2 links to the same post (post-infortunio) — need to diversify
+2. **assessment** has 2 links to the same post (scheda-tecnica) — need to diversify
+3. **scheda-tecnica** has 2 links to the same post (assessment) — need to diversify
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:47:03
+ROLE: assistant
+=========================================
+Now the "assessment" link in scheda-tecnica points to prezzi-2026 — which is contextually wrong (anchor says "assessment" but links to prices). Let me fix that to be more natural:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:47:09
+ROLE: assistant
+=========================================
+Now I have a duplicate again (scheda-tecnica → assessment appears twice). But the third link to assessment was the original one (Assessment iniziale in the list). Let me fix the "Quanto costa" paragraph to link to prezzi instead, since that paragraph is about pricing:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:47:14
+ROLE: assistant
+=========================================
+Final verification:
+
+
+=========================================
+SESSION: 20260807_084211_00067f
+TIME: 2026-08-07 08:47:20
+ROLE: assistant
+=========================================
+All 10 blog posts now have 3 unique internal cross-links each (no duplicates), and servizi.html ↔ chi-sono.html are bidirectionally linked.
+
+**Done. Summary:**
+
+- **10 blog posts** each got 3 internal cross-links (30 total), wrapping existing text as anchor text — no new paragraphs, no structure changes
+- **servizi.html** → linked to `/chi-sono.html` ("Contattami")
+- **chi-sono.html** already had a link to `/servizi.html` ("← Vedi i servizi e i prezzi") — no change needed
+- All links point to different targets per file (no duplicate destinations within a single post)
+- Existing "Torna al blog" / "← Home" / CTA links untouched
+- No CSS, meta, schema, or structure changes
+
+**Link map (new links only):**
+
+| Post | Targets |
+|---|---|
+| come-scegliere | servizi, assessment, prezzi-2026 |
+| scheda-tecnica | assessment, prezzi-2026, principianti |
+| casa-vs-palestra | principianti, post-infortunio, online-vs-presenza |
+| prezzi-2026 | post-infortunio, assessment, servizi |
+| assessment | scheda-tecnica, nutrizione, principianti |
+| online-vs-presenza | principianti, post-infortunio, scheda-tecnica |
+| principianti | personal-trainer-come-scegliere, assessment, post-infortunio, nutrizione |
+| post-infortunio | come-scegliere, nutrizione, principianti |
+| donna-roma | scheda-tecnica, nutrizione, assessment |
+| nutrizione | assessment, online-vs-presenza, donna-roma |
+
+`programmazione-allenamento-principianti.html` got 4 links (one was added naturally in the recupero paragraph) — harmless extra.
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:43:50
+ROLE: user
+=========================================
+Analyze the email templates from decastropt.com and compare them to the actual website's CSS to find ALL visual discrepancies. 
+
+1. Fetch the live site HTML: curl -s https://decastropt.com
+2. Extract the bundle.js CSS variables and styles from: /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/bundle.js
+3. Read the email template code: /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/api/email.js
+4. Read the booking email code: /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/api/booking.js
+
+Find every mismatch between site CSS and email HTML:
+- Font families (site uses Outfit for body, Oswald for headings)
+- Background colors (site: --bg #060606, --surface #0F172A)
+- Text colors (--text #F8FAFC, --text-dim #94A3B8, --accent #F97316)
+- Border style (--border rgba(255,255,255,0.1))
+- Button styles (site CTA: bg #F97316, text black, Oswald uppercase semibold, NO border-radius)
+- Logo style (site: "Decastro" + "." in #F97316, Oswald uppercase bold tracking-tight — NO SVG, NO icon)
+- Card/section backgrounds
+- Any gradients or special effects on the site that emails should match
+- Font weights, letter-spacing, text-transform
+- Padding/spacing patterns
+
+Return a detailed list of EVERY mismatch found, with the exact line in email.js/booking.js and what it should be changed to.
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:43:56
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:44:08
+ROLE: assistant
+=========================================
+Now let me get the rest of the live site HTML and the bundle.js to find the actual CSS:
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:44:13
+ROLE: assistant
+=========================================
+Now let me search the bundle.js for CSS variables and key style definitions:
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:44:21
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:44:29
+ROLE: assistant
+=========================================
+Let me get the exact CSS block and search for the React component styles (logo, button, card):
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:45:14
+ROLE: assistant
+=========================================
+Let me search for gradients and more component-level styles on the site:
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:45:18
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_134350_b53b9a
+TIME: 2026-08-07 13:46:53
+ROLE: assistant
+=========================================
+I now have all the data. Let me compile the full mismatch analysis.
+
+---
+
+## COMPLETE MISMATCH REPORT: Email Templates vs Site CSS
+
+### Site CSS ground truth (bundle.js lines 40018-40060):
+- `:root`: `--bg:#060606; --text:#F8FAFC; --text-dim:#94A3B8; --accent:#F97316; --surface:#0F172A; --border:rgba(255,255,255,0.1)`
+- body: `font-family:'Outfit',sans-serif`
+- `.font-head`: `font-family:'Oswald',sans-serif`
+- `.font-mono`: `font-family:'Space Mono',monospace`
+- Google Fonts import: `Oswald:wght@400;500;600;700` + `Outfit:wght@300;400;500;600` + `Space+Mono:wght@400;700`
+- **Main CTA button** (bundle.js L1159): `bg-[#F97316] text-black font-head font-semibold uppercase tracking-wide text-sm px-8 py-4 hover:bg-white` — **NO rounded, text-black = #000000**
+- **Logo** (bundle.js L2840-2849): `font-head uppercase tracking-tight text-lg sm:text-xl font-bold` — text "Decastro" + `<span text-[#F97316]>.</span>` — NO SVG
+- **Cards** (bundle.js L402): `bg-[#060606] p-8 sm:p-10 hover:bg-[#0F172A]` — NO rounded, NO border-width
+- **Body text** (bundle.js L485, L711, L2500): `text-[#94A3B8] font-light leading-relaxed` — **font-weight:300**
+- **Eyebrow labels** (bundle.js L338, L674): `font-mono text-xs uppercase tracking-[0.3em] text-[#F97316]`
+- **Footer** (bundle.js L2138): `text-[#475569] font-mono text-xs uppercase tracking-wide` — **font-mono (Space Mono)**
+- **Inputs** (bundle.js L647): `rounded-none` explicitly
+- **Images** (bundle.js L3752): `rounded-none` explicitly
+- **Selection**: `background:var(--accent); color:#060606`
+
+---
+
+### EVERY MISMATCH FOUND:
+
+#### MISMATCH 1: Missing Google Fonts `<link>` in email `<head>`
+- **email.js** L56, L84, L107, L139, L181: `<head><meta charset="utf-8"><meta name="viewport" ...>` — no font import
+- **booking.js** L51, L53: same — no font import
+- **Should be**: Add `<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">` to `<head>`
+- **Impact**: Without this, Oswald and Outfit never load — every email client falls back to Arial Narrow / system sans. This is the #1 reason emails "look identical to before" — the fonts aren't loading at all.
+
+#### MISMATCH 2: CTA button text color `${BG}` (#060606) vs site `text-black` (#000000)
+- **email.js** L42: `color:${BG}` → should be `color:#000000`
+- **booking.js** L21: `color:${BG}` → should be `color:#000000`
+- Site CTA uses Tailwind `text-black` = pure #000, not #060606.
+
+#### MISMATCH 3: CTA button letter-spacing `0.5px` vs site `tracking-wide` (0.025em)
+- **email.js** L42: `letter-spacing:0.5px` → should be `letter-spacing:0.025em` (≈0.35px at 14px)
+- **booking.js** L21: `letter-spacing:0.5px` → should be `letter-spacing:0.025em`
+
+#### MISMATCH 4: Assessment results box has `border-radius:12px` — site has ZERO rounded corners
+- **email.js** L197: `border-radius:12px;` → should be `border-radius:0;` or remove entirely
+- Site uses `rounded-none` on inputs (L647), images (L3752). Cards (L402) have no rounded class at all. No element on the site uses border-radius:12px.
+
+#### MISMATCH 5: Logo font-size `22px` vs site `text-lg sm:text-xl` (18px/20px)
+- **email.js** L28: `font-size:22px` → should be `font-size:20px`
+- **booking.js** L12: `font-size:22px` → should be `font-size:20px`
+
+#### MISMATCH 6: Footer name uses FONT_HEAD (Oswald) — site footer uses font-mono (Space Mono)
+- **email.js** L34: `font-family:${FONT_HEAD}` for "Davide Decastro" → should be `font-family:'Space Mono',monospace`
+- **booking.js** L13: `font-family:${FH}` for "Davide Decastro" → should be `font-family:'Space Mono',monospace`
+- Site footer (bundle.js L2138): all text is `font-mono text-xs uppercase tracking-wide`
+
+#### MISMATCH 7: Footer description uses FONT_BODY — site footer uses font-mono
+- **email.js** L34: `font-family:${FONT_BODY}` for "Personal Trainer Certificato — Roma" → should be `font-family:'Space Mono',monospace`
+- **booking.js** L13: `font-family:${FB}` for "Personal Trainer — Roma" → should be `font-family:'Space Mono',monospace`
+
+#### MISMATCH 8: Footer copyright uses FONT_BODY — site uses font-mono
+- **email.js** L34: `font-family:${FONT_BODY}` for copyright → should be `font-family:'Space Mono',monospace`
+- **booking.js** L13: `font-family:${FB}` for copyright → should be `font-family:'Space Mono',monospace`
+
+#### MISMATCH 9: Footer text sizes don't match site `text-xs` (12px) + uppercase
+- **email.js** L34: footer name is `font-size:14px`, description is `font-size:13px`, copyright is `font-size:12px` → site footer is all `text-xs` (12px) with `uppercase tracking-wide`
+- **booking.js** L13: same mismatch
+- **Should be**: All footer text `font-size:12px;text-transform:uppercase;letter-spacing:0.025em`
+
+#### MISMATCH 10: Info table label uses FONT_BODY — site labels/eyebrows use font-mono (Space Mono)
+- **email.js** L37: `font-family:${FONT_BODY}` for label cell → should be `font-family:'Space Mono',monospace`
+- **booking.js** L16: `font-family:${FB}` for label cell → should be `font-family:'Space Mono',monospace`
+- Site eyebrow/label text (bundle.js L338, L674, L1609): `font-mono uppercase tracking-[0.3em]`
+
+#### MISMATCH 11: Info table label letter-spacing `0.5px` vs site `tracking-[0.3em]` (3.6px at 12px)
+- **email.js** L37: `letter-spacing:0.5px` → should be `letter-spacing:0.2em` (2.4px at 12px) or `0.3em` (3.6px)
+- **booking.js** L16: `letter-spacing:0.5px` → should be `letter-spacing:0.2em` or `0.3em`
+
+#### MISMATCH 12: Body text missing `font-weight:300` (font-light) — site uses font-light everywhere
+- **email.js** L62-63, L71, L113, L119, L145-146, L154, L187-189, etc: all `<p>` tags have no font-weight → should add `font-weight:300`
+- **booking.js** L51, L53: same → should add `font-weight:300`
+- Site body text (bundle.js L485, L711, L1727, L2500): consistently `font-light` (300)
+
+#### MISMATCH 13: Info table value cell `font-weight:500` — site body text uses `font-light` (300)
+- **email.js** L37: value cell `font-weight:500` → should be `font-weight:400` (normal) at minimum, or `font-weight:300` to match site
+- **booking.js** L16: value cell `font-weight:500` → should be `font-weight:400` or `font-weight:300`
+
+#### MISMATCH 14: booking.js missing viewport meta tag
+- **booking.js** L51: `<head><meta charset="utf-8"></head>` → should be `<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>`
+- **email.js** has it correctly (L56, L84, etc.)
+
+#### MISMATCH 15: Body paragraph font-size `15px` vs site `text-base` (16px) or larger
+- **email.js** L62-63, L71, etc: `font-size:15px` → should be `font-size:16px`
+- **booking.js** L51, L53: `font-size:15px` → should be `font-size:16px`
+- Site body text uses `text-base` (16px) or `text-lg` (18px). Minor but contributes to the "looks different" feeling.
+
+#### MISMATCH 16: Footer name letter-spacing `0.5px` vs site `tracking-wide` (0.025em = 0.3px at 12px)
+- **email.js** L34: `letter-spacing:0.5px` → should be `letter-spacing:0.025em`
+- **booking.js** L13: `letter-spacing:0.5px` → should be `letter-spacing:0.025em`
+
+#### MISMATCH 17: Footer name color `${TEXT}` (#F8FAFC) — site footer is all `text-[#475569]`
+- **email.js** L34: `color:${TEXT}` for "Davide Decastro" → should be `color:#475569` (or at minimum DIM)
+- **booking.js** L13: `color:${TEXT}` for "Davide Decastro" → should be `color:#475569`
+- Site footer (bundle.js L2138): entire footer is `text-[#475569]` — no bright text
+
+#### MISMATCH 18: Footer link color uses `${ACCENT}` (#F97316) — site footer links use `text-[#F8FAFC] hover:text-[#F97316]`
+- **email.js** L34: `color:${ACCENT}` for site URL and Instagram links → should be `color:${TEXT}` (F8FAFC) with hover only in orange
+- **booking.js** L13: same
+- Site footer links (bundle.js L1969, L2044): `text-[#F8FAFC] hover:text-[#F97316]` — links are white, not orange
+
+---
+
+### Summary of required changes:
+
+| # | File | Line | Current | Should Be | Severity |
+|---|------|------|---------|-----------|----------|
+| 1 | email.js | 56,84,107,139,181 | No font `<link>` in `<head>` | Add Google Fonts link | **CRITICAL** |
+| 1 | booking.js | 51,53 | No font `<link>` in `<head>` | Add Google Fonts link | **CRITICAL** |
+| 2 | email.js | 42 | `color:${BG}` | `color:#000000` | Low |
+| 2 | booking.js | 21 | `color:${BG}` | `color:#000000` | Low |
+| 3 | email.js | 42 | `letter-spacing:0.5px` | `letter-spacing:0.025em` | Low |
+| 3 | booking.js | 21 | `letter-spacing:0.5px` | `letter-spacing:0.025em` | Low |
+| 4 | email.js | 197 | `border-radius:12px` | `border-radius:0` | **High** |
+| 5 | email.js | 28 | `font-size:22px` | `font-size:20px` | Medium |
+| 5 | booking.js | 12 | `font-size:22px` | `font-size:20px` | Medium |
+| 6-8 | email.js | 34 | Footer uses FONT_HEAD/FONT_BODY | Use `'Space Mono',monospace` | **High** |
+| 6-8 | booking.js | 13 | Footer uses FH/FB | Use `'Space Mono',monospace` | **High** |
+| 9 | email.js | 34 | Footer font-sizes 14/13/12px | All `12px` + `uppercase` | Medium |
+| 9 | booking.js | 13 | Footer font-sizes 14/13/12px | All `12px` + `uppercase` | Medium |
+| 10 | email.js | 37 | Label `font-family:${FONT_BODY}` | `font-family:'Space Mono',monospace` | **High** |
+| 10 | booking.js | 16 | Label `font-family:${FB}` | `font-family:'Space Mono',monospace` | **High** |
+| 11 | email.js | 37 | Label `letter-spacing:0.5px` | `letter-spacing:0.2em` | Medium |
+| 11 | booking.js | 16 | Label `letter-spacing:0.5px` | `letter-spacing:0.2em` | Medium |
+| 12 | email.js | 62,63,71,113,119,145,146,154,187,188,189 | No `font-weight` on `<p>` | Add `font-weight:300` | **High** |
+| 12 | booking.js | 51,53 | No `font-weight` on `<p>` | Add `font-weight:300` | **High** |
+| 13 | email.js | 37 | Value `font-weight:500` | `font-weight:400` | Medium |
+| 13 | booking.js | 16 | Value `font-weight:500` | `font-weight:400` | Medium |
+| 14 | booking.js | 51 | Missing viewport meta | Add viewport meta | Medium |
+| 15 | email.js | 62,63,71... | `font-size:15px` | `font-size:16px` | Low |
+| 15 | booking.js | 51,53 | `font-size:15px` | `font-size:16px` | Low |
+| 16 | email.js | 34 | Footer `letter-spacing:0.5px` | `letter-spacing:0.025em` | Low |
+| 16 | booking.js | 13 | Footer `letter-spacing:0.5px` | `letter-spacing:0.025em` | Low |
+| 17 | email.js | 34 | Footer name `color:${TEXT}` | `color:#475569` | Medium |
+| 17 | booking.js | 13 | Footer name `color:${TEXT}` | `color:#475569` | Medium |
+| 18 | email.js | 34 | Footer links `color:${ACCENT}` | `color:${TEXT}` | Medium |
+| 18 | booking.js | 13 | Footer links `color:${AC}` | `color:${TEXT}` | Medium |
+
+---
+
+### The #1 reason emails "look identical to before":
+
+**MISMATCH 1** — the `<head>` has no Google Fonts link. Without it, `font-family:'Oswald'` and `font-family:'Outfit'` are meaningless strings to every email client. The entire typographic identity of the site (Oswald headings + Outfit body) is absent from the emails. Adding the `<link>` tag to every template's `<head>` is the single highest-impact fix.
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:09:59
+ROLE: user
+=========================================
+Add blog article translations to the i18n.js dictionary for decastropt.com. 
+
+There are 10 blog articles in /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/ — all in Italian. The i18n.js file swaps text via a DICT object but is missing ~554 text blocks from blog articles.
+
+Your job:
+1. Read ALL 10 blog HTML files
+2. Extract ALL text content (paragraphs, headings, list items, links, footer text, meta dates)
+3. Translate each Italian text block to English
+4. Add them all to the DICT in /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/i18n.js
+
+Rules:
+- Add entries BEFORE the closing `};` of the DICT object
+- Format: "Italian text": "English translation",
+- Don't duplicate keys that already exist
+- Translate naturally (fitness/training context)
+- Keep proper nouns: NASM, ACE, ISSA, CONI, BMI, BMR, TDEE, BFR, Davide Decastro, Roma→Rome
+- Dates: "6 Agosto 2026" → "6 August 2026", "min lettura" → "min read"
+- Keep HTML entities and special chars as-is
+- After editing, run: node -c i18n.js to verify syntax
+- Then deploy: npx vercel --prod --token [REDACTED-TOKEN] --yes
+
+Work in: /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:11:06
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:11:53
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:12:12
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:12:17
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:23
+ROLE: assistant
+=========================================
+Now I have all 10 articles. Let me write a script to extract all text nodes, deduplicate, and filter out what's already in the dict.
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:40
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:48
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: user
+=========================================
+Add blog article translations to the i18n.js dictionary for decastropt.com. 
+
+There are 10 blog articles in /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/ — all in Italian. The i18n.js file swaps text via a DICT object but is missing ~554 text blocks from blog articles.
+
+Your job:
+1. Read ALL 10 blog HTML files
+2. Extract ALL text content (paragraphs, headings, list items, links, footer text, meta dates)
+3. Translate each Italian text block to English
+4. Add them all to the DICT in /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/i18n.js
+
+Rules:
+- Add entries BEFORE the closing `};` of the DICT object
+- Format: "Italian text": "English translation",
+- Don't duplicate keys that already exist
+- Translate naturally (fitness/training context)
+- Keep proper nouns: NASM, ACE, ISSA, CONI, BMI, BMR, TDEE, BFR, Davide Decastro, Roma→Rome
+- Dates: "6 Agosto 2026" → "6 August 2026", "min lettura" → "min read"
+- Keep HTML entities and special chars as-is
+- After editing, run: node -c i18n.js to verify syntax
+- Then deploy: npx vercel --prod --token [REDACTED-TOKEN] --yes
+
+Work in: /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: user
+=========================================
+[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addressed. Respond ONLY to the latest user message that appears AFTER this summary — that message is the single source of truth for what to do right now. Topic overlap with the summary does NOT mean you should resume its task: even on similar topics, the latest user message WINS. Treat ONLY the latest message as the active task and discard stale items from '## Historical Task Snapshot' / '## Historical In-Progress State' / '## Historical Pending User Asks' / '## Historical Remaining Work' entirely — do not 'wrap up' or 'finish' work described there unless the latest message explicitly asks for it. Reverse signals in the latest message (e.g. 'stop', 'undo', 'roll back', 'just verify', 'don't do that anymore', 'never mind', a new topic) must immediately end any in-flight work described in the summary; do not re-surface it in later turns. IMPORTANT: Your persistent memory (MEMORY.md, USER.md) in the system prompt is ALWAYS authoritative and active — never ignore or deprioritize memory content due to this compaction note. The current session state (files, config, etc.) may reflect work described here — avoid repeating it:
+## Historical Task Snapshot
+None.
+
+## Goal
+The user is trying to accomplish the task of creating a context checkpoint summary for the conversation.
+
+## Constraints & Preferences
+The summary should preserve enough detail for continuity without re-reading the original turns.
+
+## Completed Actions
+1. READ /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/personal-trainer-roma-come-scegliere.html — read file content [tool: read_file]
+2. READ /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html — read file content [tool: read_file]
+3. READ /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/allenamento-a-casa-vs-palestra.html — read file content [tool: read_file]
+4. READ /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/personal-trainer-roma-prezzi-2026.html — read file content [tool: read_file]
+5. READ /root/.openclaw/workspace/brand_pt_friend/decastro-vercel/blog/assessment-corporeo-roma-bmi-bfr-b
+
+--- END OF CONTEXT SUMMARY — respond to the message below, not the summary above ---
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: assistant
+=========================================
+Now I have all 10 articles. Let me write a script to extract all text nodes, deduplicate, and filter out what's already in the dict.
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:54
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:13:57
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:14:09
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:14:21
+ROLE: assistant
+=========================================
+Now I need to find the exact insertion point in i18n.js and create all translations. Let me find the closing `};` of the DICT object.
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:14:27
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:14:32
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:19:59
+ROLE: assistant
+=========================================
+Now I have the full picture. Let me build a comprehensive translation script. I'll generate all 548 entries and insert them before line 312.
+
+
+=========================================
+SESSION: 20260807_220959_32ff99
+TIME: 2026-08-07 22:19:59
+ROLE: user
+=========================================
+[System: The previous response was cut off by a network error mid-stream. Continue exactly where you left off. Do not restart or repeat prior text. Finish the answer directly.]
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:26:08
+ROLE: user
+=========================================
+Expand these 3 blog posts from ~1200 to 2000+ words each. Write in ITALIAN. Keep existing HTML structure. Add substantive content: examples, case studies, data, FAQ sections. Do NOT rewrite existing content — APPEND new sections before the closing </article> tag.
+
+Files to expand:
+1. /root/decastropt/blog/programmazione-allenamento-principianti.html
+2. /root/decastropt/blog/allenamento-post-infortunio-roma.html
+3. /root/decastropt/blog/personal-trainer-donna-roma.html
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:26:13
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:26:49
+ROLE: assistant
+=========================================
+All three files read. Same structure — content inside `<div class="container">`, ending with `<p><a href="/blog/" class="back">← Torna al blog</a></p>` then `</div>` then related-posts section. I'll insert new sections before the "Torna al blog" link.
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:27:19
+ROLE: assistant
+=========================================
+File 1 done. Now file 2 (post-infortunio):
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:27:51
+ROLE: assistant
+=========================================
+File 2 done. Now file 3 (personal-trainer-donna-roma):
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:28:02
+ROLE: assistant
+=========================================
+All 3 files patched. Now verify word counts:
+
+
+=========================================
+SESSION: 20260811_192608_07c8c5
+TIME: 2026-08-11 19:28:12
+ROLE: assistant
+=========================================
+All three files exceed 2000 words. Done.
+
+## Summary
+
+**What I did:** Expanded 3 blog posts from ~1200 to 2000+ words each by appending new sections before the "Torna al blog" link, keeping existing content and HTML structure intact.
+
+**Files modified:**
+- `/root/decastropt/blog/programmazione-allenamento-principianti.html` — 2487 words
+- `/root/decastropt/blog/allenamento-post-infortunio-roma.html` — 2831 words
+- `/root/decastropt/blog/personal-trainer-donna-roma.html` — 2863 words
+
+**Sections added to each file (all in Italian):**
+- Case study (Marco/Elena/Sara — realistic client stories with specific data)
+- Errori comuni (4 sub-sections each)
+- Consigli pratici (4 phased sub-sections each)
+- Progressione nel tempo
+- Dati (cited research with specific journal names, years, and statistics)
+- FAQ (6 Q&A each)
+
+**No changes** to title, meta, canonical, existing content, or HTML structure. New sections use the same `<h2>`/`<h3>`/`<p>` tags consistent with the existing styling.
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:26:09
+ROLE: user
+=========================================
+Expand these 4 blog posts from ~1200 to 2000+ words each. Write in ITALIAN. Keep existing HTML structure. Add substantive content: examples, case studies, data, FAQ sections. Do NOT rewrite existing content — APPEND new sections before the closing </article> tag.
+
+Files to expand:
+1. /root/decastropt/blog/personal-trainer-roma-come-scegliere.html
+2. /root/decastropt/blog/personal-trainer-roma-prezzi-2026.html
+3. /root/decastropt/blog/assessment-corporeo-roma-bmi-bfr-bmr.html
+4. /root/decastropt/blog/personal-trainer-online-vs-presenza.html
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:26:14
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:26:28
+ROLE: assistant
+=========================================
+Let me check current word counts to know how much to add:
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:27:09
+ROLE: assistant
+=========================================
+Now I'll create the new content blocks for each file. Let me patch all 4 files:
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:27:40
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:28:07
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:28:40
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:28:45
+ROLE: assistant
+=========================================
+Now verify word counts:
+
+
+=========================================
+SESSION: 20260811_192608_10f46c
+TIME: 2026-08-11 19:28:50
+ROLE: assistant
+=========================================
+All 4 files exceed 2000 words. Done.
+
+**Summary:**
+- Expanded 4 blog posts in `/root/decastropt/blog/` from ~1150-1400 to ~2500-2800 words each
+- Appended new sections before each file's closing `</article>`/back-link area: Case Study, Errori Comuni, Consigli Pratici, Quando Rivolgersi a un Professionista, FAQ
+- All content in Italian, matching existing HTML structure (Oswald headings, `#0F172A` surface, `#F97316` accent)
+- No existing content modified — only additions
+
+**Final word counts:**
+- `personal-trainer-roma-come-scegliere.html`: 2556
+- `personal-trainer-roma-prezzi-2026.html`: 2670
+- `assessment-corporeo-roma-bmi-bfr-bmr.html`: 2629
+- `personal-trainer-online-vs-presenza.html`: 2833
+
+
+=========================================
+SESSION: 20260811_192608_b4d963
+TIME: 2026-08-11 19:26:09
+ROLE: user
+=========================================
+Expand these 3 blog posts from ~1200 to 2000+ words each. Write in ITALIAN. Keep existing HTML structure. Add substantive content: examples, case studies, data, FAQ sections. Do NOT rewrite existing content — APPEND new sections before the closing </article> tag.
+
+Files to expand:
+1. /root/decastropt/blog/nutrizione-sportiva-calcolo-macronutrienti.html
+2. /root/decastropt/blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html
+3. /root/decastropt/blog/allenamento-a-casa-vs-palestra.html
+
+
+=========================================
+SESSION: 20260811_192608_b4d963
+TIME: 2026-08-11 19:26:11
+ROLE: assistant
+=========================================
+
+
+
+=========================================
+SESSION: 20260811_192608_b4d963
+TIME: 2026-08-11 19:28:01
+ROLE: assistant
+=========================================
+Now I'll prepare the three patches with substantial Italian content. Let me create them all in parallel.
+
+
+=========================================
+SESSION: 20260811_192608_b4d963
+TIME: 2026-08-11 19:28:06
+ROLE: assistant
+=========================================
+Now verify word counts:
+
+
+=========================================
+SESSION: 20260811_192608_b4d963
+TIME: 2026-08-11 19:28:14
+ROLE: assistant
+=========================================
+All three files expanded to 2000+ words. Done.
+
+## Summary
+
+**What I did:** Expanded 3 blog posts from ~1200 to 2700+ words each (well above the 2000 target) by appending new Italian-language sections before the CTA/related-posts blocks. Existing content untouched.
+
+**Sections added to each file:**
+- `nutrizione-sportiva-calcolo-macronutrienti.html` (2770 words): "Miti da sfatare", "Consigli pratici per la gestione quotidiana", "Case study: Marco", "FAQ" (6 Q&A)
+- `scheda-tecnica-personalizzata-cosa-aspettarsi.html` (2773 words): "Errori comuni con le schede tecniche", "Miti da sfatare sulle schede personalizzate", "Consigli pratici", "Case study: Giulia", "FAQ" (5 Q&A)
+- `allenamento-a-casa-vs-palestra.html` (2766 words): "Miti da sfatare", "Consigli pratici", "Case study: Due percorsi a confronto (Luca vs Sara)", "FAQ" (6 Q&A)
+
+**Approach:** Each file received 4 substantive new `<section>`-style blocks (h2/h3 headings, matching the existing `Oswald`/`Outfit` typography classes via the global stylesheet — no new CSS needed). Content includes case studies with concrete data (kg, kcal, timelines), myth-busting lists, practical tips, and FAQ sections. Brand styling, meta tags, canonical URLs, and HTML structure all preserved. Internal links to other blog posts added where contextually relevant.
+
+**Issues:** None. All patches applied cleanly, word counts verified.
+
+
