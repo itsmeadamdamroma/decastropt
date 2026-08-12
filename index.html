@@ -31,7 +31,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='%23fff' font-family='Arial'>D</text></svg>" />
 
-  <!-- Fonts -->
+  <!-- Preconnect for third-party assets -->
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://prod.spline.design" crossorigin>
+  <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -250,13 +253,13 @@
       });
     }
   </script>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<link rel="preload" href="https://assets.calendly.com/assets/external/widget.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" defer></script>
 </head>
 <body>
-  <!-- Prerendered content for SEO: Google sees this without executing JS -->
-  <noscript>
-    <div id="seo-content" style="max-width:700px;margin:0 auto;padding:40px 20px;font-family:Inter,sans-serif;background:#0F172A;color:#F8FAFC;line-height:1.7">
+  <!-- SEO content visible immediately, hidden when React mounts -->
+  <div id="seo-fallback" style="max-width:700px;margin:0 auto;padding:40px 20px;font-family:Inter,sans-serif;background:#0F172A;color:#F8FAFC;line-height:1.7">
       <h1>Davide Decastro PT — Personal Trainer a Roma</h1>
       <p>Se cerchi un <strong>personal trainer a Roma</strong> che costruisca schede tecniche su misura, sei nel posto giusto. Lavoro su obiettivi concreti: dimagrimento, massa muscolare, ricomposizione corporea, forza e riabilitazione post-infortunio. Ogni programma nasce dai tuoi dati reali (BMI, BMR, TDEE), non da template generici.</p>
 
@@ -317,10 +320,40 @@
       <p><a href="/blog/personal-trainer-roma-come-scegliere.html">Come scegliere un personal trainer a Roma</a> | <a href="/blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html">Scheda tecnica personalizzata</a> | <a href="/blog/allenamento-a-casa-vs-palestra.html">Allenamento a casa vs palestra</a></p>
       <p><a href="/blog/personal-trainer-roma-prezzi-2026.html">Prezzi personal trainer Roma 2026</a> | <a href="/blog/assessment-corporeo-roma-bmi-bfr-bmr.html">Assessment corporeo BMI BFR BMR</a> | <a href="/blog/personal-trainer-online-vs-presenza.html">PT online vs presenza</a></p>
       <p><a href="/blog/programmazione-allenamento-principianti.html">Programmazione per principianti</a> | <a href="/blog/allenamento-post-infortunio-roma.html">Allenamento post-infortunio</a> | <a href="/blog/personal-trainer-donna-roma.html">Personal trainer donna Roma</a> | <a href="/blog/nutrizione-sportiva-calcolo-macronutrienti.html">Nutrizione sportiva macronutrienti</a></p>
-    </div>
+  </div>
+  <noscript>
+    <style>#seo-fallback{display:block!important}#root{display:none}</style>
   </noscript>
   <div id="root"></div>
-  <script defer src="./bundle.js"></script>
+  <script>
+    // Hide fallback when React mounts, lazy-load bundle after first paint
+    (function(){
+      function loadBundle(){
+        var s=document.createElement('script');
+        s.src='./bundle.js';
+        s.defer=true;
+        document.body.appendChild(s);
+      }
+      // Hide fallback as soon as React renders into #root
+      var obs=new MutationObserver(function(mutations){
+        for(var i=0;i<mutations.length;i++){
+          if(mutations[i].target.id==='root' && mutations[i].addedNodes.length>0){
+            var fb=document.getElementById('seo-fallback');
+            if(fb) fb.style.display='none';
+            obs.disconnect();
+            return;
+          }
+        }
+      });
+      obs.observe(document.getElementById('root'),{childList:true});
+      // Load bundle after first paint or idle, whichever first
+      if(window.requestIdleCallback){
+        window.requestIdleCallback(loadBundle,{timeout:2000});
+      }else{
+        setTimeout(loadBundle,50);
+      }
+    })();
+  </script>
   <script type="module">
     import { Application } from "https://unpkg.com/@splinetool/runtime@1.12.98/build/runtime.js";
 
@@ -361,8 +394,8 @@
       tryInit();
     }
   </script>
-<script src="/i18n.js"></script>
-<script src="/cookie.js"></script>
-<script src="/legal-links.js"></script>
+<script defer src="/i18n.js"></script>
+<script defer src="/cookie.js"></script>
+<script defer src="/legal-links.js"></script>
 </body>
 </html>
