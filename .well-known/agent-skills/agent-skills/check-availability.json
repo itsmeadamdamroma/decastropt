@@ -1,0 +1,17 @@
+{
+  "name": "check-availability",
+  "type": "action",
+  "description": "Check available time slots for personal training sessions in Rome.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "date": { "type": "string", "format": "date", "description": "Date to check (YYYY-MM-DD)" },
+      "type": { "type": "string", "enum": ["assessment", "follow-up", "consultation"], "description": "Session type" }
+    }
+  },
+  "execute": {
+    "method": "GET",
+    "url": "https://decastropt.com/api/booking",
+    "headers": { "Accept": "application/json" }
+  }
+}

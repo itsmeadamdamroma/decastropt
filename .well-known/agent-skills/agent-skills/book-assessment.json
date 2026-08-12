@@ -1,0 +1,23 @@
+{
+  "name": "book-assessment",
+  "type": "action",
+  "description": "Book a personal training assessment session with Decastro PT in Rome. Assessment includes BMI, BFR, BMR, TDEE analysis, postural evaluation, and mobility tests.",
+  "inputSchema": {
+    "type": "object",
+    "required": ["name", "email", "date"],
+    "properties": {
+      "name": { "type": "string", "description": "Full name of the client" },
+      "email": { "type": "string", "format": "email", "description": "Email address" },
+      "phone": { "type": "string", "description": "Phone number (optional)" },
+      "date": { "type": "string", "format": "date", "description": "Preferred date" },
+      "time": { "type": "string", "description": "Preferred time (HH:MM)" },
+      "goals": { "type": "string", "description": "Fitness goals (e.g. weight loss, muscle gain, post-injury recovery)" },
+      "notes": { "type": "string", "description": "Additional notes (injuries, medical conditions)" }
+    }
+  },
+  "execute": {
+    "method": "POST",
+    "url": "https://decastropt.com/api/booking",
+    "headers": { "Content-Type": "application/json" }
+  }
+}

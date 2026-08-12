@@ -1,0 +1,43 @@
+# Decastro PT — Training Lab
+
+Il tuo personal trainer a Roma. Schede personalizzate, metodo scientifico, risultati misurabili.
+
+## Servizi
+
+- [Servizi e prezzi](https://decastropt.com/servizi.html)
+- [Chi sono](https://decastropt.com/chi-sono.html)
+- [Prenota assessment](https://decastropt.com/#contatti)
+
+## API
+
+- [Health check](https://decastropt.com/api/health)
+- [Servizi API](https://decastropt.com/api/services)
+- [Booking API](https://decastropt.com/api/booking)
+- [Markdown endpoint](https://decastropt.com/api/markdown)
+
+## Agent Discovery
+
+- [Agent Card (A2A)](https://decastropt.com/.well-known/agent-card.json)
+- [API Catalog](https://decastropt.com/.well-known/api-catalog/index.json)
+- [OpenAPI spec](https://decastropt.com/.well-known/api-catalog/openapi.json)
+- [Agent Skills](https://decastropt.com/.well-known/agent-skills/index.json)
+- [MCP Server Card](https://decastropt.com/.well-known/mcp/server-card.json)
+- [OAuth metadata](https://decastropt.com/.well-known/oauth-authorization-server)
+- [Auth.md](https://decastropt.com/auth.md)
+
+## Blog
+
+- [Come scegliere un personal trainer a Roma](https://decastropt.com/blog/personal-trainer-roma-come-scegliere.html)
+- [Scheda tecnica personalizzata: cosa aspettarsi](https://decastropt.com/blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html)
+- [Allenamento a casa vs palestra](https://decastropt.com/blog/allenamento-a-casa-vs-palestra.html)
+- [Personal trainer Roma prezzi 2026](https://decastropt.com/blog/personal-trainer-roma-prezzi-2026.html)
+- [Assessment corporeo: BMI, BFR, BMR](https://decastropt.com/blog/assessment-corporeo-roma-bmi-bfr-bmr.html)
+- [Personal trainer online vs presenza](https://decastropt.com/blog/personal-trainer-online-vs-presenza.html)
+- [Programmazione allenamento principianti](https://decastropt.com/blog/programmazione-allenamento-principianti.html)
+- [Allenamento post infortunio](https://decastropt.com/blog/allenamento-post-infortunio-roma.html)
+- [Personal trainer donna Roma](https://decastropt.com/blog/personal-trainer-donna-roma.html)
+- [Nutrizione sportiva: calcolo macronutrienti](https://decastropt.com/blog/nutrizione-sportiva-calcolo-macronutrienti.html)
+
+## Expanded content
+
+- [llms-full.txt](https://decastropt.com/llms-full.txt)

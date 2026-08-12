@@ -1,0 +1,11 @@
+/*
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/assets/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.js
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600

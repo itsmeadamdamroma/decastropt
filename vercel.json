@@ -1,0 +1,114 @@
+{
+  "public": true,
+  "github": {
+    "enabled": false
+  },
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agent-skills/index.json>; rel=\"service-doc\"; type=\"application/json\", </api/markdown>; rel=\"alternate\"; type=\"text/markdown\", </docs/api>; rel=\"service-doc\"; type=\"text/html\", </api/health>; rel=\"status\"; type=\"application/json\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\""
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Accept, Content-Type, Authorization"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/api-catalog",
+      "headers": [
+        { "key": "Content-Type", "value": "application/linkset+json" }
+      ]
+    },
+    {
+      "source": "/.well-known/api-catalog/index.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/linkset+json" }
+      ]
+    },
+    {
+      "source": "/.well-known/api-catalog/openapi.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/vnd.oai.openapi+json" }
+      ]
+    },
+    {
+      "source": "/.well-known/oauth-authorization-server",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/.well-known/oauth-protected-resource",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-skills/index.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp/server-card.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/auth.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown" }
+      ]
+    },
+    {
+      "source": "/index.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown" }
+      ]
+    },
+    {
+      "source": "/api/markdown",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/.well-known/http-message-signatures-directory",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/.well-known/jwks.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-card.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/docs/api", "destination": "/.well-known/api-catalog/index.json" }
+  ]
+}

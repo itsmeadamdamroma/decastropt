@@ -1,0 +1,44 @@
+{
+  "name": "Decastro PT Agent",
+  "version": "1.0.0",
+  "description": "AI agent for Decastro PT — personal training booking, assessment scheduling, and service discovery. Supports agent-to-agent task delegation for fitness appointments.",
+  "url": "https://decastropt.com",
+  "preferredTransport": "JSONRPC",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "skills": [
+    {
+      "id": "book-assessment",
+      "name": "Book Assessment",
+      "description": "Book a personalized training assessment session. Collects user details and schedules an appointment.",
+      "tags": ["booking", "assessment", "fitness"]
+    },
+    {
+      "id": "check-availability",
+      "name": "Check Availability",
+      "description": "Check available time slots for training sessions and assessments.",
+      "tags": ["booking", "scheduling", "availability"]
+    },
+    {
+      "id": "get-services",
+      "name": "Get Services",
+      "description": "Retrieve the list of training services offered by Decastro PT, including pricing and descriptions.",
+      "tags": ["services", "catalog", "fitness"]
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "type": "JSONRPC",
+      "url": "https://decastropt.com/a2a",
+      "transport": "HTTP"
+    }
+  ],
+  "authentication": {
+    "schemes": ["bearer"]
+  },
+  "defaultInputModes": ["text", "json"],
+  "defaultOutputModes": ["text", "json"]
+}

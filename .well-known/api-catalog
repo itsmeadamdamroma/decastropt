@@ -1,0 +1,28 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://decastropt.com/api",
+      "service-desc": [
+        { "href": "https://decastropt.com/.well-known/api-catalog/openapi.json", "type": "application/vnd.oai.openapi+json" }
+      ],
+      "service-doc": [
+        { "href": "https://decastropt.com/.well-known/api-catalog/docs", "type": "text/html" }
+      ],
+      "status": [
+        { "href": "https://decastropt.com/api/health", "type": "application/json" }
+      ]
+    },
+    {
+      "anchor": "https://decastropt.com/api/booking",
+      "service-desc": [
+        { "href": "https://decastropt.com/.well-known/api-catalog/openapi.json#/paths/~1api~1booking", "type": "application/vnd.oai.openapi+json" }
+      ],
+      "service-doc": [
+        { "href": "https://decastropt.com/.well-known/api-catalog/docs#booking", "type": "text/html" }
+      ],
+      "status": [
+        { "href": "https://decastropt.com/api/health", "type": "application/json" }
+      ]
+    }
+  ]
+}

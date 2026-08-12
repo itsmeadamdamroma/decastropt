@@ -1,0 +1,6 @@
+{
+  "resource": "https://decastropt.com",
+  "authorization_servers": ["https://decastropt.com"],
+  "scopes_supported": ["booking:read", "booking:write", "profile"],
+  "bearer_methods_supported": ["header"]
+}

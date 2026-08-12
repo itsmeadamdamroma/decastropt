@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog | Davide Decastro PT</title>
+<meta name="description" content="Articoli su allenamento, programmazione, nutrizione e metodo scientifico. Il blog di Davide Decastro, personal trainer a Roma.">
+<link rel="canonical" href="https://decastropt.com/blog/">
+  <link rel="alternate" hreflang="it" href="https://decastropt.com/blog/">
+  <link rel="alternate" hreflang="en" href="https://decastropt.com/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://decastropt.com/blog/">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://decastropt.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://decastropt.com/blog/"}]}
+</script>
+<style>
+:root{--bg:#060606;--text:#F8FAFC;--text-dim:#94A3B8;--accent:#F97316;--surface:#0F172A;--border:rgba(255,255,255,0.1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;line-height:1.7}
+::selection{background:var(--accent);color:#060606}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--text)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;color:var(--text)}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-family:'Outfit',sans-serif;font-size:14px;color:var(--text-dim);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.container{max-width:700px;margin:0 auto;padding:120px 24px 60px}
+h1{font-family:'Oswald',sans-serif;font-size:clamp(28px,5vw,42px);font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;line-height:0.95;color:var(--text);margin-bottom:8px}
+h2{font-family:'Oswald',sans-serif;font-size:24px;font-weight:600;text-transform:uppercase;letter-spacing:-0.025em;color:var(--text);margin-top:32px;margin-bottom:8px}
+h3{font-family:'Oswald',sans-serif;font-size:18px;font-weight:600;text-transform:uppercase;letter-spacing:-0.025em;color:var(--text);margin-top:24px;margin-bottom:8px}
+p{color:var(--text-dim);font-size:16px;line-height:1.7;font-weight:300;margin-bottom:16px}
+strong{color:var(--text);font-weight:500}
+ul{margin:0 0 16px 20px;color:var(--text-dim);font-weight:300}
+li{margin-bottom:8px;line-height:1.7}
+.meta{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.3em;color:var(--accent);margin-bottom:32px}
+.meta-date{color:var(--text-dim);letter-spacing:0.1em}
+.sep{text-align:center;color:var(--accent);margin:32px 0;font-size:14px}
+.back{display:inline-block;margin-top:32px;font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent)}
+.back:hover{color:var(--text)}
+.article-card{padding:24px 0;border-top:1px solid var(--border);transition:background .2s}
+.article-card:hover{background:var(--surface)}
+.article-card h2{margin-top:0}
+.article-card h2 a{color:var(--text)}
+.article-card h2 a:hover{color:var(--accent)}
+.article-card p{color:var(--text-dim)}
+.btn{display:inline-block;background:var(--accent);color:#000;font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:0.025em;padding:16px 32px;border-radius:0;text-decoration:none;margin:16px 0;transition:background .2s}
+.btn:hover{background:#fff;color:#000}
+.footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center}
+.footer h3{font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text);margin-bottom:4px}
+.footer p{font-size:13px;color:var(--text-dim);margin-bottom:10px}
+.footer a{color:var(--accent);text-decoration:none}
+.footer-sep{color:var(--accent);margin:0 8px}
+.footer-copy{font-family:'Space Mono',monospace;color:#475569;font-size:11px;letter-spacing:0.05em}
+@media(max-width:640px){.nav-links{gap:12px;font-size:12px}.nav-links a{font-size:12px}.container{padding:100px 16px 40px}}
+</style>
+<link rel="preload" href="https://assets.calendly.com/assets/external/widget.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","decastropt");
+</script>
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Personal Trainer Roma | Davide Decastro PT">
+<meta name="twitter:description" content="Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Assessment gratuito. Roma e online.">
+<meta name="twitter:image" content="https://decastropt.com/og-image.png">
+<meta name="twitter:site" content="@decastro_pt_lab">
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID'); fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+<nav class="nav"><a href="/" class="nav-logo">Decastro<span>.</span></a><div class="nav-links"><a href="/#metodo">Metodo</a><a href="/#servizi">Servizi</a><a href="/#storie">Storie</a><a href="/blog/">Blog</a><a href="/chi-sono.html">Chi sono</a><a href="/#faq">FAQ</a></div></nav>
+<div class="container">
+<h1>Blog</h1>
+<p class="meta meta-date">Metodo scientifico, programmazione e consigli pratici dal personal trainer Davide Decastro.</p>
+
+<article class="article-card">
+<div class="meta">6 Agosto 2026 · 5 min lettura</div>
+<h2><a href="/blog/personal-trainer-roma-come-scegliere.html">Personal Trainer a Roma: come scegliere quello giusto</a></h2>
+<p>Scegliere un personal trainer a Roma non è semplice. Ecco i criteri oggettivi per valutare chi ti seguirà davvero, senza sprecare tempo e soldi.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">6 Agosto 2026 · 4 min lettura</div>
+<h2><a href="/blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html">Scheda tecnica personalizzata: cosa aspettarsi davvero</a></h2>
+<p>Non tutte le schede sono uguali. Differenza tra schede generiche e programmazione su misura, e perché conta per i tuoi risultati.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">6 Agosto 2026 · 6 min lettura</div>
+<h2><a href="/blog/allenamento-a-casa-vs-palestra.html">Allenamento a casa vs palestra: pro, contro e quando scegliere</a></h2>
+<p>Quale conviene per i tuoi obiettivi? Analisi onesta di costi, risultati e sostenibilità nel tempo.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 6 min lettura</div>
+<h2><a href="/blog/personal-trainer-roma-prezzi-2026.html">Personal Trainer Roma: prezzi e costi nel 2026</a></h2>
+<p>Quanto costa un personal trainer a Roma nel 2026? Prezzi medi, fattori che influenzano il costo e come scegliere il rapporto qualità-prezzo migliore.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 7 min lettura</div>
+<h2><a href="/blog/assessment-corporeo-roma-bmi-bfr-bmr.html">Assessment corporeo: BMI, BFR, BMR e TDEE spiegati</a></h2>
+<p>Cosa sono BMI, BFR, BMR e TDEE? Come si calcolano e perché servono per una scheda di allenamento personalizzata.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 6 min lettura</div>
+<h2><a href="/blog/personal-trainer-online-vs-presenza.html">Personal trainer online vs in presenza: pro e contro</a></h2>
+<p>Conviene un personal trainer online o in presenza? Confronto pratico su costi, efficacia, flessibilità e risultati.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 8 min lettura</div>
+<h2><a href="/blog/programmazione-allenamento-principianti.html">Programmazione allenamento per principianti: da dove iniziare</a></h2>
+<p>Come iniziare ad allenarsi quando non hai mai fatto sport. Programmazione progressiva, errori comuni e consigli pratici.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 6 min lettura</div>
+<h2><a href="/blog/allenamento-post-infortunio-roma.html">Allenamento post-infortunio a Roma: come riprendere in sicurezza</a></h2>
+<p>Dopo un infortunio, riprendere l'allenamento richiede attenzione. Come costruire un percorso sicuro con un personal trainer.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 7 min lettura</div>
+<h2><a href="/blog/personal-trainer-donna-roma.html">Personal trainer per donne a Roma: schede e metodo specifico</a></h2>
+<p>Le donne hanno bisogno di allenamenti diversi? Metodi, miti da sfatare e come scegliere un PT che capisca il corpo femminile.</p>
+</article>
+
+<article class="article-card">
+<div class="meta">7 Agosto 2026 · 8 min lettura</div>
+<h2><a href="/blog/nutrizione-sportiva-calcolo-macronutrienti.html">Nutrizione sportiva: calcolo dei macronutrienti per atleti</a></h2>
+<p>Come calcolare proteine, carboidrati e grassi in base al tuo obiettivo. Massa muscolare, definizione, dimagrimento: i numeri che contano.</p>
+</article>
+
+<a class="back" href="https://decastropt.com">← Torna al sito</a>
+</div>
+<footer class="footer"><h3>Davide Decastro</h3><p>Personal Trainer — Roma</p><p><a href="https://decastropt.com">decastropt.com</a><span class="footer-sep">✦</span><a href="https://instagram.com/decastro_pt_lab">@decastro_pt_lab</a></p><p class="footer-copy">© 2026 DECASTRO PT</p></footer>
+<script defer src="/i18n.js"></script>
+<script defer src="/cookie.js"></script>
+<script defer src="/legal-links.js"></script>
+</body>
+</html>

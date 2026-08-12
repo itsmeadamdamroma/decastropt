@@ -1,0 +1,128 @@
+# Decastro PT — Training Lab
+
+> Il tuo personal trainer a Roma. Schede personalizzate, metodo scientifico, risultati misurabili.
+
+## Chi sono
+
+Davide Decastro, personal trainer certificato con base a Roma. Specializzato in schede tecniche personalizzate, assessment corporeo completo, allenamento post-infortunio, e nutrizione sportiva. Metodo basato su dati misurabili: BMI, BFR (Body Fat Ratio), BMR (Basal Metabolic Rate).
+
+## Servizi e Prezzi
+
+### Assessment Corporeo Completo
+- Valutazione BMI, BFR, BMR
+- Analisi posturale
+- Test di forza e flessibilità
+- Piano d'azione personalizzato
+- Prezzo: 50€
+- Durata: 60 minuti
+
+### Scheda Tecnica Personalizzata
+- Programma di allenamento su misura
+- Aggiornamento mensile
+- Supporto via chat
+- Prezzo: 80€/mese
+- Durata: abbonamento mensile
+
+### Personal Training 1-a-1
+- Sessione individuale
+- Programmazione progressiva
+- Correzione tecnica in tempo reale
+- Prezzo: 50€/sessione
+- Durata: 60 minuti
+
+### Allenamento Post-Infortunio
+- Programma riabilitativo
+- Coordination con fisioterapista
+- Progressione sicura
+- Prezzo: 60€/sessione
+- Durata: 60 minuti
+
+### Nutrizione Sportiva
+- Calcolo macronutrienti
+- Piano alimentare personalizzato
+- Follow-up quindicinale
+- Prezzo: 70€/mese
+- Durata: abbonamento mensile
+
+## API Endpoints
+
+### GET /api/health
+Health check. Ritorna `{"status":"ok","timestamp":"..."}`.
+
+### GET /api/services
+Lista completa servizi con prezzi e durate. Ritorna JSON array.
+
+### GET /api/booking
+Slot disponibili. Query params: `?date=YYYY-MM-DD&type=assessment|training|consultation`.
+
+### POST /api/booking
+Crea prenotazione. Body: `{"name":"...","email":"...","date":"YYYY-MM-DD","time":"HH:MM","type":"..."}`. Invia email di conferma al cliente e notifica al trainer.
+
+### GET /api/markdown
+Versione markdown del sito per agenti AI. Content-Type: text/markdown.
+
+## Agent Protocols Supportati
+
+### A2A (Agent-to-Agent)
+- Agent Card: /.well-known/agent-card.json
+- Endpoint: https://decastropt.com/a2a
+- Skills: book-assessment, check-availability, get-services
+- Transport: JSONRPC over HTTP
+
+### MCP (Model Context Protocol)
+- Server Card: /.well-known/mcp/server-card.json
+- Transport: HTTPS
+- Tools: book-assessment, check-availability, get-services
+
+### OAuth 2.0 / Agent Auth
+- Authorization Server: /.well-known/oauth-authorization-server
+- Protected Resource: /.well-known/oauth-protected-resource
+- Registration: /auth.md (WorkOS auth.md standard)
+- Scopes: booking:read, booking:write, profile
+- Identity types: anonymous, service_auth
+
+### Web Bot Auth
+- JWKS: /.well-known/http-message-signatures-directory
+- Algorithm: Ed25519 (EdDSA)
+- Key ID: 31c4b60503c19bb1
+
+### DNS-AID
+- SVCB records: _index._agents.decastropt.com, _a2a._agents.decastropt.com
+- ALPN: h2, Port: 443
+
+### Content Signals
+- search=yes (consento indicizzazione per motori di ricerca)
+- ai-train=no (non consento training AI)
+- ai-input=no (non consento input AI)
+
+## Markdown for Agents
+Il sito supporta content negotiation: invia `Accept: text/markdown` per ricevere la versione markdown.
+
+## Link Headers
+Tutte le response includono Link headers per agent discovery:
+- api-catalog → /.well-known/api-catalog
+- service-doc → /.well-known/agent-skills/index.json
+- alternate (markdown) → /api/markdown
+- status → /api/health
+- describedby → /auth.md
+
+## Blog
+
+10 articoli in italiano su personal training, allenamento, nutrizione:
+- /blog/personal-trainer-roma-come-scegliere.html
+- /blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html
+- /blog/allenamento-a-casa-vs-palestra.html
+- /blog/personal-trainer-roma-prezzi-2026.html
+- /blog/assessment-corporeo-roma-bmi-bfr-bmr.html
+- /blog/personal-trainer-online-vs-presenza.html
+- /blog/programmazione-allenamento-principianti.html
+- /blog/allenamento-post-infortunio-roma.html
+- /blog/personal-trainer-donna-roma.html
+- /blog/nutrizione-sportiva-calcolo-macronutrienti.html
+
+## Contatti
+
+- Sito: https://decastropt.com
+- Email: info@decastropt.com
+- Instagram: @decastro_pt_lab
+- Zona: Roma

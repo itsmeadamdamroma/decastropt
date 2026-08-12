@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Richiedi la tua scheda | Decastro PT</title>
+<meta name="description" content="Compila il questionario e prenota la tua consulenza gratuita con Davide Decastro.">
+<link rel="canonical" href="https://decastropt.com/assessment.html">
+  <link rel="alternate" hreflang="it" href="https://decastropt.com/assessment.html">
+  <link rel="alternate" hreflang="en" href="https://decastropt.com/assessment.html">
+  <link rel="alternate" hreflang="x-default" href="https://decastropt.com/assessment.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='%23fff' font-family='Arial'>D</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://assets.calendly.com/assets/external/widget.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script defer src="/i18n.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://decastropt.com"},{"@type":"ListItem","position":2,"name":"Assessment","item":"https://decastropt.com/assessment.html"}]}
+</script>
+<style>
+:root{--bg:#060606;--surface:#0F172A;--text:#F8FAFC;--dim:#94A3B8;--accent:#F97316;--border:rgba(255,255,255,0.1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-family:'Outfit',sans-serif;font-size:14px;color:var(--dim);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+/* Progress */
+.progress{display:flex;gap:4px;max-width:600px;margin:0 auto;padding:80px 20px 0}
+.progress-bar{flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;transition:background .3s}
+.progress-bar.active{background:var(--accent)}
+.progress-bar.done{background:rgba(249,115,22,0.5)}
+/* Form */
+.container{max-width:600px;margin:0 auto;padding:24px 20px 60px}
+.step{display:none;animation:fade .4s ease}
+.step.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+h1,h2{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;margin-bottom:8px}
+.subtitle{color:var(--dim);font-size:15px;margin-bottom:32px}
+label{display:block;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--dim);margin-bottom:8px;margin-top:24px}
+input,select,textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.2);border-radius:0;padding:12px 0;color:var(--text);font-family:'Outfit',sans-serif;font-size:16px;font-weight:300;outline:none;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+input::placeholder,textarea::placeholder{color:#475569}
+select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394A3B8' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0 center}
+option{background:var(--surface);color:var(--text)}
+textarea{resize:none;min-height:80px}
+.row{display:flex;gap:20px}
+.row>div{flex:1}
+.btn-row{display:flex;gap:12px;margin-top:40px}
+.btn{font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;padding:16px 32px;border:none;cursor:pointer;transition:all .3s}
+.btn-primary{background:var(--accent);color:#000}
+.btn-primary:hover{background:#fff}
+.btn-secondary{background:transparent;color:var(--dim);border:1px solid var(--border)}
+.btn-secondary:hover{color:var(--text);border-color:var(--text)}
+/* Calendly */
+#calendly-wrap{margin-top:32px;min-height:600px}
+.calendly-inline-widget{min-width:320px;height:600px}
+/* Done */
+.done-msg{text-align:center;padding:40px 20px}
+.done-msg .check{font-size:48px;color:var(--accent);margin-bottom:16px}
+.done-msg h2{font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;margin-bottom:8px}
+.done-msg p{color:var(--dim);font-size:15px}
+/* Responsive */
+@media(max-width:640px){
+  .nav-links{gap:12px;font-size:12px}
+  .nav-links a{font-size:12px}
+  .row{flex-direction:column;gap:0}
+  .container{padding:20px 16px 40px}
+  h1{font-size:24px}
+}
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","decastropt");
+</script>
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Personal Trainer Roma | Davide Decastro PT">
+<meta name="twitter:description" content="Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Assessment gratuito. Roma e online.">
+<meta name="twitter:image" content="https://decastropt.com/og-image.png">
+<meta name="twitter:site" content="@decastro_pt_lab">
+<!-- Instagram --><link rel="me" href="https://www.instagram.com/decastro_pt_lab/">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">Decastro<span>.</span></a>
+  <div class="nav-links">
+    <a href="/#metodo">Metodo</a>
+    <a href="/#servizi">Servizi</a>
+    <a href="/#storie">Storie</a>
+    <a href="/blog/">Blog</a>
+    <a href="/chi-sono.html">Chi sono</a>
+    <a href="/#faq">FAQ</a>
+  </div>
+</nav>
+
+<div class="progress" id="progress">
+  <div class="progress-bar active"></div>
+  <div class="progress-bar"></div>
+  <div class="progress-bar"></div>
+  <div class="progress-bar"></div>
+  <div class="progress-bar"></div>
+</div>
+
+<div class="container">
+  <form id="assessment-form">
+
+    <!-- Step 1: Contatti -->
+    <div class="step active" data-step="1">
+      <h1>Richiedi la tua scheda</h1>
+      <p class="subtitle">Compila il questionario e prenota la consulenza gratuita. 4 step, 2 minuti.</p>
+      <label>Nome</label>
+      <input type="text" name="name" placeholder="Il tuo nome" required>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="tu@email.com" required>
+      <label>Telefono</label>
+      <input type="tel" name="phone" placeholder="+39 333 1234567">
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" onclick="nextStep(1)">Avanti →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Fisico -->
+    <div class="step" data-step="2">
+      <h2>Dati fisici</h2>
+      <p class="subtitle">Servono per calcolare BMR, TDEE e parametri base.</p>
+      <div class="row">
+        <div>
+          <label>Sesso</label>
+          <select name="gender" required>
+            <option value="" disabled selected>Seleziona</option>
+            <option value="M">Uomo</option>
+            <option value="F">Donna</option>
+          </select>
+        </div>
+        <div>
+          <label>Età</label>
+          <input type="number" name="age" min="14" max="90" placeholder="30" required>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Peso (kg)</label>
+          <input type="number" name="weight" min="30" max="250" placeholder="75" required>
+        </div>
+        <div>
+          <label>Altezza (cm)</label>
+          <input type="number" name="height" min="120" max="230" placeholder="175" required>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-secondary" onclick="prevStep(2)">← Indietro</button>
+        <button type="button" class="btn btn-primary" onclick="nextStep(2)">Avanti →</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Allenamento -->
+    <div class="step" data-step="3">
+      <h2>Allenamento</h2>
+      <p class="subtitle">Per costruire la programmazione giusta.</p>
+      <label>Obiettivo principale</label>
+      <select name="goal" required>
+        <option value="" disabled selected>Seleziona</option>
+        <option>Dimagrimento</option>
+        <option>Massa muscolare</option>
+        <option>Ricomposizione</option>
+        <option>Forza</option>
+        <option>Ricondizionamento</option>
+        <option>Riabilitazione post-infortunio</option>
+        <option>Performance sportiva</option>
+        <option>Altro</option>
+      </select>
+      <label>Livello attuale</label>
+      <select name="level" required>
+        <option value="" disabled selected>Seleziona</option>
+        <option value="Principiante">Principiante (0-6 mesi)</option>
+        <option value="Intermedio">Intermedio (6 mesi - 2 anni)</option>
+        <option value="Avanzato">Avanzato (2+ anni)</option>
+      </select>
+      <div class="row">
+        <div>
+          <label>Giorni a settimana</label>
+          <select name="frequency" required>
+            <option value="" disabled selected>Seleziona</option>
+            <option>1-2 giorni</option>
+            <option>3 giorni</option>
+            <option>4 giorni</option>
+            <option>5+ giorni</option>
+          </select>
+        </div>
+        <div>
+          <label>Dove ti alleni</label>
+          <select name="location">
+            <option value="" disabled selected>Seleziona</option>
+            <option>Palestra</option>
+            <option>Casa</option>
+            <option>Ibrido (palestra + casa)</option>
+          </select>
+        </div>
+      </div>
+      <label>Sport pregressi o attuali</label>
+      <input type="text" name="sports" placeholder="Calcio, nuoto, nessuno…" >
+      <div class="btn-row">
+        <button type="button" class="btn btn-secondary" onclick="prevStep(3)">← Indietro</button>
+        <button type="button" class="btn btn-primary" onclick="nextStep(3)">Avanti →</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Salute -->
+    <div class="step" data-step="4">
+      <h2>Salute e contesto</h2>
+      <p class="subtitle">Info necessarie per una scheda sicura e efficace.</p>
+      <label>Infortuni o limitazioni fisiche</label>
+      <textarea name="injuries" placeholder="Lombalgia, spalla, ginocchio, nessuno…"></textarea>
+      <label>Farmaci (opzionale)</label>
+      <input type="text" name="medications" placeholder="Nessuno…" >
+      <div class="row">
+        <div>
+          <label>Sonno (ore/notte)</label>
+          <select name="sleep">
+            <option value="" disabled selected>Seleziona</option>
+            <option>Meno di 5</option>
+            <option>5-6</option>
+            <option>7-8</option>
+            <option>Più di 8</option>
+          </select>
+        </div>
+        <div>
+          <label>Livello di stress</label>
+          <select name="stress">
+            <option value="" disabled selected>Seleziona</option>
+            <option>Basso</option>
+            <option>Medio</option>
+            <option>Alto</option>
+          </select>
+        </div>
+      </div>
+      <label>Note (opzionale)</label>
+      <textarea name="notes" placeholder="Tutto quello che vuoi dirmi…"></textarea>
+      <div class="btn-row">
+        <button type="button" class="btn btn-secondary" onclick="prevStep(4)">← Indietro</button>
+        <button type="button" class="btn btn-primary" onclick="submitAssessment()">Invia e prenota →</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Calendly -->
+    <div class="step" data-step="5">
+      <h2>Prenota la call</h2>
+      <p class="subtitle">Scegli un orario per la consulenza gratuita di 30 minuti.</p>
+      <div id="calendly-wrap">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/decastropt/30min?primary_color=f97316"></div>
+      </div>
+      <div class="done-msg" id="done-msg" style="display:none">
+        <div class="check">✓</div>
+        <h2>Richiesta inviata!</h2>
+        <p>Controlla la tua email per la conferma.<br>Davide ti contatterà entro 24 ore.</p>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<script>
+const TOTAL_STEPS = 5;
+let currentStep = 1;
+
+function showStep(n) {
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.querySelector('[data-step="'+n+'"]').classList.add('active');
+  document.querySelectorAll('.progress-bar').forEach((b,i) => {
+    b.classList.remove('active','done');
+    if (i < n-1) b.classList.add('done');
+    if (i === n-1) b.classList.add('active');
+  });
+  currentStep = n;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function nextStep(n) {
+  const step = document.querySelector('[data-step="'+n+'"]');
+  const required = step.querySelectorAll('[required]');
+  for (const field of required) {
+    if (!field.value || field.value === '') {
+      field.style.borderBottomColor = '#ef4444';
+      field.focus();
+      return;
+    }
+    field.style.borderBottomColor = '';
+  }
+  showStep(n+1);
+}
+
+function prevStep(n) { showStep(n-1); }
+
+async function submitAssessment() {
+  const form = document.getElementById('assessment-form');
+  const data = {};
+  new FormData(form).forEach((v,k) => data[k] = v);
+
+  // Basic validation
+  if (!data.name || !data.email || !data.gender || !data.age || !data.weight || !data.height || !data.goal || !data.level || !data.frequency) {
+    alert('Compila tutti i campi obbligatori.');
+    return;
+  }
+
+  // Send to API
+  try {
+    const res = await fetch('/api/assessment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+  } catch(e) {
+    // Still show Calendly even if API fails — don't block booking
+    console.error('Assessment API error:', e);
+  }
+
+  // Show Calendly step
+  showStep(5);
+}
+</script>
+<script defer src="/cookie.js"></script>
+<script defer src="/legal-links.js"></script>
+</body>
+</html>

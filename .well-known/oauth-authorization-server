@@ -1,0 +1,25 @@
+{
+  "issuer": "https://decastropt.com",
+  "token_endpoint": "https://decastropt.com/auth/token",
+  "revocation_endpoint": "https://decastropt.com/auth/revoke",
+  "jwks_uri": "https://decastropt.com/.well-known/jwks.json",
+  "grant_types_supported": [
+    "urn:ietf:params:oauth:grant-type:jwt-bearer",
+    "urn:workos:agent-auth:grant-type:claim"
+  ],
+  "response_types_supported": ["code"],
+  "scopes_supported": ["booking:read", "booking:write", "profile"],
+  "token_endpoint_auth_methods_supported": ["client_secret_basic", "client_secret_post"],
+  "code_challenge_methods_supported": ["S256"],
+  "agent_auth": {
+    "skill": "https://decastropt.com/auth.md",
+    "register_uri": "https://decastropt.com/auth/register",
+    "identity_endpoint": "https://decastropt.com/auth/register",
+    "claim_endpoint": "https://decastropt.com/auth/claim",
+    "events_endpoint": "https://decastropt.com/auth/events",
+    "identity_types_supported": ["anonymous", "service_auth"],
+    "events_supported": [
+      "https://schemas.workos.com/events/agent/auth/identity/assertion/revoked"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-index.json",
+  "skills": [
+    {
+      "name": "book-assessment",
+      "type": "action",
+      "description": "Book a personal training assessment session with Decastro PT in Rome. Collects name, email, preferred date/time, and fitness goals.",
+      "url": "https://decastropt.com/.well-known/agent-skills/book-assessment.json",
+      "sha256": "placeholder"
+    },
+    {
+      "name": "get-services",
+      "type": "info",
+      "description": "Retrieve the list of personal training services offered by Decastro PT, including pricing and duration.",
+      "url": "https://decastropt.com/.well-known/agent-skills/get-services.json",
+      "sha256": "placeholder"
+    },
+    {
+      "name": "check-availability",
+      "type": "action",
+      "description": "Check available time slots for personal training sessions in Rome.",
+      "url": "https://decastropt.com/.well-known/agent-skills/check-availability.json",
+      "sha256": "placeholder"
+    }
+  ]
+}
