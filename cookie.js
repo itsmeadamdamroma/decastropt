@@ -1,4 +1,4 @@
-// cookie.js — GDPR cookie banner
+// cookie.js — GDPR cookie banner with GA4 consent mode
 (function(){
   if (localStorage.getItem('cookieConsent')) return;
   var bar = document.createElement('div');
@@ -9,12 +9,12 @@
   function close(){ bar.remove(); }
   document.getElementById('cookie-accept').onclick = function(){
     localStorage.setItem('cookieConsent','accepted');
+    if (window.gtag) gtag('consent', 'update', { analytics_storage: 'granted' });
     close();
   };
   document.getElementById('cookie-deny').onclick = function(){
     localStorage.setItem('cookieConsent','denied');
-    // Disable GA
-    window['ga-disable-G-9YEMG81CKK'] = true;
+    if (window.gtag) gtag('consent', 'update', { analytics_storage: 'denied' });
     close();
   };
 })();

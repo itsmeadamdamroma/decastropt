@@ -1,15 +1,20 @@
-// legal-links.js — inject footer legal links if missing
+// Append legal links to the site footer on the main SPA
 (function(){
-  var footer = document.querySelector('.footer');
-  if (!footer) return;
-  var hasPrivacy = footer.querySelector('a[href*="privacy"]');
-  var hasTerms = footer.querySelector('a[href*="terms"]');
-  if (hasPrivacy && hasTerms) return;
-  var p = document.createElement('p');
-  p.style.cssText = 'margin-top:8px;font-size:13px;color:#64748B';
-  var links = [];
-  if (!hasPrivacy) links.push('<a href="/privacy.html" style="color:#64748B;text-decoration:none">Privacy</a>');
-  if (!hasTerms) links.push('<a href="/terms.html" style="color:#64748B;text-decoration:none">Termini</a>');
-  p.innerHTML = links.join(' <span style="color:#334155">·</span> ');
-  footer.appendChild(p);
-})();
+  function addLegalLinks(){
+    var footer = document.querySelector('footer, [data-testid="site-footer"]');
+    if (!footer) return;
+    if (footer.querySelector('.dc-legal-links')) return;
+    var div = document.createElement('div');
+    div.className = 'dc-legal-links';
+    div.style.cssText = 'margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;';
+    div.innerHTML = '<a href="/privacy.html" style="color:#475569;font-family:\'Space Mono\',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;transition:color .2s">Privacy Policy</a><a href="/termini.html" style="color:#475569;font-family:\'Space Mono\',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;transition:color .2s">Terms of Service</a>';
+    footer.appendChild(div);
+  }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', addLegalLinks);
+  } else {
+    addLegalLinks();
+  }
+  setTimeout(addLegalLinks, 1000);
+  setTimeout(addLegalLinks, 3000);
+}());
