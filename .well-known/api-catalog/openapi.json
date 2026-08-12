@@ -1,0 +1,66 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Decastro PT — Training Lab API",
+    "version": "1.0.0",
+    "description": "Personal training services API for Decastro PT, Rome. Booking, assessment, and schedule management.",
+    "contact": {
+      "name": "Decastro PT",
+      "url": "https://decastropt.com",
+      "email": "info@decastropt.com"
+    }
+  },
+  "servers": [
+    { "url": "https://decastropt.com/api", "description": "Production" }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": { "application/json": { "schema": { "type": "object", "properties": { "status": { "type": "string" }, "timestamp": { "type": "string", "format": "date-time" } } } } }
+          }
+        }
+      }
+    },
+    "/booking": {
+      "get": {
+        "summary": "List available assessment slots",
+        "responses": {
+          "200": {
+            "description": "Available time slots",
+            "content": { "application/json": { "schema": { "type": "array", "items": { "type": "object", "properties": { "date": { "type": "string", "format": "date" }, "time": { "type": "string" }, "type": { "type": "string", "enum": ["assessment", "follow-up", "consultation"] } } } } } }
+          }
+        }
+      },
+      "post": {
+        "summary": "Book an assessment session",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "email", "date", "time"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
+                  "phone": { "type": "string" },
+                  "date": { "type": "string", "format": "date" },
+                  "time": { "type": "string" },
+                  "type": { "type": "string", "enum": ["assessment", "follow-up", "consultation"] },
+                  "notes": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Booking confirmed" },
+          "400": { "description": "Invalid request" }
+        }
+      }
+    }
+  }
+}
