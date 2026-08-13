@@ -2,7 +2,7 @@
 // Receives form data, sends structured HTML email to trainer via Resend
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
 const FROM_EMAIL = 'Decastro PT <noreply@decastropt.com>';
-const TRAINER_EMAIL = 'spidyroma@gmail.com';
+const TRAINER_EMAIL = 'info@decastropt.com';
 const CUSTOMER_FROM = 'Davide Decastro <noreply@decastropt.com>';
 
 const BG = "#1a1a1a", TX = "#e8e8e8", DM = "#94A3B8", AC = "#F97316", SF = "#242424", BD = "rgba(255,255,255,0.12)";

@@ -1,6 +1,6 @@
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
 const FROM_EMAIL = 'Decastro PT <noreply@decastropt.com>';
-const NOTIFY_EMAIL = 'spidyroma@gmail.com';
+const NOTIFY_EMAIL = 'info@decastropt.com';
 const SITE_URL = 'https://decastropt.com';
 const IG = 'https://instagram.com/decastro_pt_lab';
 
