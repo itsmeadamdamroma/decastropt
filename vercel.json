@@ -1,11 +1,26 @@
 {
   "public": true,
-  "github": {
-    "enabled": false
-  },
+  "github": { "enabled": false },
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/servizi",
+      "destination": "/servizi.html",
+      "permanent": true
+    },
+    {
+      "source": "/chi-sono",
+      "destination": "/chi-sono.html",
+      "permanent": true
+    },
+    {
+      "source": "/assessment",
+      "destination": "/assessment.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -113,6 +128,18 @@
     },
     {
       "source": "/bundle.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/bundle-new.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/style-new.css",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
