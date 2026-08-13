@@ -518,20 +518,30 @@ function injectToggle() {
   const toggle = document.createElement('div');
   toggle.className = 'lang-toggle';
   toggle.innerHTML = '<button data-lang="it" class="active" style="background:none;border:none;color:var(--text,#fff);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">IT</button><span style="color:var(--text-dim,#888);font-size:12px">·</span><button data-lang="en" style="background:none;border:none;color:var(--text-dim,#888);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">EN</button>';
-  // On mobile, move to left side so it doesn't cover the hamburger menu
+  // Desktop: floating top-right. Mobile: inside burger menu
   const isMobile = window.innerWidth < 768;
-  const side = isMobile ? 'left:16px' : 'right:16px';
-  toggle.style.cssText = 'position:fixed;top:16px;' + side + ';z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
-  document.body.appendChild(toggle);
+  if (isMobile && document.getElementById('nav-mobile')) {
+    toggle.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.05)';
+    document.getElementById('nav-mobile').appendChild(toggle);
+  } else {
+    toggle.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
+    document.body.appendChild(toggle);
+  }
 }
 
-// Reposition toggle on resize (mobile: left, desktop: right)
+// Reposition toggle on resize
 window.addEventListener('resize', () => {
   const t = document.querySelector('.lang-toggle');
   if (!t) return;
   const isMobile = window.innerWidth < 768;
-  t.style.left = isMobile ? '16px' : '';
-  t.style.right = isMobile ? '' : '16px';
+  const navMobile = document.getElementById('nav-mobile');
+  if (isMobile && navMobile && t.parentElement !== navMobile) {
+    t.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.05)';
+    navMobile.appendChild(t);
+  } else if (!isMobile && t.parentElement !== document.body) {
+    t.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
+    document.body.appendChild(t);
+  }
 });
 
 // Inject "Chi sono" link into SPA nav (React doesn't include it)
