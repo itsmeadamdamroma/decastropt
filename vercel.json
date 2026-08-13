@@ -6,20 +6,14 @@
   "outputDirectory": ".",
   "redirects": [
     {
-      "source": "/servizi",
-      "destination": "/servizi.html",
-      "permanent": true
+      "source": "/(.*)",
+      "destination": "https://decastropt.com/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "www.decastropt.com" }]
     },
-    {
-      "source": "/chi-sono",
-      "destination": "/chi-sono.html",
-      "permanent": true
-    },
-    {
-      "source": "/assessment",
-      "destination": "/assessment.html",
-      "permanent": true
-    }
+    { "source": "/servizi", "destination": "/servizi.html", "permanent": true },
+    { "source": "/chi-sono", "destination": "/chi-sono.html", "permanent": true },
+    { "source": "/assessment", "destination": "/assessment.html", "permanent": true }
   ],
   "headers": [
     {
