@@ -88,7 +88,7 @@ textarea{resize:none;min-height:80px}
 <meta name="twitter:site" content="@decastro_pt_lab">
 <!-- Instagram --><link rel="me" href="https://www.instagram.com/decastro_pt_lab/">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YEMG81CKK"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied'});gtag('js',new Date());gtag('config','G-9YEMG81CKK');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('js',new Date());gtag('config','G-9YEMG81CKK');</script>
 </head>
 <body>
 
@@ -314,6 +314,15 @@ async function submitAssessment() {
   } catch(e) {
     // Still show Calendly even if API fails — don't block booking
     console.error('Assessment API error:', e);
+  }
+
+  // Track conversion: generate_lead key event
+  if (window.gtag) {
+    gtag('event', 'generate_lead', {
+      event_category: 'engagement',
+      event_label: 'assessment_form',
+      value: 1
+    });
   }
 
   // Show Calendly step

@@ -44,6 +44,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Analytics: GA4 with Consent Mode V2 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YEMG81CKK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-9YEMG81CKK', { page_title: 'Davide Decastro PT' });
+  </script>
+
   <!-- Structured Data: LocalBusiness + Geo -->
   <script type="application/ld+json">
   {
