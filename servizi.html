@@ -54,6 +54,11 @@ th{color:#F8FAFC;font-weight:600}
 .nav-links a{font-family:Inter,sans-serif;font-size:14px;color:#94A3B8;text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:#F8FAFC}
 @media(max-width:640px){.nav-links{gap:12px;font-size:12px}.nav-links a{font-size:12px}.container{padding:100px 16px 40px}}
+    .service-grid{display:grid;gap:16px;margin-bottom:32px}
+    .service-card{display:block;padding:20px;background:#0F172A;border-radius:8px;border:1px solid rgba(255,255,255,0.05);text-decoration:none;color:inherit;transition:transform .2s,border-color .2s}
+    .service-card:hover{transform:translateY(-2px);border-color:rgba(249,115,22,0.3)}
+    .service-card strong{font-family:Inter,sans-serif;display:block;color:#F97316;text-transform:none;font-size:1rem;margin-bottom:6px}
+    .service-card p{margin:0;color:#CBD5E1;font-size:.95rem;line-height:1.5}
 </style>
 <link rel="preload" href="https://assets.calendly.com/assets/external/widget.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -151,6 +156,29 @@ th{color:#F8FAFC;font-weight:600}
 <h2>Come iniziare</h2>
 <p>La <strong>prima consulenza è gratuita</strong>. <a href="/chi-sono.html">Contattami</a> per capire insieme i tuoi obiettivi e costruire il percorso giusto.</p>
 <p><a href="/assessment.html">Prenota la consulenza gratuita →</a></p>
+
+<div class="service-grid">
+  <a href="/" class="service-card">
+    <strong>Home</strong>
+    <p>Scopri il metodo Decastro PT e richiedi la scheda su misura</p>
+  </a>
+  <a href="/chi-sono.html" class="service-card">
+    <strong>Chi sono</strong>
+    <p>Davide Decastro: ex pugile, maratoneta, personal trainer a Roma</p>
+  </a>
+  <a href="/blog/" class="service-card">
+    <strong>Blog</strong>
+    <p>Guide approfondite su allenamento, nutrizione e personal trainer</p>
+  </a>
+  <a href="/risorse/" class="service-card">
+    <strong>Risorse</strong>
+    <p>FAQ, strumenti di calcolo e contenuti gratuiti</p>
+  </a>
+  <a href="/assessment.html" class="service-card">
+    <strong>Assessment gratuito</strong>
+    <p>BMI, BMR, TDEE e valutazione corporea gratuita</p>
+  </a>
+</div>
 
 <h2>Perché scegliere Decastro PT</h2>
 <p><strong>Metodo scientifico.</strong> Ogni scheda è costruita sui tuoi dati reali: BMR, TDEE, body fat ratio, livello di allenamento. Niente programmi generici copiati da internet.</p>
