@@ -683,9 +683,27 @@ if (document.readyState === 'loading') {
   init();
 }
 
+// Close SPA burger menu when a link is clicked
+function closeSpaBurger() {
+  const spaToggle = document.querySelector('[data-testid="nav-mobile-toggle"]');
+  const spaMenu = document.querySelector('[data-testid="nav-mobile-menu"]');
+  // Only close if menu is currently visible
+  if (spaToggle && spaMenu && getComputedStyle(spaMenu).display !== 'none') {
+    spaToggle.click();
+  }
+}
+
 // Re-inject toggle + chi-sono for SPA (React may remove them during re-render)
 const reInject = setInterval(() => {
   injectToggle();
+  // Close SPA burger when any link inside it is clicked
+  const spaMenu = document.querySelector('[data-testid="nav-mobile-menu"]');
+  if (spaMenu && !spaMenu.dataset.burgerCloseWired) {
+    spaMenu.dataset.burgerCloseWired = '1';
+    spaMenu.addEventListener('click', function(e) {
+      if (e.target.closest('a')) closeSpaBurger();
+    });
+  }
   injectChiSono();
 }, 1000);
 // Keep checking — SPA can re-render at any time
