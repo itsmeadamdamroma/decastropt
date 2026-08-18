@@ -585,33 +585,34 @@ function ensureBurger() {
 
 // Inject toggle button — CSS controls visibility, not JS
 function injectToggle() {
-  if (document.querySelector('.lang-toggle-desktop')) return;
   ensureBurger();
 
   const toggleHTML = '<button data-lang="it" class="active" style="background:none;border:none;color:var(--text,#fff);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">IT</button><span style="color:var(--text-dim,#888);font-size:12px">·</span><button data-lang="en" style="background:none;border:none;color:var(--text-dim,#888);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">EN</button>';
-
-  // Desktop: floating top-right (hidden on mobile via CSS)
-  const desktop = document.createElement('div');
-  desktop.className = 'lang-toggle lang-toggle-desktop';
-  desktop.innerHTML = toggleHTML;
-  desktop.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
-  document.body.appendChild(desktop);
-
-  // Mobile: inside burger menu (hidden on desktop via CSS)
-  // Try static pages first (#nav-mobile), then SPA (.nav-mobile-menu)
-  const navMobile = document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
-  if (navMobile) {
-    const mobile = document.createElement('div');
-    mobile.className = 'lang-toggle lang-toggle-mobile';
-    mobile.innerHTML = toggleHTML;
-    mobile.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
-    navMobile.appendChild(mobile);
-  }
 
   // CSS: show/hide based on viewport
   if (!document.getElementById('lang-toggle-css')) {
     const css = '<style id="lang-toggle-css">@media(max-width:768px){.lang-toggle-desktop{display:none!important}.lang-toggle-mobile{display:flex!important}}@media(min-width:769px){.lang-toggle-mobile{display:none!important}.lang-toggle-desktop{display:flex!important}}</style>';
     document.head.insertAdjacentHTML('beforeend', css);
+  }
+
+  // Desktop: floating top-right (hidden on mobile via CSS)
+  if (!document.querySelector('.lang-toggle-desktop')) {
+    const desktop = document.createElement('div');
+    desktop.className = 'lang-toggle lang-toggle-desktop';
+    desktop.innerHTML = toggleHTML;
+    desktop.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
+    document.body.appendChild(desktop);
+  }
+
+  // Mobile: inside burger menu (hidden on desktop via CSS)
+  // Try static pages first (#nav-mobile), then SPA (.nav-mobile-menu)
+  const navMobile = document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
+  if (navMobile && !navMobile.querySelector('.lang-toggle-mobile')) {
+    const mobile = document.createElement('div');
+    mobile.className = 'lang-toggle lang-toggle-mobile';
+    mobile.innerHTML = toggleHTML;
+    mobile.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
+    navMobile.appendChild(mobile);
   }
 }
 
@@ -684,18 +685,7 @@ if (document.readyState === 'loading') {
 
 // Re-inject toggle + chi-sono for SPA (React may remove them during re-render)
 const reInject = setInterval(() => {
-  const needsDesktop = !document.querySelector('.lang-toggle-desktop');
-  const needsMobile = !document.querySelector('.lang-toggle-mobile');
-  const navMobile = document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
-  if (needsDesktop || (needsMobile && navMobile)) {
-    injectToggle();
-    const lang = getLang();
-    document.querySelectorAll('.lang-toggle button').forEach(b => {
-      b.classList.toggle('active', b.dataset.lang === lang);
-      b.style.color = b.dataset.lang === lang ? 'var(--text,#fff)' : 'var(--text-dim,#888)';
-    });
-    if (lang !== 'it') applyLang(lang);
-  }
+  injectToggle();
   injectChiSono();
 }, 1000);
 // Keep checking — SPA can re-render at any time
