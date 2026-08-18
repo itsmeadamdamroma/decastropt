@@ -6,9 +6,12 @@
 <title>Servizi e Prezzi | Davide Decastro PT — Personal Trainer Roma</title>
 <meta name="description" content="Assessment personalizzato, scheda tecnica su misura, follow-up mensile e consulenza nutrizionale. Prezzi chiari, nessun pacchetto nascosto. Personal trainer a Roma.">
 <link rel="canonical" href="https://decastropt.com/servizi.html">
-<link rel="alternate" hreflang="it" href="https://decastropt.com/servizi.html">
-<link rel="alternate" hreflang="en" href="https://decastropt.com/servizi.html">
-<link rel="alternate" hreflang="x-default" href="https://decastropt.com/servizi.html">
+  <link rel="alternate" hreflang="it" href="https://decastropt.com/servizi.html">
+  <link rel="alternate" hreflang="en" href="https://decastropt.com/servizi.html">
+  <link rel="alternate" hreflang="x-default" href="https://decastropt.com/servizi.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Servizi e Prezzi | Davide Decastro PT">
+<meta property="og:description" content="Assessment, scheda tecnica, follow-up e nutrizione. Prezzi chiari, personal trainer a Roma.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='%23fff' font-family='Arial'>D</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -22,6 +25,56 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://decastropt.com/"},{"@type":"ListItem","position":2,"name":"Servizi","item":"https://decastropt.com/servizi.html"}]}
 </script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#0F172A;color:#F8FAFC;line-height:1.7}
+.container{max-width:700px;margin:0 auto;padding:40px 20px}
+h1{font-size:2.2rem;font-weight:800;margin-bottom:0.5rem}
+.subtitle{color:#94A3B8;margin-bottom:2rem}
+h2{font-size:1.4rem;margin-top:2rem;margin-bottom:0.5rem;color:#F97316}
+h3{font-size:1.1rem;margin-top:1.5rem;margin-bottom:0.5rem;color:#F1F5F9}
+h3{font-size:1.05rem;margin-top:1.2rem;margin-bottom:0.5rem;color:var(--accent)}
+p{margin-bottom:1rem;color:#CBD5E1}
+ul{margin-left:1.5rem;margin-bottom:1rem;color:#CBD5E1}
+li{margin-bottom:0.5rem}
+strong{color:#F8FAFC}
+.price{font-size:1.3rem;font-weight:800;color:#F97316}
+.service{border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem}
+.service h2{margin-top:0}
+.meta{color:#64748B;font-size:0.9rem;margin-bottom:0.5rem}
+.back{display:inline-block;margin-top:2rem;color:#F97316}
+a{color:#F97316}
+table{width:100%;border-collapse:collapse;margin-bottom:1.5rem}
+th,td{text-align:left;padding:0.75rem;border-bottom:1px solid rgba(255,255,255,0.1);color:#CBD5E1}
+th{color:#F8FAFC;font-weight:600}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.1);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:Inter,sans-serif;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:-0.025em;color:#F8FAFC}
+.nav-logo span{color:#F97316}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-family:Inter,sans-serif;font-size:14px;color:#94A3B8;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#F8FAFC}
+@media(max-width:640px){.nav-links{gap:12px;font-size:12px}.nav-links a{font-size:12px}.container{padding:100px 16px 40px}}
+    .service-grid{display:grid;gap:16px;margin-bottom:32px}
+    .service-card{display:block;padding:20px;background:#0F172A;border-radius:8px;border:1px solid rgba(255,255,255,0.05);text-decoration:none;color:inherit;transition:transform .2s,border-color .2s}
+    .service-card:hover{transform:translateY(-2px);border-color:rgba(249,115,22,0.3)}
+    .service-card strong{font-family:Inter,sans-serif;display:block;color:#F97316;text-transform:none;font-size:1rem;margin-bottom:6px}
+    .service-card p{margin:0;color:#CBD5E1;font-size:.95rem;line-height:1.5}
+
+/* Burger menu */
+.nav-burger{display:none;flex-direction:column;justify-content:space-between;width:24px;height:18px;background:none;border:none;cursor:pointer;padding:0;z-index:60}
+.nav-burger span{display:block;width:100%;height:2px;background:var(--text,#F8FAFC);transition:transform .3s,opacity .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:0;right:0;width:100%;max-width:300px;height:100vh;background:rgba(6,6,6,0.98);backdrop-filter:blur(12px);border-left:1px solid rgba(255,255,255,0.1);padding:80px 24px 24px;z-index:55;flex-direction:column;gap:0;transform:translateX(100%);transition:transform .3s ease}
+.nav-mobile.open{display:flex;transform:translateX(0)}
+.nav-mobile a{font-family:Oswald,sans-serif;font-size:18px;color:var(--text,#F8FAFC);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);text-transform:uppercase;letter-spacing:0.02em}
+.nav-mobile a:hover{color:var(--accent,#F97316)}
+.nav-mobile-cta{margin-top:16px;background:var(--accent,#F97316);color:#000!important;text-align:center;padding:14px!important;border-radius:0;font-weight:600}
+@media(max-width:768px){.nav-links,.nav-cta{display:none!important}.nav-burger{display:flex}}
+</style>
+<link rel="preload" href="https://assets.calendly.com/assets/external/widget.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,85 +106,27 @@
   }
 }
 </script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Inter,sans-serif;background:#060606;color:#F8FAFC;line-height:1.7;-webkit-font-smoothing:antialiased}
-a{color:#F97316;text-decoration:none;transition:color .2s}
-a:hover{color:#fff}
-img{max-width:100%;height:auto}
-/* Header */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,6,6,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
-.site-header .wrap{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:Inter,sans-serif;font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:-.025em;color:#F8FAFC}
-.brand span{color:#F97316}
-.site-nav{display:flex;align-items:center;gap:32px}
-.site-nav a{font-family:Inter,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#94A3B8;transition:color .2s}
-.site-nav a:hover{color:#F97316}
-.site-cta{font-family:Inter,sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:#F97316;color:#000;padding:10px 20px;transition:background .2s}
-.site-cta:hover{background:#fff}
-.burger{display:none;flex-direction:column;justify-content:space-between;width:26px;height:20px;background:none;border:none;cursor:pointer;padding:0;z-index:60}
-.burger span{display:block;width:100%;height:2px;background:#F8FAFC;transition:transform .25s,opacity .25s;transform-origin:center}
-.burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
-.mobile-menu{position:fixed;inset:0;background:rgba(6,6,6,.98);backdrop-filter:blur(12px);z-index:55;display:none;flex-direction:column;padding:100px 32px 32px;overflow-y:auto}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-family:Inter,sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#F8FAFC;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.mobile-menu a:hover{color:#F97316}
-.mobile-menu .cta{margin-top:16px;background:#F97316;color:#000;text-align:center;border-bottom:none}
-@media(max-width:900px){.site-nav,.site-cta{display:none}.burger{display:flex}}
-/* Main */
-main{padding-top:72px;min-height:60vh}
-.container{max-width:760px;margin:0 auto;padding:48px 24px}
-h1{font-size:2.6rem;font-weight:800;margin-bottom:.5rem;line-height:1.1}
-h2{font-size:1.5rem;font-weight:700;margin-top:2.5rem;margin-bottom:.75rem;color:#F97316}
-h3{font-size:1.15rem;font-weight:700;margin-top:1.5rem;margin-bottom:.5rem}
-p,li{color:#CBD5E1;margin-bottom:1rem}
-ul{margin-left:1.5rem;margin-bottom:1rem}
-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
-th,td{text-align:left;padding:.75rem;border-bottom:1px solid rgba(255,255,255,.1)}
-th{color:#F8FAFC;font-weight:700}
-/* Footer */
-.site-footer{margin-top:60px;border-top:1px solid rgba(255,255,255,.1);padding:40px 24px;text-align:center}
-.site-footer p{color:#94A3B8;font-size:.9rem;margin-bottom:.5rem}
-.site-footer a{color:#F97316;margin:0 8px;white-space:nowrap}
-@media(max-width:640px){.container{padding:32px 16px}h1{font-size:2rem}}
-</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","decastropt");
+</script>
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Personal Trainer Roma | Davide Decastro PT">
+<meta name="twitter:description" content="Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Assessment gratuito. Roma e online.">
+<meta name="twitter:image" content="https://decastropt.com/og-image.png">
+<meta name="twitter:site" content="@decastro_pt_lab">
+<!-- Instagram --><link rel="me" href="https://www.instagram.com/decastro_pt_lab/">
+<script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://www.googletagmanager.com/gtag/js?id=G-9YEMG81CKK";s.async=1;document.head.appendChild(s);});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('js',new Date());gtag('config','G-9YEMG81CKK');</script>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a href="/" class="brand">DECASTRO<span>.</span></a>
-    <nav class="site-nav">
-      <a href="/#metodo">Metodo</a>
-      <a href="/servizi.html">Servizi</a>
-      <a href="/#storie">Storie</a>
-      <a href="/blog/">Blog</a>
-      <a href="/risorse/">Risorse</a>
-      <a href="/chi-sono.html">Chi sono</a>
-      <a href="/#faq">FAQ</a>
-    </nav>
-    <a href="/#contatti" class="site-cta">Richiedi scheda</a>
-    <button class="burger" aria-label="Menu" onclick="var m=document.getElementById('mobile-menu');this.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':''"><span></span><span></span><span></span></button>
-  </div>
-</header>
-<div class="mobile-menu" id="mobile-menu">
-  <a href="/#metodo">Metodo</a>
-  <a href="/servizi.html">Servizi</a>
-  <a href="/#storie">Storie</a>
-  <a href="/blog/">Blog</a>
-  <a href="/risorse/">Risorse</a>
-  <a href="/chi-sono.html">Chi sono</a>
-  <a href="/#faq">FAQ</a>
-  <a href="/#contatti" class="cta">Richiedi scheda</a>
-</div>
-<script>
-(function(){var m=document.getElementById('mobile-menu');m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');document.querySelector('.burger').classList.remove('open');document.body.style.overflow='';});});})();
-</script>
 
-<main>
-<div class="container">
+
 <style>
 .hd-bar{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .hd-wrap{max-width:1400px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
@@ -156,8 +151,36 @@ th{color:#F8FAFC;font-weight:700}
   .hd-burger{display:flex}
 }
 </style>
-
-
+<header class="hd-bar">
+  <div class="hd-wrap">
+    <a href="/" class="hd-logo">DECASTRO<span>.</span></a>
+    <nav class="hd-desk">
+      <a href="/#metodo">Metodo</a>
+      <a href="/servizi.html">Servizi</a>
+      <a href="/#storie">Storie</a>
+      <a href="/blog/">Blog</a>
+      <a href="/risorse/">Risorse</a>
+      <a href="/chi-sono.html">Chi sono</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a href="/#contatti" class="hd-cta hd-cta-desk">Richiedi scheda</a>
+    <button class="hd-burger" data-burger aria-label="Apri menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+</header>
+<div class="hd-menu" data-mobile-menu>
+  <nav>
+    <a href="/#metodo">Metodo</a>
+    <a href="/servizi.html">Servizi</a>
+    <a href="/#storie">Storie</a>
+    <a href="/blog/">Blog</a>
+    <a href="/risorse/">Risorse</a>
+    <a href="/chi-sono.html">Chi sono</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#contatti" class="hd-menu-cta">Richiedi scheda</a>
+  </nav>
+</div>
 <script>
 (function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function c(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function o(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function t(){m.classList.contains('open')?c():o();}b.addEventListener('click',t);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',c)});})();
 </script>
@@ -167,7 +190,7 @@ th{color:#F8FAFC;font-weight:700}
 (function(){const b=document.querySelector('[data-burger]');const m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.add('hidden');document.body.classList.remove('overflow-hidden');b.setAttribute('aria-label','Apri menu');}function open(){m.classList.remove('hidden');document.body.classList.add('overflow-hidden');b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('hidden')?open():close();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));})();
 </script>
 
-
+<script>document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav-mobile').classList.remove('open');document.querySelector('.nav-burger').classList.remove('open')})});</script>
 <div class="container">
 <h1>Servizi e Prezzi</h1>
 <p class="subtitle">Personal training a Roma. Prezzi chiari, nessun pacchetto nascosto.</p>
@@ -303,23 +326,5 @@ th{color:#F8FAFC;font-weight:700}
 <script defer src="/i18n.js?v=8"></script>
 <script defer src="/cookie.js"></script>
 <script defer src="/legal-links.js"></script>
-</div>
-</main>
-
-<footer class="site-footer">
-  <p><strong style="color:#F8FAFC">DAVIDE DECASTRO</strong></p>
-  <p>Personal trainer a Roma · Schede tecniche personalizzate</p>
-  <p>
-    <a href="mailto:info@decastropt.com">info@decastropt.com</a>
-    <a href="https://wa.me/393513838701">+39 351 383 8701</a>
-    <a href="https://www.instagram.com/decastro_pt_lab">@decastro_pt_lab</a>
-  </p>
-  <p style="font-size:.8rem;color:#64748B">
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/termini.html">Termini di Servizio</a>
-    <a href="/terms.html">Terms of Service</a>
-  </p>
-</footer>
-<script src="/i18n.js?v=9" defer></script>
 </body>
 </html>
