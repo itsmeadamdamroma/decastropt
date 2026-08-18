@@ -605,8 +605,8 @@ function injectToggle() {
   }
 
   // Mobile: inside burger menu (hidden on desktop via CSS)
-  // Try static pages first (#nav-mobile), then SPA (.nav-mobile-menu)
-  const navMobile = document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
+  // Try new static hd-menu first, then legacy #nav-mobile, then SPA .nav-mobile-menu
+  const navMobile = document.querySelector('.hd-menu.open, .hd-menu') || document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
   if (navMobile && !navMobile.querySelector('.lang-toggle-mobile')) {
     const mobile = document.createElement('div');
     mobile.className = 'lang-toggle lang-toggle-mobile';
