@@ -535,52 +535,10 @@ function injectBurgerCSS() {
 }
 
 function ensureBurger() {
-  injectBurgerCSS();
-  const nav = document.querySelector('nav.nav, .nav');
-  if (!nav) return;
-  
-  // Add burger button if missing
-  if (!nav.querySelector('.nav-burger')) {
-    const btn = document.createElement('button');
-    btn.className = 'nav-burger';
-    btn.setAttribute('aria-label', 'Menu');
-    btn.innerHTML = '<span></span><span></span><span></span>';
-    btn.onclick = function() {
-      const m = document.getElementById('nav-mobile');
-      this.classList.toggle('open');
-      if (m) m.classList.toggle('open');
-    };
-    nav.appendChild(btn);
-  }
-  
-  // Add nav-mobile container if missing
-  if (!document.getElementById('nav-mobile')) {
-    const mobile = document.createElement('div');
-    mobile.className = 'nav-mobile';
-    mobile.id = 'nav-mobile';
-    // Copy nav links
-    const links = nav.querySelectorAll('.nav-links a');
-    links.forEach(a => {
-      const clone = a.cloneNode(true);
-      clone.addEventListener('click', () => {
-        mobile.classList.remove('open');
-        nav.querySelector('.nav-burger')?.classList.remove('open');
-      });
-      mobile.appendChild(clone);
-    });
-    // Add CTA if exists
-    const cta = nav.querySelector('.nav-cta');
-    if (cta) {
-      const ctaClone = cta.cloneNode(true);
-      ctaClone.className = 'nav-mobile-cta';
-      ctaClone.addEventListener('click', () => {
-        mobile.classList.remove('open');
-        nav.querySelector('.nav-burger')?.classList.remove('open');
-      });
-      mobile.appendChild(ctaClone);
-    }
-    nav.parentNode.insertBefore(mobile, nav.nextSibling);
-  }
+  // Disabled — canonical header (header_v2.html) already includes its own burger.
+  // Old code injected a SECOND .nav-burger button on pages that had nav.nav — causing
+  // the "double burger" bug. Since all static pages now use header_v2, this is a no-op.
+  return;
 }
 
 // Inject toggle button — CSS controls visibility, not JS

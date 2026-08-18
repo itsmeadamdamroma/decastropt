@@ -41,7 +41,7 @@
 :root{--bg:#060606;--text:#F8FAFC;--text-dim:#94A3B8;--accent:#F97316;--surface:#0F172A;--border:rgba(255,255,255,0.1)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:auto}
-body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;line-height:1.7}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;line-height:1.7;padding-top:80px}
 ::selection{background:var(--accent);color:#060606}
 a{color:var(--accent);text-decoration:none;transition:color .2s}
 a:hover{color:var(--text)}
@@ -154,35 +154,34 @@ li{margin-bottom:8px;line-height:1.7}
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('js',new Date());gtag('config','G-9YEMG81CKK');</script>
 </head>
 <body>
-
-
 <style>
-.hd-bar{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.hd-wrap{max-width:1400px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.hd-logo{font-family:Oswald,sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;color:#F8FAFC;text-decoration:none}
+/* Canonical header — 1:1 clone of homepage React nav (bundle fE) */
+.hd-bar{position:fixed;top:0;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.hd-bar.scrolled{background:rgba(6,6,6,0.7);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom-color:rgba(255,255,255,0.1)}
+.hd-wrap{max-width:1400px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.hd-logo{font-family:Oswald,sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;color:#F8FAFC;text-decoration:none}
 .hd-logo span{color:#F97316}
 .hd-desk{display:flex;align-items:center;gap:36px}
-.hd-desk a{font-family:monospace,'Space Mono',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.2em;color:#94A3B8;text-decoration:none;transition:color .2s}
+.hd-desk a{font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.2em;color:#94A3B8;text-decoration:none;transition:color .2s}
 .hd-desk a:hover{color:#F97316}
-.hd-cta{font-family:Oswald,sans-serif;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.025em;color:#060606;background:#F97316;padding:10px 20px;text-decoration:none;transition:background .2s}
+.hd-cta{display:inline-flex;align-items:center;font-family:Oswald,sans-serif;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.025em;color:#000;background:#F97316;padding:10px 20px;text-decoration:none;transition:background .3s}
 .hd-cta:hover{background:#fff}
-.hd-burger{display:none;width:40px;height:40px;align-items:center;justify-content:center;color:#F8FAFC;background:none;border:none;padding:0;cursor:pointer}
-.hd-menu{display:none;position:fixed;inset:0;z-index:40;background:rgba(6,6,6,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:96px 32px 32px}
-.hd-menu.open{display:block}
-.hd-menu nav{display:flex;flex-direction:column;gap:0}
-.hd-menu a{font-family:Oswald,sans-serif;font-size:26px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#F8FAFC;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);transition:color .2s}
+.hd-burger{display:none;background:none;border:none;padding:0;cursor:pointer;color:#F8FAFC;line-height:0}
+.hd-burger .icon-x{display:none}
+.hd-burger.open .icon-menu{display:none}
+.hd-burger.open .icon-x{display:inline}
+.hd-menu{display:none;background:rgba(6,6,6,0.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.1);padding:24px 20px;flex-direction:column;gap:20px}
+.hd-menu.open{display:flex}
+.hd-menu a{font-family:Oswald,sans-serif;font-size:20px;text-transform:uppercase;color:#F8FAFC;text-decoration:none}
 .hd-menu a:hover{color:#F97316}
-.hd-menu-cta{margin-top:24px;background:#F97316;color:#060606!important;text-align:center;border-bottom:none!important;padding:16px!important;font-size:18px}
-.hd-menu-cta:hover{background:#fff}
-@media(max-width:768px){
-  .hd-desk{display:none!important}
-  .hd-cta-desk{display:none!important}
-  .hd-burger{display:flex}
-}
+.hd-menu-cta{margin-top:8px;background:#F97316;color:#000!important;text-align:center;font-weight:600;padding:12px}
+.hd-menu-cta:hover{background:#fff!important}
+@media(max-width:768px){.hd-desk{display:none!important}.hd-cta-desk{display:none!important}.hd-burger{display:block}}
+@media(min-width:640px){.hd-wrap{padding:0 32px;height:80px}.hd-logo{font-size:20px}}
 </style>
 <header class="hd-bar">
   <div class="hd-wrap">
-    <a href="/" class="hd-logo">DECASTRO<span>.</span></a>
+    <a href="/" class="hd-logo">Decastro<span>.</span></a>
     <nav class="hd-desk">
       <a href="/#metodo">Metodo</a>
       <a href="/servizi.html">Servizi</a>
@@ -193,13 +192,12 @@ li{margin-bottom:8px;line-height:1.7}
       <a href="/#faq">FAQ</a>
     </nav>
     <a href="/#contatti" class="hd-cta hd-cta-desk">Richiedi scheda</a>
-    <button class="hd-burger" data-burger aria-label="Apri menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    <button class="hd-burger" data-burger aria-label="Menu">
+      <svg class="icon-menu" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      <svg class="icon-x" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
     </button>
   </div>
-</header>
-<div class="hd-menu" data-mobile-menu>
-  <nav>
+  <div class="hd-menu" data-mobile-menu>
     <a href="/#metodo">Metodo</a>
     <a href="/servizi.html">Servizi</a>
     <a href="/#storie">Storie</a>
@@ -208,11 +206,12 @@ li{margin-bottom:8px;line-height:1.7}
     <a href="/chi-sono.html">Chi sono</a>
     <a href="/#faq">FAQ</a>
     <a href="/#contatti" class="hd-menu-cta">Richiedi scheda</a>
-  </nav>
-</div>
+  </div>
+</header>
 <script>
-(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function open(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('open')?close():open();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});})();
+(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');var h=document.querySelector('.hd-bar');if(!b||!m)return;function close(){m.classList.remove('open');b.classList.remove('open');}function open(){m.classList.add('open');b.classList.add('open');}b.addEventListener('click',function(){m.classList.contains('open')?close():open();});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});function s(){h.classList.toggle('scrolled',window.scrollY>40);}window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
+
 
 
 <div class="container">
@@ -389,7 +388,7 @@ li{margin-bottom:8px;line-height:1.7}
 </section>
 
 <footer class="footer"><h3>Davide Decastro</h3><p>Personal Trainer — Roma</p><p><a href="https://decastropt.com">decastropt.com</a><span class="footer-sep">✦</span><a href="https://instagram.com/decastro_pt_lab">@decastro_pt_lab</a></p><p class="footer-copy">© 2026 DECASTRO PT</p></footer>
-<script defer src="/i18n.js?v=8"></script>
+<script defer src="/i18n.js?v=9"></script>
 <script defer src="/cookie.js"></script>
 <script defer src="/legal-links.js"></script>
 </body>
