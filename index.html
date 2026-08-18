@@ -430,43 +430,23 @@
     <div id="app-loader"><div class="spinner"></div></div>
   </div>
   <link rel="stylesheet" href="/style-new.css">
-  <script type="module" defer>
-    import '/bundle-new.js';
-  </script>
-  <script type="module">
-    // ponytail: Spline 3D deferred to idle to not block TBT
-    function initSpline() {
-      import('https://unpkg.com/@splinetool/runtime@1.12.98/build/runtime.js').then(function(mod) {
-        var Application = mod.Application;
-        var hero = document.querySelector('[data-testid="hero-section"]');
-        if (!hero) return;
-        var container = hero.querySelector('.absolute.inset-0.z-0');
-        if (!container) return;
-        var old = container.querySelector('canvas');
-        if (old) old.remove();
-        var canvas = document.createElement('canvas');
-        canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;outline:none;pointer-events:none;display:block;';
-        container.appendChild(canvas);
-        function resize() {
-          var w = container.clientWidth || window.innerWidth;
-          var h = container.clientHeight || window.innerHeight;
-          if (w < 2 || h < 2) return;
-          canvas.width = w; canvas.height = h;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-        new ResizeObserver(resize).observe(container);
-        var app = new Application(canvas);
-        app.load('https://prod.spline.design/c3gGCfGy08T3XbOf/scene.splinecode')
-          .then(function() { /* Spline loaded */ })
-          .catch(function(e) { console.error('Spline load failed:', e); });
+  <script>
+    // Performance: load Spline-free bundle on mobile (saves 567KB + 169s TBT)
+    (function() {
+      var isMobile = window.matchMedia('(max-width: 768px)').matches;
+      var slowConn = navigator.connection && navigator.connection.effectiveType && ['slow-2g','2g','3g'].includes(navigator.connection.effectiveType);
+      var useMobile = isMobile || slowConn;
+      var script = document.createElement('script');
+      script.type = 'module';
+      script.defer = true;
+      script.textContent = "import '/" + (useMobile ? 'bundle-mobile.js' : 'bundle-new.js') + "';";
+      document.head.appendChild(script);
+      // Remove the app-loader once bundle loads
+      window.addEventListener('load', function() {
+        var loader = document.getElementById('app-loader');
+        if (loader) setTimeout(function() { loader.style.opacity = '0'; setTimeout(function() { loader.remove(); }, 300); }, 500);
       });
-    }
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(initSpline, { timeout: 3000 });
-    } else {
-      setTimeout(initSpline, 1000);
-    }
+    })();
   </script>
 <script defer src="/i18n.js"></script>
 <script defer src="/cookie.js"></script>
