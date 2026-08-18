@@ -210,16 +210,6 @@
   }
   </script>
 
-  <!-- Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YEMG81CKK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', { 'analytics_storage': 'denied' });
-    gtag('js', new Date());
-    gtag('config', 'G-9YEMG81CKK', { page_title: 'Davide Decastro PT' });
-  </script>
-
   <title>Davide Decastro PT</title>
   <!-- Markdown for Agents: serve markdown when Accept: text/markdown -->
   <script>
@@ -275,9 +265,7 @@
       });
     }
   </script>
-<link rel="preload" href="https://assets.calendly.com/assets/external/widget.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" defer></script>
+
 </head>
 <body>
   <script type="text/javascript">
@@ -404,44 +392,39 @@
   <script type="module" defer>
     import '/bundle-new.js';
   </script>
-  <script type="module" defer>
-    import { Application } from "https://unpkg.com/@splinetool/runtime@1.12.98/build/runtime.js";
-
-    function tryInit() {
-      var hero = document.querySelector('[data-testid="hero-section"]');
-      if (!hero) { setTimeout(tryInit, 100); return; }
-
-      var container = hero.querySelector('.absolute.inset-0.z-0');
-      if (!container) { setTimeout(tryInit, 100); return; }
-
-      var old = container.querySelector('canvas');
-      if (old) old.remove();
-
-      var canvas = document.createElement('canvas');
-      canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;outline:none;pointer-events:none;display:block;';
-      container.appendChild(canvas);
-
-      function resize() {
-        var w = container.clientWidth || window.innerWidth;
-        var h = container.clientHeight || window.innerHeight;
-        if (w < 2 || h < 2) return;
-        canvas.width = w;
-        canvas.height = h;
-      }
-      resize();
-      window.addEventListener('resize', resize);
-      new ResizeObserver(resize).observe(container);
-
-      var app = new Application(canvas);
-      app.load('https://prod.spline.design/c3gGCfGy08T3XbOf/scene.splinecode')
-        .then(function() { /* Spline loaded */ })
-        .catch(function(e) { console.error('Spline load failed:', e); });
+  <script type="module">
+    // ponytail: Spline 3D deferred to idle to not block TBT
+    function initSpline() {
+      import('https://unpkg.com/@splinetool/runtime@1.12.98/build/runtime.js').then(function(mod) {
+        var Application = mod.Application;
+        var hero = document.querySelector('[data-testid="hero-section"]');
+        if (!hero) return;
+        var container = hero.querySelector('.absolute.inset-0.z-0');
+        if (!container) return;
+        var old = container.querySelector('canvas');
+        if (old) old.remove();
+        var canvas = document.createElement('canvas');
+        canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;outline:none;pointer-events:none;display:block;';
+        container.appendChild(canvas);
+        function resize() {
+          var w = container.clientWidth || window.innerWidth;
+          var h = container.clientHeight || window.innerHeight;
+          if (w < 2 || h < 2) return;
+          canvas.width = w; canvas.height = h;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        new ResizeObserver(resize).observe(container);
+        var app = new Application(canvas);
+        app.load('https://prod.spline.design/c3gGCfGy08T3XbOf/scene.splinecode')
+          .then(function() { /* Spline loaded */ })
+          .catch(function(e) { console.error('Spline load failed:', e); });
+      });
     }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', tryInit);
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(initSpline, { timeout: 3000 });
     } else {
-      tryInit();
+      setTimeout(initSpline, 1000);
     }
   </script>
 <script defer src="/i18n.js"></script>
