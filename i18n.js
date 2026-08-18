@@ -598,7 +598,8 @@ function injectToggle() {
   document.body.appendChild(desktop);
 
   // Mobile: inside burger menu (hidden on desktop via CSS)
-  const navMobile = document.getElementById('nav-mobile');
+  // Try static pages first (#nav-mobile), then SPA (.nav-mobile-menu)
+  const navMobile = document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
   if (navMobile) {
     const mobile = document.createElement('div');
     mobile.className = 'lang-toggle lang-toggle-mobile';
@@ -683,7 +684,10 @@ if (document.readyState === 'loading') {
 
 // Re-inject toggle + chi-sono for SPA (React may remove them during re-render)
 const reInject = setInterval(() => {
-  if (!document.querySelector('.lang-toggle-desktop')) {
+  const needsDesktop = !document.querySelector('.lang-toggle-desktop');
+  const needsMobile = !document.querySelector('.lang-toggle-mobile');
+  const navMobile = document.getElementById('nav-mobile') || document.querySelector('[data-testid="nav-mobile-menu"]');
+  if (needsDesktop || (needsMobile && navMobile)) {
     injectToggle();
     const lang = getLang();
     document.querySelectorAll('.lang-toggle button').forEach(b => {
