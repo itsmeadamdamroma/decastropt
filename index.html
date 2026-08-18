@@ -113,8 +113,11 @@
       "https://www.instagram.com/decastro_pt_lab",
       "https://www.linkedin.com/company/decastro-training-lab",
       "https://www.trustpilot.com/review/decastropt.com",
-      "https://brownbook.net/business/55418316/decastro-pt"
+      "https://brownbook.net/business/55418316/decastro-pt",
+      "https://medium.com/@decastro-pt"
     ],
+    "founder": {"@id": "https://decastropt.com#davide"},
+    "employee": {"@id": "https://decastropt.com#davide"},
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -194,7 +197,20 @@
   }
   </script>
 
-  <!-- Structured Data: FAQPage (10 questions for rich snippets) -->
+  <!-- Structured Data: Davide Decastro Person (linked from LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://decastropt.com#davide",
+    "name": "Davide Decastro",
+    "jobTitle": "Personal Trainer Certificato",
+    "worksFor": {"@id": "https://decastropt.com#business"},
+    "url": "https://decastropt.com",
+    "image": "https://decastropt.com/og-image.png",
+    "knowsAbout": ["Personal Training", "Programmazione Scientifica", "Assessment Corporeo", "Riabilitazione Post-Infortunio", "Nutrizione Sportiva"]
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -254,40 +270,6 @@
         "@type": "Question",
         "name": "Come calcolate BMI, BMR e TDEE?",
         "acceptedAnswer": { "@type": "Answer", "text": "Utilizzo i tuoi dati reali (peso, altezza, età, livello di attività) per calcolare BMI, BMR e TDEE. Da questi numeri costruisco volume, intensità e recupero. Niente template generici." }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Structured Data: Reviews -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PersonalTrainer",
-    "name": "Davide Decastro PT",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "3"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Marco T." },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Dopo 3 mesi con Davide ho perso 8 kg e ritrovato energie. Le schede sono chiare, tecniche e adatte al mio livello."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Giulia R." },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Mi ha seguita durante la gravidanza e dopo. Sempre attento alla sicurezza e ai miei limiti fisici. Consigliatissima."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Andrea L." },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Ex pugile che sa il fatto suo. Mi ha preparato per la prima maratona con un piano serio e progressivo. Zero infortuni."
       }
     ]
   }
