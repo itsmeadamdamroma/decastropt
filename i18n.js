@@ -583,41 +583,38 @@ function ensureBurger() {
   }
 }
 
-// Inject toggle button — always floating, never inside React tree
+// Inject toggle button — CSS controls visibility, not JS
 function injectToggle() {
-  if (document.querySelector('.lang-toggle')) return;
+  if (document.querySelector('.lang-toggle-desktop')) return;
   ensureBurger();
-  
-  const toggle = document.createElement('div');
-  toggle.className = 'lang-toggle';
-  toggle.innerHTML = '<button data-lang="it" class="active" style="background:none;border:none;color:var(--text,#fff);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">IT</button><span style="color:var(--text-dim,#888);font-size:12px">·</span><button data-lang="en" style="background:none;border:none;color:var(--text-dim,#888);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">EN</button>';
-  
-  // Desktop: floating top-right. Mobile: inside burger menu
-  const isMobile = window.innerWidth < 768;
-  if (isMobile && document.getElementById('nav-mobile')) {
-    toggle.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
-    document.getElementById('nav-mobile').appendChild(toggle);
-  } else {
-    toggle.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
-    document.body.appendChild(toggle);
+
+  const toggleHTML = '<button data-lang="it" class="active" style="background:none;border:none;color:var(--text,#fff);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">IT</button><span style="color:var(--text-dim,#888);font-size:12px">·</span><button data-lang="en" style="background:none;border:none;color:var(--text-dim,#888);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">EN</button>';
+
+  // Desktop: floating top-right (hidden on mobile via CSS)
+  const desktop = document.createElement('div');
+  desktop.className = 'lang-toggle lang-toggle-desktop';
+  desktop.innerHTML = toggleHTML;
+  desktop.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
+  document.body.appendChild(desktop);
+
+  // Mobile: inside burger menu (hidden on desktop via CSS)
+  const navMobile = document.getElementById('nav-mobile');
+  if (navMobile) {
+    const mobile = document.createElement('div');
+    mobile.className = 'lang-toggle lang-toggle-mobile';
+    mobile.innerHTML = toggleHTML;
+    mobile.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
+    navMobile.appendChild(mobile);
+  }
+
+  // CSS: show/hide based on viewport
+  if (!document.getElementById('lang-toggle-css')) {
+    const css = '<style id="lang-toggle-css">@media(max-width:768px){.lang-toggle-desktop{display:none!important}.lang-toggle-mobile{display:flex!important}}@media(min-width:769px){.lang-toggle-mobile{display:none!important}.lang-toggle-desktop{display:flex!important}}</style>';
+    document.head.insertAdjacentHTML('beforeend', css);
   }
 }
 
-// Reposition toggle on resize
-window.addEventListener('resize', () => {
-  ensureBurger();
-  const t = document.querySelector('.lang-toggle');
-  if (!t) return;
-  const isMobile = window.innerWidth < 768;
-  const navMobile = document.getElementById('nav-mobile');
-  if (isMobile && navMobile && t.parentElement !== navMobile) {
-    t.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
-    navMobile.appendChild(t);
-  } else if (!isMobile && t.parentElement !== document.body) {
-    t.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
-    document.body.appendChild(t);
-  }
-});
+// No resize handler needed — CSS media queries handle toggle visibility
 
 // Inject "Chi sono" link into SPA nav (React doesn't include it)
 function injectChiSono() {
@@ -686,7 +683,7 @@ if (document.readyState === 'loading') {
 
 // Re-inject toggle + chi-sono for SPA (React may remove them during re-render)
 const reInject = setInterval(() => {
-  if (!document.querySelector('.lang-toggle')) {
+  if (!document.querySelector('.lang-toggle-desktop')) {
     injectToggle();
     const lang = getLang();
     document.querySelectorAll('.lang-toggle button').forEach(b => {
