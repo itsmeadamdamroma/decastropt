@@ -512,16 +512,90 @@ function applyLang(lang) {
   }
 }
 
+// Inject burger menu CSS + HTML on pages that lack it, then place lang toggle inside
+function injectBurgerCSS() {
+  if (document.getElementById('burger-css')) return;
+  const css = `<style id="burger-css">
+.nav-burger{display:none;flex-direction:column;justify-content:space-between;width:24px;height:18px;background:none;border:none;cursor:pointer;padding:0;z-index:60}
+.nav-burger span{display:block;width:100%;height:2px;background:var(--text,#F8FAFC);transition:transform .3s,opacity .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:0;right:0;width:100%;max-width:300px;height:100vh;background:rgba(6,6,6,0.98);backdrop-filter:blur(12px);border-left:1px solid rgba(255,255,255,0.1);padding:80px 24px 24px;z-index:55;flex-direction:column;gap:0;transform:translateX(100%);transition:transform .3s ease}
+.nav-mobile.open{display:flex;transform:translateX(0)}
+.nav-mobile a{font-family:Oswald,sans-serif;font-size:18px;color:var(--text,#F8FAFC);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);text-transform:uppercase;letter-spacing:0.02em}
+.nav-mobile a:hover{color:var(--accent,#F97316)}
+.nav-mobile-cta{margin-top:16px;background:var(--accent,#F97316);color:#000!important;text-align:center;padding:14px!important;border-radius:0;font-weight:600}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none!important}
+  .nav-burger{display:flex}
+}
+  </style>`;
+  document.head.insertAdjacentHTML('beforeend', css);
+}
+
+function ensureBurger() {
+  injectBurgerCSS();
+  const nav = document.querySelector('nav.nav, .nav');
+  if (!nav) return;
+  
+  // Add burger button if missing
+  if (!nav.querySelector('.nav-burger')) {
+    const btn = document.createElement('button');
+    btn.className = 'nav-burger';
+    btn.setAttribute('aria-label', 'Menu');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    btn.onclick = function() {
+      const m = document.getElementById('nav-mobile');
+      this.classList.toggle('open');
+      if (m) m.classList.toggle('open');
+    };
+    nav.appendChild(btn);
+  }
+  
+  // Add nav-mobile container if missing
+  if (!document.getElementById('nav-mobile')) {
+    const mobile = document.createElement('div');
+    mobile.className = 'nav-mobile';
+    mobile.id = 'nav-mobile';
+    // Copy nav links
+    const links = nav.querySelectorAll('.nav-links a');
+    links.forEach(a => {
+      const clone = a.cloneNode(true);
+      clone.addEventListener('click', () => {
+        mobile.classList.remove('open');
+        nav.querySelector('.nav-burger')?.classList.remove('open');
+      });
+      mobile.appendChild(clone);
+    });
+    // Add CTA if exists
+    const cta = nav.querySelector('.nav-cta');
+    if (cta) {
+      const ctaClone = cta.cloneNode(true);
+      ctaClone.className = 'nav-mobile-cta';
+      ctaClone.addEventListener('click', () => {
+        mobile.classList.remove('open');
+        nav.querySelector('.nav-burger')?.classList.remove('open');
+      });
+      mobile.appendChild(ctaClone);
+    }
+    nav.parentNode.insertBefore(mobile, nav.nextSibling);
+  }
+}
+
 // Inject toggle button — always floating, never inside React tree
 function injectToggle() {
   if (document.querySelector('.lang-toggle')) return;
+  ensureBurger();
+  
   const toggle = document.createElement('div');
   toggle.className = 'lang-toggle';
   toggle.innerHTML = '<button data-lang="it" class="active" style="background:none;border:none;color:var(--text,#fff);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">IT</button><span style="color:var(--text-dim,#888);font-size:12px">·</span><button data-lang="en" style="background:none;border:none;color:var(--text-dim,#888);font-family:Oswald,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;cursor:pointer;padding:2px 4px">EN</button>';
+  
   // Desktop: floating top-right. Mobile: inside burger menu
   const isMobile = window.innerWidth < 768;
   if (isMobile && document.getElementById('nav-mobile')) {
-    toggle.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.05)';
+    toggle.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
     document.getElementById('nav-mobile').appendChild(toggle);
   } else {
     toggle.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
@@ -531,12 +605,13 @@ function injectToggle() {
 
 // Reposition toggle on resize
 window.addEventListener('resize', () => {
+  ensureBurger();
   const t = document.querySelector('.lang-toggle');
   if (!t) return;
   const isMobile = window.innerWidth < 768;
   const navMobile = document.getElementById('nav-mobile');
   if (isMobile && navMobile && t.parentElement !== navMobile) {
-    t.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.05)';
+    t.style.cssText = 'display:flex;gap:4px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)';
     navMobile.appendChild(t);
   } else if (!isMobile && t.parentElement !== document.body) {
     t.style.cssText = 'position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:4px;align-items:center;background:rgba(6,6,6,0.85);backdrop-filter:blur(8px);padding:4px 10px;border:1px solid rgba(255,255,255,0.1)';
