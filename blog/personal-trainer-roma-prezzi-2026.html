@@ -211,15 +211,10 @@ li{margin-bottom:8px;line-height:1.7}
   </nav>
 </div>
 <script>
-(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function c(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function o(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function t(){m.classList.contains('open')?c():o();}b.addEventListener('click',t);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',c)});})();
+(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function open(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('open')?close():open();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});})();
 </script>
 
 
-<script>
-(function(){const b=document.querySelector('[data-burger]');const m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.add('hidden');document.body.classList.remove('overflow-hidden');b.setAttribute('aria-label','Apri menu');}function open(){m.classList.remove('hidden');document.body.classList.add('overflow-hidden');b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('hidden')?open():close();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));})();
-</script>
-
-<script>document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav-mobile').classList.remove('open');document.querySelector('.nav-burger').classList.remove('open')})});</script>
 <div class="container">
 <h1>Personal Trainer Roma: prezzi e costi nel 2026</h1>
 <div class="meta meta-date">7 Agosto 2026 · 8 min lettura · Davide Decastro</div>

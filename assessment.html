@@ -106,7 +106,6 @@ textarea{resize:none;min-height:80px}
 <body>
 
 
-
 <style>
 .hd-bar{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .hd-wrap{max-width:1400px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
@@ -162,15 +161,9 @@ textarea{resize:none;min-height:80px}
   </nav>
 </div>
 <script>
-(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function c(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function o(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function t(){m.classList.contains('open')?c():o();}b.addEventListener('click',t);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',c)});})();
+(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function open(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('open')?close():open();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});})();
 </script>
 
-
-<script>
-(function(){const b=document.querySelector('[data-burger]');const m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.add('hidden');document.body.classList.remove('overflow-hidden');b.setAttribute('aria-label','Apri menu');}function open(){m.classList.remove('hidden');document.body.classList.add('overflow-hidden');b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('hidden')?open():close();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));})();
-</script>
-
-<script>document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav-mobile').classList.remove('open');document.querySelector('.nav-burger').classList.remove('open')})});</script>
 
 <div class="progress" id="progress">
   <div class="progress-bar active"></div>

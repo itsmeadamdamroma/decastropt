@@ -1,0 +1,33 @@
+<header class="hd-bar">
+  <div class="hd-wrap">
+    <a href="/" class="hd-logo">DECASTRO<span>.</span></a>
+    <nav class="hd-desk">
+      <a href="/#metodo">Metodo</a>
+      <a href="/servizi.html">Servizi</a>
+      <a href="/#storie">Storie</a>
+      <a href="/blog/">Blog</a>
+      <a href="/risorse/">Risorse</a>
+      <a href="/chi-sono.html">Chi sono</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a href="/#contatti" class="hd-cta hd-cta-desk">Richiedi scheda</a>
+    <button class="hd-burger" data-burger aria-label="Apri menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+</header>
+<div class="hd-menu" data-mobile-menu>
+  <nav>
+    <a href="/#metodo">Metodo</a>
+    <a href="/servizi.html">Servizi</a>
+    <a href="/#storie">Storie</a>
+    <a href="/blog/">Blog</a>
+    <a href="/risorse/">Risorse</a>
+    <a href="/chi-sono.html">Chi sono</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#contatti" class="hd-menu-cta">Richiedi scheda</a>
+  </nav>
+</div>
+<script>
+(function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');if(!b||!m)return;function close(){m.classList.remove('open');document.body.style.overflow='';b.setAttribute('aria-label','Apri menu');}function open(){m.classList.add('open');document.body.style.overflow='hidden';b.setAttribute('aria-label','Chiudi menu');}function toggle(){m.classList.contains('open')?close():open();}b.addEventListener('click',toggle);m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});})();
+</script>

@@ -1,0 +1,24 @@
+<style>
+.hd-bar{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(6,6,6,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hd-wrap{max-width:1400px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.hd-logo{font-family:Oswald,sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;color:#F8FAFC;text-decoration:none}
+.hd-logo span{color:#F97316}
+.hd-desk{display:flex;align-items:center;gap:36px}
+.hd-desk a{font-family:monospace,'Space Mono',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:0.2em;color:#94A3B8;text-decoration:none;transition:color .2s}
+.hd-desk a:hover{color:#F97316}
+.hd-cta{font-family:Oswald,sans-serif;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.025em;color:#060606;background:#F97316;padding:10px 20px;text-decoration:none;transition:background .2s}
+.hd-cta:hover{background:#fff}
+.hd-burger{display:none;width:40px;height:40px;align-items:center;justify-content:center;color:#F8FAFC;background:none;border:none;padding:0;cursor:pointer}
+.hd-menu{display:none;position:fixed;inset:0;z-index:40;background:rgba(6,6,6,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:96px 32px 32px}
+.hd-menu.open{display:block}
+.hd-menu nav{display:flex;flex-direction:column;gap:0}
+.hd-menu a{font-family:Oswald,sans-serif;font-size:26px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#F8FAFC;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);transition:color .2s}
+.hd-menu a:hover{color:#F97316}
+.hd-menu-cta{margin-top:24px;background:#F97316;color:#060606!important;text-align:center;border-bottom:none!important;padding:16px!important;font-size:18px}
+.hd-menu-cta:hover{background:#fff}
+@media(max-width:768px){
+  .hd-desk{display:none!important}
+  .hd-cta-desk{display:none!important}
+  .hd-burger{display:flex}
+}
+</style>
