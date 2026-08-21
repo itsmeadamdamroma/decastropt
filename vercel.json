@@ -1,6 +1,8 @@
 {
   "public": true,
-  "github": { "enabled": false },
+  "github": {
+    "enabled": false
+  },
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
@@ -9,13 +11,48 @@
       "source": "/(.*)",
       "destination": "https://decastropt.com/$1",
       "permanent": true,
-      "has": [{ "type": "host", "value": "www.decastropt.com" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "www.decastropt.com"
+        }
+      ]
     },
-    { "source": "/servizi", "destination": "/servizi.html", "permanent": true },
-    { "source": "/chi-sono", "destination": "/chi-sono.html", "permanent": true },
-    { "source": "/assessment", "destination": "/assessment.html", "permanent": true }
+    {
+      "source": "/servizi",
+      "destination": "/servizi.html",
+      "permanent": true
+    },
+    {
+      "source": "/chi-sono",
+      "destination": "/chi-sono.html",
+      "permanent": true
+    },
+    {
+      "source": "/assessment",
+      "destination": "/assessment.html",
+      "permanent": true
+    }
   ],
   "headers": [
+    {
+      "source": "^/(.*)\\.html?$",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=300, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "^/$",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=300, stale-while-revalidate=86400"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
@@ -35,123 +72,195 @@
           "key": "Access-Control-Allow-Methods",
           "value": "GET, POST, OPTIONS"
         },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     },
     {
       "source": "/.well-known/api-catalog",
       "headers": [
-        { "key": "Content-Type", "value": "application/linkset+json" }
+        {
+          "key": "Content-Type",
+          "value": "application/linkset+json"
+        }
       ]
     },
     {
       "source": "/.well-known/api-catalog/index.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/linkset+json" }
+        {
+          "key": "Content-Type",
+          "value": "application/linkset+json"
+        }
       ]
     },
     {
       "source": "/.well-known/api-catalog/openapi.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/vnd.oai.openapi+json" }
+        {
+          "key": "Content-Type",
+          "value": "application/vnd.oai.openapi+json"
+        }
       ]
     },
     {
       "source": "/.well-known/oauth-authorization-server",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/.well-known/oauth-protected-resource",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/.well-known/agent-skills/index.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/.well-known/mcp/server-card.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/auth.md",
       "headers": [
-        { "key": "Content-Type", "value": "text/markdown" }
+        {
+          "key": "Content-Type",
+          "value": "text/markdown"
+        }
       ]
     },
     {
       "source": "/index.md",
       "headers": [
-        { "key": "Content-Type", "value": "text/markdown" }
+        {
+          "key": "Content-Type",
+          "value": "text/markdown"
+        }
       ]
     },
     {
       "source": "/api/markdown",
       "headers": [
-        { "key": "Content-Type", "value": "text/markdown" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "text/markdown"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/.well-known/http-message-signatures-directory",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/.well-known/jwks.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/.well-known/agent-card.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     },
     {
       "source": "/bundle.js",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/bundle-new.js",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/style-new.css",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/i18n.js",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(webp|jpg|png|svg|ico|woff2)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/docs/api", "destination": "/.well-known/api-catalog/index.json" }
+    {
+      "source": "/docs/api",
+      "destination": "/.well-known/api-catalog/index.json"
+    }
   ]
 }

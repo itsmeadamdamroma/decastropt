@@ -65,114 +65,176 @@
 
   <!-- Structured Data: LocalBusiness + Geo -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://decastropt.com#business",
-    "name": "Davide Decastro PT",
-    "description": "Personal trainer a Roma. Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Assessment corporeo (BMI, BFR, BMR, TDEE), schede personalizzate, riabilitazione post-infortunio.",
-    "url": "https://decastropt.com",
-    "telephone": "+39 351 383 8701",
-    "email": "info@decastropt.com",
-    "image": "https://decastropt.com/og-image.png",
-    "logo": "https://decastropt.com/og-image.png",
-    "priceRange": "€€",
-    "currenciesAccepted": "EUR",
-    "paymentAccepted": "Cash, Bank Transfer",
-    "areaServed": {
-      "@type": "City",
-      "name": "Roma"
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://decastropt.com#business",
+  "name": "Davide Decastro PT",
+  "description": "Personal trainer a Roma. Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Assessment corporeo (BMI, BFR, BMR, TDEE), schede personalizzate, riabilitazione post-infortunio.",
+  "url": "https://decastropt.com",
+  "telephone": "+39 351 383 8701",
+  "email": "info@decastropt.com",
+  "image": "https://decastropt.com/og-image.png",
+  "logo": "https://decastropt.com/og-image.png",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Bank Transfer",
+  "areaServed": {
+    "@type": "City",
+    "name": "Roma"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Roma",
+    "addressRegion": "Lazio",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.9028",
+    "longitude": "12.4964"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "21:00"
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Roma",
-      "addressRegion": "Lazio",
-      "addressCountry": "IT"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "41.9028",
-      "longitude": "12.4964"
-    },
-    "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/decastro_pt_lab",
+    "https://www.linkedin.com/company/decastro-training-lab",
+    "https://www.trustpilot.com/review/decastropt.com",
+    "https://brownbook.net/business/55418316/decastro-pt",
+    "https://medium.com/@decastro-pt"
+  ],
+  "founder": {
+    "@id": "https://decastropt.com#davide"
+  },
+  "hasMap": "https://www.google.com/maps?cid=15446145053135424259",
+  "employee": {
+    "@id": "https://decastropt.com#davide"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "37",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servizi di Personal Training",
+    "itemListElement": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:00",
-        "closes": "21:00"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Scheda tecnica personalizzata",
+          "description": "Programmazione di allenamento su misura basata sui tuoi obiettivi"
+        },
+        "price": "50",
+        "priceCurrency": "EUR"
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday"],
-        "opens": "08:00",
-        "closes": "18:00"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Assessment personalizzato",
+          "description": "BMI, BFR, BMR, TDEE, analisi posturale completa"
+        },
+        "price": "30",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Consulenza gratuita",
+          "description": "Prima consulenza gratuita per valutare obiettivi e percorso"
+        },
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Consulenza nutrizionale",
+          "description": "Piano alimentare opzionale personalizzato"
+        },
+        "price": "40",
+        "priceCurrency": "EUR"
       }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/decastro_pt_lab",
-      "https://www.linkedin.com/company/decastro-training-lab",
-      "https://www.trustpilot.com/review/decastropt.com",
-      "https://brownbook.net/business/55418316/decastro-pt",
-      "https://medium.com/@decastro-pt"
-    ],
-    "founder": {"@id": "https://decastropt.com#davide"},
-    "hasMap": "https://www.google.com/maps?cid=15446145053135424259",
-    "employee": {"@id": "https://decastropt.com#davide"},
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "37",
-      "bestRating": "5",
-      "worstRating": "1"
+    ]
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Marco T."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Dopo 3 mesi con Davide ho perso 8 kg e ritrovato energie. Le schede sono chiare, tecniche e adatte al mio livello.",
+      "publisher": {
+        "@id": "https://decastropt.com#business"
+      }
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servizi di Personal Training",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Scheda tecnica personalizzata",
-            "description": "Programmazione di allenamento su misura basata sui tuoi obiettivi"
-          },
-          "price": "50",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Assessment personalizzato",
-            "description": "BMI, BFR, BMR, TDEE, analisi posturale completa"
-          },
-          "price": "30",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Consulenza gratuita",
-            "description": "Prima consulenza gratuita per valutare obiettivi e percorso"
-          },
-          "price": "0",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Consulenza nutrizionale",
-            "description": "Piano alimentare opzionale personalizzato"
-          },
-          "price": "40",
-          "priceCurrency": "EUR"
-        }
-      ]
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Giulia R."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Mi ha seguita durante la gravidanza e dopo. Sempre attento alla sicurezza e ai miei limiti fisici. Consigliatissima.",
+      "publisher": {
+        "@id": "https://decastropt.com#business"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Andrea L."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Ex pugile che sa il fatto suo. Mi ha preparato per la prima maratona con un piano serio e progressivo. Zero infortuni.",
+      "publisher": {
+        "@id": "https://decastropt.com#business"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
 
   <!-- Structured Data: Davide Decastro Person (linked from LocalBusiness) -->
   <script type="application/ld+json">
@@ -368,6 +430,7 @@
       <blockquote><p><strong>Marco T.</strong> — "Dopo 3 mesi con Davide ho perso 8 kg e ritrovato energie. Le schede sono chiare, tecniche e adatte al mio livello."</p></blockquote>
       <blockquote><p><strong>Giulia R.</strong> — "Mi ha seguita durante la gravidanza e dopo. Sempre attento alla sicurezza e ai miei limiti fisici. Consigliatissima."</p></blockquote>
       <blockquote><p><strong>Andrea L.</strong> — "Ex pugile che sa il fatto suo. Mi ha preparato per la prima maratona con un piano serio e progressivo. Zero infortuni."</p></blockquote>
+      <p style="margin-top:18px;font-size:14px"><a href="https://www.trustpilot.com/review/decastropt.com" target="_blank" rel="noopener">Leggi tutte le recensioni su Trustpilot ↗</a></p>
 
       <h2>Contatti</h2>
       <p>
