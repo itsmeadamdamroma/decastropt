@@ -99,6 +99,8 @@ const DICT = {
   "PDF pronto per la palestra entro 48-72 ore lavorative.": "PDF ready for the gym within 48-72 business hours.",
   "Perché scegliere Decastro PT": "Why choose Decastro PT",
   "Non schede copiate da Instagram. Costruisco protocolli personalizzati dai tuoi dati reali: BMI, BMR, TDEE. Rispondi a poche domande e ricevi la tua scheda in PDF.": "Protocolli personalizzati costruiti sui tuoi dati reali: BMI, BMR, TDEE. Rispondi a poche domande e ricevi la tua scheda in PDF.",
+  // Blog lang notice
+  "Questo articolo è disponibile solo in italiano": "This article is available in Italian only",
   // Servizi page
   "Servizi e Prezzi": "Services & Pricing",
   "Servizi e Prezzi | Davide Decastro PT — Personal Trainer Roma": "Services & Pricing | Davide Decastro PT — Personal Trainer Rome",
@@ -549,7 +551,7 @@ function injectToggle() {
 
   // CSS: show/hide based on viewport
   if (!document.getElementById('lang-toggle-css')) {
-    const css = '<style id="lang-toggle-css">@media(max-width:768px){.lang-toggle-desktop{display:none!important}.lang-toggle-mobile{display:flex!important}}@media(min-width:769px){.lang-toggle-mobile{display:none!important}.lang-toggle-desktop{display:flex!important}}</style>';
+    const css = '<style id="lang-toggle-css">@media(max-width:768px){.lang-toggle-desktop{display:none!important}.lang-toggle-mobile{display:flex!important}}@media(min-width:769px){.lang-toggle-mobile{display:none!important}.lang-toggle-desktop{display:flex!important}}.blog-lang-notice{display:none}html[lang="en"] .blog-lang-notice{display:block;padding:10px 14px;margin:16px 0;border:1px solid rgba(249,115,22,0.3);border-radius:8px;background:rgba(249,115,22,0.05);color:#94A3B8;font-size:14px;font-family:Outfit,sans-serif}</style>';
     document.head.insertAdjacentHTML('beforeend', css);
   }
 
