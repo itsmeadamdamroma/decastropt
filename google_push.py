@@ -9,7 +9,7 @@ import json, subprocess, sys, os
 from datetime import datetime, timezone
 
 SERVICE_ACCOUNT = "/root/.hermes/gsc-service-account.json"
-INDEXNOW_KEY = "89c34137e077bdf8ebc85945bc06e826"
+INDEXNOW_KEY = "dbac97519efb45c9a786ad0031320902"
 SITE = "https://decastropt.com"
 SITEMAP = f"{SITE}/sitemap.xml"
 LOG = "/root/decastropt/cron_push.log"
