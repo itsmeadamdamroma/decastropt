@@ -32,6 +32,16 @@
       "source": "/assessment",
       "destination": "/assessment.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/allenamento-post-infortunio-il-ritorno-al-gioco-senza-rischiare-di-ripetere-gli-errori",
+      "destination": "/blog/allenamento-post-infortunio-roma.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/personal-trainer-donna-roma-come-migliorare-la-sua-forma-fisica-con-un-professionista",
+      "destination": "/blog/personal-trainer-donna-roma.html",
+      "permanent": true
     }
   ],
   "headers": [
