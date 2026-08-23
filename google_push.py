@@ -39,6 +39,8 @@ URLS = [
     f"{SITE}/blog/deficit-calorico-il-segreto-per-un-corpo-perfetto.html",
     f"{SITE}/blog/migliaia-di-muscoli-il-segreto-della-masse-muscolare.html",
     f"{SITE}/blog/calcolare-bmi-bmr-e-tdee-la-chiave-per-un-allenamento-personalizzato.html",
+    f"{SITE}/blog/personal-trainer-donna-roma-come-migliorare-la-sua-forma-fisica-con-un-professionista.html",
+    f"{SITE}/blog/allenamento-post-infortunio-il-ritorno-al-gioco-senza-rischiare-di-ripetere-gli-errori.html",
 ]
 
 def log(msg):
@@ -94,14 +96,14 @@ def indexnow():
     payload = json.dumps({
         "host": "decastropt.com",
         "key": INDEXNOW_KEY,
-        "keyLocation": f"{SITE}/indexnow.txt",
+        "keyLocation": f"{SITE}/{INDEXNOW_KEY}.txt",
         "urlList": [u.replace(SITE, "") for u in URLS if u != f"{SITE}/"]
     })
     # Full URLs
     payload = json.dumps({
         "host": "decastropt.com",
         "key": INDEXNOW_KEY,
-        "keyLocation": f"{SITE}/indexnow.txt",
+        "keyLocation": f"{SITE}/{INDEXNOW_KEY}.txt",
         "urlList": URLS
     })
     

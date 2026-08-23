@@ -58,7 +58,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agent-skills/index.json>; rel=\"service-doc\"; type=\"application/json\", </api/markdown>; rel=\"alternate\"; type=\"text/markdown\", </docs/api>; rel=\"service-doc\"; type=\"text/html\", </api/health>; rel=\"status\"; type=\"application/json\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\""
+          "value": "</sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agent-skills/index.json>; rel=\"service-doc\"; type=\"application/json\", </api/markdown>; rel=\"alternate\"; type=\"text/markdown\", </docs/api>; rel=\"service-doc\"; type=\"text/html\", </api/health>; rel=\"status\"; type=\"application/json\", </auth.md>; rel=\"describedby\"; type=\"text/markdown\""
         },
         {
           "key": "Access-Control-Allow-Origin",
