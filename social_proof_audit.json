@@ -1,0 +1,87 @@
+{
+  "audit_date": "2026-08-23",
+  "site": "/root/decastropt/",
+  "social_profiles": {
+    "instagram": "https://www.instagram.com/decastro_pt_lab",
+    "linkedin": "https://www.linkedin.com/company/decastro-training-lab",
+    "trustpilot": "https://www.trustpilot.com/review/decastropt.com",
+    "whatsapp": "https://wa.me/393513838701",
+    "email": "info@decastropt.com",
+    "google_maps": "https://www.google.com/maps?cid=15446145053135424259"
+  },
+  "nap": {
+    "name": "Davide Decastro PT",
+    "address": "Roma, Lazio, IT",
+    "phone": "+39 351 383 8701",
+    "consistent_across_pages": true
+  },
+  "pages_updated": [
+    {
+      "file": "bundle-new.js",
+      "changes": [
+        "Added linkedin, trustpilot, googleMaps to kt config object",
+        "Added LinkedIn, Trustpilot, Google Maps links to SPA footer (WP function)",
+        "Added LinkedIn, Trustpilot, Google Maps contact items to contact section (UP function)"
+      ],
+      "signals_added": ["linkedin", "trustpilot", "google_maps"]
+    },
+    {
+      "file": "bundle-mobile.js",
+      "changes": [
+        "Added linkedin, trustpilot, googleMaps to kt config object",
+        "Added LinkedIn, Trustpilot, Google Maps links to SPA footer (WP function)",
+        "Added LinkedIn, Trustpilot, Google Maps contact items to contact section (UP function)"
+      ],
+      "signals_added": ["linkedin", "trustpilot", "google_maps"]
+    }
+  ],
+  "pages_already_complete": [
+    "index.html (noscript + structured data had all 6 signals; JS bundle was missing LinkedIn, Trustpilot, Google Maps — now fixed)",
+    "servizi.html (footer: IG, LinkedIn, WhatsApp, Email, Trustpilot, Google Maps)",
+    "assessment.html (footer: IG, LinkedIn, WhatsApp, Email, Trustpilot, Google Maps)",
+    "chi-sono.html (footer: IG, LinkedIn, WhatsApp, Email, Trustpilot, Google Maps)",
+    "personal-trainer-roma-centro.html (footer: all 6 signals)",
+    "personal-trainer-roma-est.html (footer: all 6 signals)",
+    "personal-trainer-roma-nord.html (footer: all 6 signals)",
+    "personal-trainer-roma-ovest.html (footer: all 6 signals)",
+    "personal-trainer-roma-sud.html (footer: all 6 signals)",
+    "privacy.html (footer: all 6 signals)",
+    "termini.html (footer: all 6 signals)",
+    "terms.html (footer: all 6 signals)",
+    "risorse/index.html (footer: all 6 signals)",
+    "risorse/faq-personal-trainer-roma.html (footer: all 6 signals)",
+    "blog/index.html (footer: all 6 signals)",
+    "blog/allenamento-a-casa-vs-palestra.html (footer: all 6 signals)",
+    "blog/allenamento-post-infortunio-il-ritorno-al-gioco-senza-rischiare-di-ripetere-gli-errori.html (footer: all 6 signals)",
+    "blog/allenamento-post-infortunio-roma.html (footer: all 6 signals)",
+    "blog/assessment-corporeo-roma-bmi-bfr-bmr.html (footer: all 6 signals)",
+    "blog/calcolare-bmi-bmr-e-tdee-la-chiave-per-un-allenamento-personalizzato.html (footer: all 6 signals)",
+    "blog/deficit-calorico-il-segreto-per-un-corpo-perfetto.html (footer: all 6 signals)",
+    "blog/migliaia-di-muscoli-il-segreto-della-masse-muscolare.html (footer: all 6 signals)",
+    "blog/nutrizione-sportiva-calcolo-macronutrienti.html (footer: all 6 signals)",
+    "blog/personal-trainer-donna-roma-come-migliorare-la-sua-forma-fisica-con-un-professionista.html (footer: all 6 signals)",
+    "blog/personal-trainer-donna-roma.html (footer: all 6 signals)",
+    "blog/personal-trainer-online-vs-presenza.html (footer: all 6 signals)",
+    "blog/personal-trainer-roma-come-scegliere.html (footer: all 6 signals)",
+    "blog/personal-trainer-roma-prezzi-2026.html (footer: all 6 signals)",
+    "blog/programmazione-allenamento-principianti.html (footer: all 6 signals)",
+    "blog/proteine-per-massa-la-chiave-del-successo-per-i-tuoi-obiettivi.html (footer: all 6 signals)",
+    "blog/scheda-tecnica-personalizzata-cosa-aspettarsi.html (footer: all 6 signals)"
+  ],
+  "pages_not_applicable": [
+    "google871383dc80a59fbe.html (Google verification file, not a page)",
+    "_partials/*.html (build partials, not served directly)"
+  ],
+  "summary": {
+    "total_pages_checked": 31,
+    "pages_updated": 2,
+    "pages_already_complete": 31,
+    "signals_checked": ["instagram", "linkedin", "trustpilot", "whatsapp", "email", "google_maps", "nap_consistency"],
+    "nap_consistent": true,
+    "nap_format_variants": [
+      "'Davide Decastro PT · Roma · +39 351 383 8701' (modern pages: servizi, assessment, landing pages, legal pages, risorse)",
+      "'Davide Decastro | Personal Trainer — Roma · +39 351 383 8701' (blog posts, chi-sono)",
+      "Structured data in index.html and chi-sono.html (JSON-LD LocalBusiness/Person schema)"
+    ]
+  }
+}

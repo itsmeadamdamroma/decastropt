@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="DecastroPT-OSM-Submission">
+  <changeset>
+    <tag k="created_by" v="DecastroPT-OSM-Submission/1.0"/>
+    <tag k="comment" v="Add Decastro Training Lab fitness centre in Roma"/>
+  </changeset>
+  <node changeset="0" lat="41.9100711" lon="12.5359979">
+    <tag k="leisure" v="fitness_centre"/>
+    <tag k="name" v="Decastro Training Lab"/>
+    <tag k="website" v="https://decastropt.com"/>
+    <tag k="addr:city" v="Roma"/>
+    <tag k="addr:country" v="IT"/>
+    <tag k="addr:street" v="Via Vacuna"/>
+    <tag k="addr:postcode" v="00159"/>
+    <tag k="phone" v="+393513838701"/>
+    <tag k="email" v="info@decastropt.com"/>
+    <tag k="contact:instagram" v="https://www.instagram.com/decastro_pt_lab"/>
+  </node>
+</osm>

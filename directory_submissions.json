@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-08-23",
+  "submissions": [
+    {
+      "directory": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/edit?node=",
+      "status": "xml_prepared",
+      "notes": "OSM requires OAuth. XML payload at osm_node.xml. Use iD editor: https://www.openstreetmap.org/edit?editor=id#map=19/41.91007/12.53600",
+      "xml_file": "osm_node.xml",
+      "coords": "41.9100711, 12.5359979"
+    },
+    {
+      "directory": "Cylex.it",
+      "url": "https://www.cylex.it/registrazione-azienda.html",
+      "status": "needs_manual",
+      "notes": "Browser automation failed (rate limit). Manual submission required."
+    },
+    {
+      "directory": "PagineBianche",
+      "url": "https://www.paginebianche.it/inserisci-la-tua-attivita",
+      "status": "needs_manual",
+      "notes": "Requires account registration. Manual submission required."
+    },
+    {
+      "directory": "Fresha",
+      "url": "https://partners.fresha.com/signup",
+      "status": "needs_manual",
+      "notes": "Requires email verification. Manual submission required."
+    },
+    {
+      "directory": "My-PersonalTrainer.it",
+      "url": "https://www.my-personaltrainer.it/",
+      "status": "needs_manual",
+      "notes": "Find business listing submission page. Manual submission required."
+    },
+    {
+      "directory": "EREPS.eu",
+      "url": "https://ereps.eu/register",
+      "status": "needs_manual",
+      "notes": "European Register of Exercise Professionals. Requires qualification proof. Manual submission required."
+    }
+  ],
+  "already_live": [
+    {
+      "directory": "Google Business Profile",
+      "status": "live",
+      "id": "15446145053135424259"
+    },
+    {
+      "directory": "Trustpilot",
+      "status": "live",
+      "url": "https://www.trustpilot.com/review/decastropt.com"
+    },
+    {
+      "directory": "LinkedIn Company Page",
+      "status": "live",
+      "url": "https://www.linkedin.com/company/decastro-training-lab"
+    },
+    {
+      "directory": "Brownbook",
+      "status": "live",
+      "link_type": "dofollow"
+    },
+    {
+      "directory": "GitHub Pages",
+      "status": "live",
+      "url": "https://itsmeadamdamroma.github.io/decastropt-lab",
+      "dr": 95
+    },
+    {
+      "directory": "Foursquare",
+      "status": "in_review",
+      "url": "https://foursquare.com/placemakers/review-place/6a862cb2792bf35d930e0fe8"
+    },
+    {
+      "directory": "Bing Places",
+      "status": "pending_publish",
+      "eta": "7-12 days"
+    },
+    {
+      "directory": "Yelp",
+      "status": "in_moderation"
+    }
+  ]
+}
