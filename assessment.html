@@ -6,6 +6,13 @@
 <title>Richiedi la tua scheda | Decastro PT</title>
 <meta name="description" content="Compila il questionario e prenota la tua consulenza gratuita con Davide Decastro.">
 <link rel="canonical" href="https://decastropt.com/assessment.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richiedi la tua scheda | Decastro PT">
+<meta property="og:description" content="Compila il questionario e prenota la tua consulenza gratuita con Davide Decastro. Assessment corporeo completo: BMI, BMR, TDEE, body composition e movement screening.">
+<meta property="og:url" content="https://decastropt.com/assessment.html">
+<meta property="og:image" content="https://decastropt.com/og-image.png">
+<meta property="og:site_name" content="Decastro PT">
+<meta property="og:locale" content="it_IT">
   <link rel="alternate" hreflang="it" href="https://decastropt.com/assessment.html">
   <link rel="alternate" hreflang="en" href="https://decastropt.com/assessment.html">
   <link rel="alternate" hreflang="x-default" href="https://decastropt.com/assessment.html">
@@ -162,7 +169,135 @@ textarea{resize:none;min-height:80px}
 (function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');var h=document.querySelector('.hd-bar');if(!b||!m)return;function close(){m.classList.remove('open');b.classList.remove('open');}function open(){m.classList.add('open');b.classList.add('open');}b.addEventListener('click',function(){m.classList.contains('open')?close():open();});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});function s(){h.classList.toggle('scrolled',window.scrollY>40);}window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
 
+<style>
+/* Assessment info sections */
+.assess-info{max-width:760px;margin:0 auto;padding:40px 20px 0}
+.assess-section{padding:48px 0;border-top:1px solid var(--border)}
+.assess-section:first-child{border-top:none;padding-top:24px}
+.assess-section h2{font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:-0.025em;margin-bottom:8px;color:var(--text)}
+.assess-section .lead{color:var(--dim);font-size:15px;margin-bottom:24px}
+.assess-item{margin-bottom:20px}
+.assess-item h3{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:var(--accent);margin-bottom:6px}
+.assess-item p{font-size:15px;color:var(--dim);line-height:1.7}
+.assess-item p a{color:var(--text);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+.assess-steps{list-style:none;padding:0;margin:0;counter-reset:step}
+.assess-steps li{padding:16px 0 16px 48px;position:relative;border-bottom:1px solid var(--border)}
+.assess-steps li:last-child{border-bottom:none}
+.assess-steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:16px;width:32px;height:32px;background:var(--accent);color:#000;font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.assess-steps li strong{font-family:'Oswald',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:0.02em;display:block;margin-bottom:4px;color:var(--text)}
+.assess-steps li p{color:var(--dim);font-size:14px;margin:0}
+.assess-tools{display:grid;gap:20px}
+.assess-tools .assess-item{padding:20px;background:var(--surface);border:1px solid var(--border)}
+@media(max-width:640px){.assess-info{padding:24px 16px 0}.assess-section{padding:36px 0}.assess-section h2{font-size:20px}}
+</style>
 
+<div class="assess-info">
+
+  <!-- 1. Cosa misura l'assessment -->
+  <section class="assess-section">
+    <h2>Cosa misura l'assessment</h2>
+    <p class="lead">La valutazione iniziale raccoglie i parametri oggettivi che determinano il punto di partenza. Niente supposizioni: solo dati su cui costruire la programmazione.</p>
+
+    <div class="assess-item">
+      <h3>BMI (Body Mass Index)</h3>
+      <p>Il Body Mass Index rapporta peso e altezza per collocarti in una fascia di riferimento (sottopeso, normopeso, sovrappeso, obesità). Non è un indicatore perfetto perché non distingue massa magra da grasso, ma offre una prima fotografia utile per contestualizzare l'obiettivo e confrontarlo con i parametri successivi.</p>
+    </div>
+
+    <div class="assess-item">
+      <h3>BMR (Basal Metabolic Rate)</h3>
+      <p>Il metabolismo basale è il numero di calorie che il tuo corpo consuma a riposo per mantenere le funzioni vitali: respirazione, circolazione, termoregolazione. Conoscere il BMR significa sapere il fabbisogno minimo al di sotto del quale non si dovrebbe scendere senza rischi metabolici. È il punto zero da cui parte ogni calcolo nutrizionale.</p>
+    </div>
+
+    <div class="assess-item">
+      <h3>TDEE (Total Daily Energy Expenditure)</h3>
+      <p>Il TDEE è il dispendio energetico totale giornaliero: somma del BMR più l'energia spesa per l'attività lavorativa, l'allenamento e il NEAT (termogenesi da attività non legata all'esercizio). Il valore TDEE determina le calorie di mantenimento e da lì si calcolano i deficit o i surplus necessari per l'obiettivo.</p>
+    </div>
+
+    <div class="assess-item">
+      <h3>Body composition</h3>
+      <p>La composizione corporea va oltre il peso totale e distingue tra massa magra, massa grassa e acqua. Si stima tramite plicometria secondo il protocollo Jackson-Pollock a 3 o 7 pieghe, che misura lo spessore delle pliche cutanee in punti specifici. Il risultato permette di settare target di grasso e muscolo coerenti con la realtà, non con il solo peso sulla bilancia.</p>
+    </div>
+
+    <div class="assess-item">
+      <h3>Postura e screening motorio</h3>
+      <p>Una valutazione posturale e uno screening dei pattern di movimento identificano compensi, asimmetrie e limitazioni di mobilità prima di caricare il corpo con i pesi. Prevenire un infortunio costa un minuto di osservazione; recuperarne uno costa mesi. Per questo l'assessment include test di mobilità articolare e osservazione posturale statica.</p>
+    </div>
+  </section>
+
+  <!-- 2. Perché l'assessment è il primo passo -->
+  <section class="assess-section">
+    <h2>Perché l'assessment è il primo passo</h2>
+    <p class="lead">Saltare la valutazione significa allenarsi alla cieca. I dati trasformano un programma generico in un programma che ti riguarda.</p>
+
+    <div class="assess-item">
+      <h3>Programmazione data-driven vs. scheda standard</h3>
+      <p>Una scheda trovata su internet è scritta per un'ipotetica persona media che non esiste. Due individui con lo stesso obiettivo possono avere TDEE diversi di 500 kcal, mobilità opposta, recuperi completamente differenti. Solo partendo dai tuoi parametri puoi ricevere volumi, intensità e esercizi calibrati su di te. Approfondisci il tema nel nostro <a href="/blog/calcolare-bmi-bmr-e-tdee-la-chiave-per-un-allenamento-personalizzato.html">articolo su come calcolare BMI, BMR e TDEE</a>.</p>
+    </div>
+
+    <div class="assess-item">
+      <h3>Prevenzione degli infortuni</h3>
+      <p>L'assessment intercetta i fattori di rischio prima che diventano problemi: limitazioni di mobilità, asimmetrie destra-sinistra, dolori latenti, farmaci che incidono sulla frequenza cardiaca o sulla termoregolazione. Sapere in anticipo che hai una lombalgia cronica o una spalla instabile cambia la scelta degli esercizi, i range di movimento, e la progressione dei carichi. Trovi un quadro completo nel nostro articolo sull'<a href="/blog/assessment-corporeo-roma-bmi-bfr-bmr.html">assessment corporeo a Roma</a>.</p>
+    </div>
+
+    <div class="assess-item">
+      <h3>Baseline e tracking dei progressi</h3>
+      <p>Il primo assessment fissa la linea di partenza: i tuoi numeri, la tua postura, la tua composizione corporea al tempo zero. Senza baseline non puoi misurare progressi in modo oggettivo: ti resta solo la sensazione. I rilevamenti periodici permettono di capire se il programma funziona, quando ricalibrarlo, e di visualizzare risultati che altrimenti resterebbero invisibili.</p>
+    </div>
+  </section>
+
+  <!-- 3. Come funziona la valutazione -->
+  <section class="assess-section">
+    <h2>Come funziona la valutazione</h2>
+    <p class="lead">Quattro fasi, dal questionario online alla consegna della scheda tecnica. Trasparente, strutturata, senza passaggi nascosti.</p>
+
+    <ol class="assess-steps">
+      <li>
+        <strong>Questionario online</strong>
+        <p>Compili i dati fisici, di allenamento e di salute direttamente qui sotto. Bastano due minuti: altezza, peso, obiettivo, livello, infortuni pregressi. Tutto ciò che serve per preparare la prima analisi.</p>
+      </li>
+      <li>
+        <strong>Analisi dei dati</strong>
+        <p>Ricevuto il questionario, elaboro i parametri: calcolo di BMR e TDEE, stima della composizione corporea, valutazione del livello di esperienza e screening dei fattori di rischio. Il risultato è un profilo tecnico, non un'impressione.</p>
+      </li>
+      <li>
+        <strong>Scheda tecnica personalizzata</strong>
+        <p>Sulla base del profilo costruisco la programmazione: split settimanale, esercizi, serie, ripetizioni, progressione dei carichi e note di esecuzione. Ogni parametro è giustificato dai tuoi dati, non da template preconfezionati. Scopri i servizi disponibili su <a href="/servizi.html">decastropt.com/servizi</a>.</p>
+      </li>
+      <li>
+        <strong>Consegna PDF e call di consulenza</strong>
+        <p>Ricevi la scheda tecnica in PDF e una call gratuita di 30 minuti in cui la esaminiamo insieme: come eseguire gli esercizi, come gestire la progressione, cosa aspettarsi nelle settimane successive. Inizi ad allenarti con un piano chiaro e con la consapevolezza del perché funziona.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 4. Strumenti e metodologie -->
+  <section class="assess-section">
+    <h2>Strumenti e metodologie</h2>
+    <p class="lead">Protocolli standardizzati e validati a livello scientifico. Niente metriche inventate o strumenti improvvisati.</p>
+
+    <div class="assess-tools">
+      <div class="assess-item">
+        <h3>Protocollo Jackson-Pollock per le pliche cutanee</h3>
+        <p>La stima della composizione corporea segue il protocollo Jackson-Pollock, il più diffuso e studiato nella letteratura sportiva. La versione a 3 pieghe è rapida e adatta a contesti non clinici, quella a 7 pieghe offre maggiore precisione. Entrambe restituiscono una percentuale di grasso corporeo da confrontare con le tabelle di riferimento per età e sesso.</p>
+      </div>
+      <div class="assess-item">
+        <h3>Equazioni per il metabolismo basale</h3>
+        <p>Il BMR è calcolato con le equazioni Mifflin-St Jeor, aggiornate e validate sulle popolazioni moderne. Per soggetti con massa muscolare elevata si valuta anche l'equazione di Katch-McArdle, che incorpora la massa magra nel calcolo. La scelta dell'equazione migliore dipende dal profilo del soggetto.</p>
+      </div>
+      <div class="assess-item">
+        <h3>Moltiplicatori del TDEE</h3>
+        <p>Il TDEE si ottiene moltiplicando il BMR per un fattore di attività, scelto in base a livello di allenamento, lavoro quotidiano e NEAT. I moltiplicatori vanno da 1.2 (sedentario) a 1.9+ (atleta con allenamenti intensi e lavoro fisico). La selezione del fattore corretto è dove una stima grossolana introduce il maggior margine di errore, e dove l'assessment personalizzato fa la differenza.</p>
+      </div>
+      <div class="assess-item">
+        <h3>Movement screening e test di mobilità</h3>
+        <p>I test di movimento valutano la qualità dei pattern motori fondamentali: squat, hinge, push, pull, lunge e rotazioni. Osservando come il corpo si muove senza carico si identificano deficit di mobilità, instabilità e compensi. Questo screening determina quali esercizi inserire subito e quali preparare prima di caricare.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- End assessment info sections -->
 
 <div class="progress" id="progress">
   <div class="progress-bar active"></div>
