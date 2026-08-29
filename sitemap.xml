@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://decastropt.com/</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -195,6 +195,12 @@
   <url>
     <loc>https://decastropt.com/blog/riabilitazione-motoria-il-cammino-verso-la-ripresa-dellattivita-fisica.html</loc>
     <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://decastropt.com/blog/dimagrimento-roma-il-percorso-verso-una-vita-sana.html</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
