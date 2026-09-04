@@ -545,7 +545,7 @@
       var script = document.createElement('script');
       script.type = 'module';
       script.defer = true;
-      script.src = '/bundle-mobile.js';
+      script.src = '/bundle-mobile.js?v=10';
       document.head.appendChild(script);
       // Remove the app-loader once bundle loads
       window.addEventListener('load', function() {
@@ -554,7 +554,7 @@
       });
     })();
   </script>
-<script defer src="/i18n.js?v=9"></script>
+<script defer src="/i18n.js?v=10"></script>
 <script defer src="/cookie.js"></script>
 <script defer src="/legal-links.js"></script>
 </body>
