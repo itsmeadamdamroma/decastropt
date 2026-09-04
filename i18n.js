@@ -171,6 +171,13 @@ const DICT = {
   "Esercizi, serie, ripetizioni e recupero calibrati su di te. Ogni parametro ha una ragione.": "Exercises, sets, reps and rest calibrated on you. Every parameter has a reason.",
   "Forza": "Strength",
   "Giulia R.": "GIULIA R.",
+  // Google reviews (IT -> EN)
+  "Dopo mesi di plateau non capivo perché i numeri non si muovevano. Con Davide il primo giorno ho fatto un assessment completo (composizione corporea, test, circonferenze) e da lì la scheda è stata ricalcolata ogni settimana: i carichi salgono, si vede il progresso nero su bianco. Non è motivazione a parole, è metodo e dati. Risultato in 3 mesi: -6 kg di grasso e panca +20 kg. Personal trainer a Roma che lavora misurando, non a sensazione. La prima consulenza gratuita vale da sola.": "After months of plateau I couldn't understand why the numbers weren't moving. With Davide, day one was a full assessment (body composition, tests, measurements) and from there the program was recalculated every week: loads went up and progress was visible in black and white. Not motivation in words, it's method and data. Results in 3 months: -6 kg of fat and +20 kg on bench. A personal trainer in Rome who works by measurement, not by feeling. The free first consultation is worth it on its own.",
+  "Ottima esperienza! Allenamenti ben organizzati, mai improvvisati e soprattutto adatti al mio livello. Apprezzo molto l'attenzione durante gli esercizi e il fatto che sappia motivarti senza essere pesante. Professionale e disponibile.": "Great experience! Well-organized training, never improvised, and above all suited to my level. I really appreciate the attention during exercises and the fact that he motivates you without being pushy. Professional and available.",
+  "Ottimo piano per la palestra, così posso iniziare l'anno con il piede giusto.": "Great plan for the gym, so I can start the year on the right foot.",
+  "Combinazione di esercizi fantastica con il piano d'assestamento.": "Fantastic combination of exercises with the adaptation plan.",
+  "Molto professionale, ti ascolta e ti segue fino all'obiettivo!": "Very professional, he listens to you and follows you to the goal!",
+  "Recensione Google · 5.0★": "Google Review · 5.0★",
   "Instagram": "Instagram",
   "Invia richiesta": "Send request",
   "L'Evolution Pack mi ha tenuto costante per tre mesi. I check-in mensili hanno fatto la differenza: ogni scheda era tarata sui progressi reali, non sulle sensazioni.": "The Evolution Pack kept me consistent for three months. Monthly check-ins made the difference: each program was calibrated on real progress, not feelings.",
