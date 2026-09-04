@@ -1,0 +1,18 @@
+# api/email.js
+
+- logo · function · L23-L25 — function logo()
+- label · function · L27-L29 — function label(text)
+- heading · function · L30-L32 — function heading(text)
+- ptext · function · L33-L35 — function ptext(text)
+- sep · function · L36-L38 — function sep()
+- tbl · function · L39-L42 — function tbl(rows)
+- btn · function · L44-L46 — function btn(href, text)
+- step · function · L47-L53 — function step(num, title, text)
+- wrap · function · L70-L79 — function wrap(content)
+- bookingConfirmationCustomer · function · L82-L97 — function bookingConfirmationCustomer(d)
+- bookingNotificationTrainer · function · L100-L108 — function bookingNotificationTrainer(d)
+- welcomeEmail · function · L111-L126 — function welcomeEmail(d)
+- followUpEmail · function · L129-L145 — function followUpEmail(d)
+- assessmentResultsEmail · function · L148-L183 — function assessmentResultsEmail(d)
+- sendEmail · function · L186-L191 — async function sendEmail(to, subject, html)
+- handler · function · L194-L270 — async function handler(req, res)

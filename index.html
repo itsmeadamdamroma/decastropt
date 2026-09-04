@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
   <!-- SEO Meta -->
-  <title>Personal Trainer Roma | Davide Decastro PT — Schede su Misura</title>
+  <title>Personal Trainer Roma | Davide Decastro — Prima Call Gratuita</title>
   <meta name="description" content="Davide Decastro, personal trainer a Roma. Schede tecniche su misura, programmazione personalizzata e metodo scientifico per raggiungere i tuoi obiettivi. Prima consulenza gratuita." />
   <meta name="keywords" content="personal trainer roma, schede tecniche, programmazione personalizzata, allenamento personalizzato, coach fitness roma, personal trainer online, decastro" />
   <meta name="author" content="Davide Decastro" />
@@ -18,7 +18,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Personal Trainer Roma | Davide Decastro PT" />
+  <meta property="og:title" content="Personal Trainer Roma | Davide Decastro — Prima Call Gratuita" />
   <meta property="og:description" content="Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Prima consulenza gratuita." />
   <meta property="og:url" content="https://decastropt.com" />
   <meta property="og:site_name" content="Davide Decastro PT" />
@@ -27,7 +27,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Personal Trainer Roma | Davide Decastro PT" />
+  <meta name="twitter:title" content="Personal Trainer Roma | Davide Decastro — Prima Call Gratuita" />
   <meta name="twitter:description" content="Schede tecniche su misura, programmazione personalizzata e metodo scientifico. Prima consulenza gratuita." />
   <meta name="twitter:image" content="https://decastropt.com/og-image.png" />
 
@@ -457,15 +457,12 @@
   </div>
   <link rel="stylesheet" href="/style-new.css">
   <script>
-    // Performance: load Spline-free bundle on mobile (saves 567KB + 169s TBT)
+    // Performance: Spline-free bundle on ALL devices (Spline runtime = 567KB + 37s TBT on desktop)
     (function() {
-      var isMobile = window.matchMedia('(max-width: 768px)').matches;
-      var slowConn = navigator.connection && navigator.connection.effectiveType && ['slow-2g','2g','3g'].includes(navigator.connection.effectiveType);
-      var useMobile = isMobile || slowConn;
       var script = document.createElement('script');
       script.type = 'module';
       script.defer = true;
-      script.textContent = "import '/" + (useMobile ? 'bundle-mobile.js' : 'bundle-new.js') + "';";
+      script.src = '/bundle-mobile.js';
       document.head.appendChild(script);
       // Remove the app-loader once bundle loads
       window.addEventListener('load', function() {
