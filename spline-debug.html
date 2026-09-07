@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Debug Spline</title>
+<style>
+body{background:#0F172A;color:#F8FAFC;font-family:ui-monospace,monospace;padding:24px;font-size:14px;line-height:1.6}
+li{margin:8px 0;padding:8px 12px;border-left:3px solid #475569;list-style:none;background:#1E293B}
+.ok{border-color:#34D399}.fail{border-color:#EF4444}.warn{border-color:#FBBF24}
+canvas{width:100%;height:300px;border:1px solid #475569;margin:12px 0}
+#send{display:inline-block;background:#F97316;color:#000;font-weight:700;padding:10px 20px;border:none;font-size:15px;margin-top:12px}
+</style></head><body>
+<h2 style="font-size:20px">Diagnosi Spline — DecastroPT</h2>
+<ol id="out"></ol>
+<canvas id="sc"></canvas>
+<button id="send">Invia risultati</button>
+<script>
+const R = [];
+const log = (txt, cls='ok', extra='') => { R.push((cls==='ok'?'✅ ':cls==='fail'?'❌ ':'⚠️ ')+txt+(extra?' — '+extra:''));
+  const li = document.createElement('li'); li.className = cls; li.textContent = R[R.length-1].slice(2);
+  document.getElementById('out').appendChild(li); };
+const send = () => fetch('/api/email', {method:'POST', headers:{'Content-Type':'application/json'},
+  body: JSON.stringify({template:'nutrition-lead', data:{name:'SPLINE DEBUG', email:'debug@decastropt.com',
+  message: R.join('\n')}})}).then(r => log('Risultati inviati a info@ (' + r.status + ')'));
+
+(async () => {
+  log('Browser: ' + navigator.userAgent.slice(0,90), 'warn');
+  // 1. WebGL
+  const c = document.getElementById('sc');
+  const gl = c.getContext('webgl2') || c.getContext('webgl');
+  gl ? log('WebGL disponibile (' + (c.getContext('webgl2')?'2':'1') + ')') : log('WebGL NON disponibile', 'fail');
+  // 2. Runtime scaricabile
+  try { const r1 = await fetch('/spline-runtime.js?v=1');
+    r1.ok ? log('spline-runtime.js: ' + r1.status + ' (' + (await r1.clone().blob()).size + ' bytes)') : log('spline-runtime.js: ' + r1.status, 'fail');
+  } catch(e) { log('spline-runtime.js: ' + e.message, 'fail'); }
+  // 3. Scena scaricabile
+  try { const r2 = await fetch('/scene.splinecode?v=1');
+    r2.ok ? log('scene.splinecode: ' + r2.status + ' (' + (await r2.clone().blob()).size + ' bytes)') : log('scene.splinecode: ' + r2.status, 'fail');
+  } catch(e) { log('scene.splinecode: ' + e.message, 'fail'); }
+  // 4. Runtime import + scena load
+  try {
+    const { Application } = await import('/spline-runtime.js?v=1');
+    log('Runtime importato: Application = ' + typeof Application);
+    const app = new Application(c);
+    await app.load('/scene.splinecode?v=1');
+    log('Scena CARICATA (load completato)');
+    // 5. Render effettivo dopo 4s
+    setTimeout(() => {
+      const g = c.getContext('webgl2') || c.getContext('webgl');
+      if (!g) return log('Nessun contesto GL per il test pixel', 'fail');
+      const px = new Uint8Array(4 * 200 * 100);
+      g.readPixels(0, 0, 200, 100, g.RGBA, g.UNSIGNED_BYTE, px);
+      let nonNero = 0;
+      for (let i = 0; i < px.length; i += 4) if (px[i] + px[i+1] + px[i+2] > 15) nonNero++;
+      const pct = Math.round(100 * nonNero / (px.length/4));
+      pct > 3 ? log('Scena RENDERIZZA (' + pct + '% pixel attivi sopra il canvas)') : log('Scena caricata ma canvas NERO (' + pct + '% pixel)', 'warn');
+      log('Se vedi l\'animazione nel canvas qui sopra, Spline funziona sul tuo Mac', 'warn');
+    }, 4000);
+  } catch(e) { log('Runtime/Scena: ' + e.message, 'fail'); }
+  document.getElementById('send').onclick = send;
+  send();
+})();
+</script></body></html>
