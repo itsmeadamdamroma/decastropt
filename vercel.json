@@ -19,6 +19,11 @@
       ]
     },
     {
+      "source": "/nutrizione",
+      "destination": "/nutrizione.html",
+      "permanent": true
+    },
+    {
       "source": "/servizi",
       "destination": "/servizi.html",
       "permanent": true

@@ -17,6 +17,7 @@ LOG = "/root/decastropt/cron_push.log"
 URLS = [
     f"{SITE}/",
     f"{SITE}/servizi.html",
+    f"{SITE}/nutrizione.html",
     f"{SITE}/assessment.html",
     f"{SITE}/chi-sono.html",
     f"{SITE}/risorse/",
