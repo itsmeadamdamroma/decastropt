@@ -18,7 +18,7 @@ const log = (txt, cls='ok', extra='') => { R.push((cls==='ok'?'✅ ':cls==='fail
   const li = document.createElement('li'); li.className = cls; li.textContent = R[R.length-1].slice(2);
   document.getElementById('out').appendChild(li); };
 const send = () => fetch('/api/email', {method:'POST', headers:{'Content-Type':'application/json'},
-  body: JSON.stringify({template:'nutrition-lead', data:{name:'SPLINE DEBUG', email:'debug@decastropt.com',
+  body: JSON.stringify({template:'nutrition-lead', data:{name:'SPLINE DEBUG', contact:'debug@decastropt.com', email:'debug@decastropt.com',
   message: R.join('\n')}})}).then(r => log('Risultati inviati a info@ (' + r.status + ')'));
 
 (async () => {
