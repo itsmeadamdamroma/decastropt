@@ -258,7 +258,7 @@ export default async function handler(req, res) {
       html = wrap(`
         ${label('NUTRIZIONE — NUOVA RICHIESTA')}
         ${heading('Richiesta per la Dott.ssa Marta')}
-        ${ptext(`Nuova richiesta dal form nutrizione su <a href="${SITE_URL}/nutrizione.html" style="color:${AC};text-decoration:none;">decastropt.com/nutrizione</a>.`}
+        ${ptext('Nuova richiesta dal form nutrizione su <a href="' + SITE_URL + '/nutrizione.html" style="color:' + AC + ';text-decoration:none;">decastropt.com/nutrizione</a>')}
         ${tbl([
           ['Nome', d.name],
           ['Email', d.email || '—'],
