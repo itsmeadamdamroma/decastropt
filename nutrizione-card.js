@@ -24,8 +24,7 @@
       '    <p style="font-size:13px;color:var(--text-muted,#94A3B8);margin:0">Percorsi nutrizionali · Nutrizione sportiva · Recupero · Composizione corporea</p>',
       '  </div>',
       '  <div style="display:flex;gap:14px;flex-wrap:wrap">',
-      '    <a href="/nutrizione.html" style="display:inline-block;padding:13px 26px;background:var(--accent,#FFD700);color:#000;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;text-decoration:none">Scopri il percorso nutrizionale</a>',
-      '    <a href="https://www.instagram.com/magianelpiatto/" target="_blank" rel="noopener" style="display:inline-block;padding:13px 26px;border:1px solid rgba(255,215,0,0.45);color:var(--accent,#FFD700);font-weight:600;font-size:14px;text-decoration:none">Instagram @magianelpiatto</a>',      '  </div>',
+      '    <a href="/nutrizione.html" style="display:inline-block;padding:13px 26px;background:var(--accent,#FFD700);color:#000;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;text-decoration:none">Scopri il percorso nutrizionale</a>',      '  </div>',
       '</div>'
     ].join('');
 
