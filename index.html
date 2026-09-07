@@ -539,13 +539,13 @@
   </div>
   <link rel="stylesheet" href="/style-new.css">
   <script>
-    // Performance: Spline-free bundle on ALL devices (Spline runtime = 567KB + 37s TBT on desktop)
+    // Performance: Spline lazy-load dopo LCP (requestIdleCallback, runtime via dynamic import)
     (function() {
       var slowConn = navigator.connection && navigator.connection.effectiveType && ['slow-2g','2g','3g'].includes(navigator.connection.effectiveType);
       var script = document.createElement('script');
       script.type = 'module';
       script.defer = true;
-      script.src = '/bundle-mobile.js?v=10';
+      script.src = '/bundle-mobile.js?v=11';
       document.head.appendChild(script);
       // Remove the app-loader once bundle loads
       window.addEventListener('load', function() {
