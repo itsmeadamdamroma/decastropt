@@ -135,7 +135,7 @@ const DICT = {
   "Aggiorna": "Update",
   "BMI/BFR/TDEE se il tuo corpo è cambiato": "BMI/BFR/TDEE if your body has changed",
   "Consulenza Nutrizionale": "Nutrition Consultation",
-  "€40 · 45 min": "€40 · 45 min",
+  "€189 · 3 cicli da 6 settimane · rinnovo €150": "€189 · 3 cycles of 6 weeks · renewal €150",
   "Piano alimentare personalizzato, opzionale ma complementare alla scheda. Calcolo macronutrienti (proteine, carboidrati, grassi) sul tuo TDEE reale.": "Personalized meal plan, optional but complementary to the program. Macro calculation (protein, carbs, fat) on your real TDEE.",
   "Non": "Not",
   "una dieta generica, ma un piano sui tuoi numeri": "a generic diet, but a plan on your numbers",
