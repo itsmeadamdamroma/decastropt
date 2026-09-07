@@ -196,11 +196,61 @@
         </div>
       </div>
       <div style="margin-top:40px;text-align:center">
-        <a href="https://www.instagram.com/magianelpiatto/" target="_blank" rel="noopener" class="nav-cta-btn" style="display:inline-block;font-size:15px;padding:14px 28px">Contatta la Dott.ssa Marta</a>
+        <a href="#modulo-nutrizione" class="nav-cta-btn" style="display:inline-block;font-size:15px;padding:14px 28px">Contatta la Dott.ssa Marta</a>
         <p style="margin-top:12px;color:var(--text-muted);font-size:13px">Oppure scrivi a Davide per il percorso combinato: <a href="https://wa.me/393513838701" style="color:var(--accent)">WhatsApp</a></p>
       </div>
     </section>
+
+    <!-- Modulo contatto nutrizione -->
+    <section id="modulo-nutrizione" style="margin-top:80px;padding:40px 28px;background:linear-gradient(135deg,rgba(255,215,0,0.08),rgba(255,215,0,0.02));border:1px solid rgba(255,215,0,0.35)">
+      <span class="section-kicker" style="font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.3em;color:var(--accent);margin-bottom:16px;display:block">Il primo passo</span>
+      <h2 class="section-title">Richiedi informazioni</h2>
+      <p class="section-desc" style="margin-bottom:32px">Compila il modulo: la tua richiesta arriva direttamente allo studio. Ti ricontattiamo per fissare il primo colloquio con la Dott.ssa Marta.</p>
+      <form id="nutrition-form" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:640px" novalidate>
+        <div style="grid-column:span 1">
+          <label for="nf-name" style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-muted);margin-bottom:8px">Nome e cognome *</label>
+          <input id="nf-name" name="name" type="text" required autocomplete="name" style="width:100%;box-sizing:border-box;padding:14px;background:var(--surface-card);border:1px solid var(--border);color:var(--text);font-size:15px;font-family:inherit" placeholder="Mario Rossi">
+        </div>
+        <div style="grid-column:span 1">
+          <label for="nf-email" style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-muted);margin-bottom:8px">Email *</label>
+          <input id="nf-email" name="email" type="email" required autocomplete="email" style="width:100%;box-sizing:border-box;padding:14px;background:var(--surface-card);border:1px solid var(--border);color:var(--text);font-size:15px;font-family:inherit" placeholder="mario@email.it">
+        </div>
+        <div style="grid-column:span 1">
+          <label for="nf-phone" style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-muted);margin-bottom:8px">Telefono (facoltativo)</label>
+          <input id="nf-phone" name="phone" type="tel" autocomplete="tel" style="width:100%;box-sizing:border-box;padding:14px;background:var(--surface-card);border:1px solid var(--border);color:var(--text);font-size:15px;font-family:inherit" placeholder="+39 ...">
+        </div>
+        <div style="grid-column:span 1">
+          <label for="nf-goal" style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-muted);margin-bottom:8px">Obiettivo</label>
+          <select id="nf-goal" name="goal" style="width:100%;box-sizing:border-box;padding:14px;background:var(--surface-card);border:1px solid var(--border);color:var(--text);font-size:15px;font-family:inherit">
+            <option value="">Scegli…</option>
+            <option>Dimagrimento</option>
+            <option>Composizione corporea</option>
+            <option>Nutrizione sportiva</option>
+            <option>Recupero e benessere</option>
+            <option>Percorso con allenamento (Decastro PT + Marta)</option>
+            <option>Altro</option>
+          </select>
+        </div>
+        <div style="grid-column:span 2">
+          <label for="nf-msg" style="display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-muted);margin-bottom:8px">Messaggio (facoltativo)</label>
+          <textarea id="nf-msg" name="message" rows="4" maxlength="2000" style="width:100%;box-sizing:border-box;padding:14px;background:var(--surface-card);border:1px solid var(--border);color:var(--text);font-size:15px;font-family:inherit;resize:vertical" placeholder="Raccontami il tuo obiettivo in due righe…"></textarea>
+        </div>
+        <div id="nf-status" role="status" aria-live="polite" style="grid-column:span 2;min-height:20px;font-size:14px;color:var(--text-muted)"></div>
+        <div style="grid-column:span 2">
+          <button type="submit" id="nf-submit" style="padding:15px 32px;background:var(--accent);color:#000;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;border:none;cursor:pointer">Invia richiesta</button>
+        </div>
+      </form>
+    </section>
   </main>
+
+  <!-- Segui Marta -->
+  <section style="margin-top:80px;padding:32px 28px;border:1px solid var(--border);text-align:center">
+    <span class="section-kicker" style="font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.3em;color:var(--accent);margin-bottom:16px;display:block">Segui Marta</span>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <a href="https://www.instagram.com/magianelpiatto/" target="_blank" rel="noopener" style="padding:12px 24px;border:1px solid var(--border);color:var(--text);text-decoration:none;font-size:14px">Instagram @magianelpiatto</a>
+      <a href="https://it.linkedin.com/in/marta-frattali-clementi-08a20a3b5" target="_blank" rel="noopener" style="padding:12px 24px;border:1px solid var(--border);color:var(--text);text-decoration:none;font-size:14px">LinkedIn</a>
+    </div>
+  </section>
 
   <footer data-testid="site-footer" style="position:relative;z-index:2;border-top:1px solid var(--border);padding:32px 20px;text-align:center;color:var(--text-muted);font-size:12px">
     <div style="max-width:1000px;margin:0 auto;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em">
@@ -223,5 +273,54 @@
   </footer>
 
   <script defer src="/legal-links.js"></script>
+  <script>
+  // Form nutrizione → /api/email template nutrition-lead (Resend → info@decastropt.com)
+  (function () {
+    var f = document.getElementById('nutrition-form');
+    if (!f) return;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var st = document.getElementById('nf-status');
+      var btn = document.getElementById('nf-submit');
+      var name = document.getElementById('nf-name').value.trim();
+      var email = document.getElementById('nf-email').value.trim();
+      if (!name || !email || email.indexOf('@') < 1) {
+        st.textContent = 'Inserisci nome e email validi.';
+        st.style.color = '#f87171';
+        return;
+      }
+      btn.disabled = true; btn.textContent = 'Invio…';
+      st.textContent = ''; st.style.color = '';
+      fetch('/api/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          template: 'nutrition-lead',
+          data: {
+            name: name,
+            contact: email,
+            email: email,
+            phone: document.getElementById('nf-phone').value.trim(),
+            goal: document.getElementById('nf-goal').value,
+            message: document.getElementById('nf-msg').value.trim()
+          }
+        })
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        if (j.sent) {
+          st.textContent = 'Richiesta inviata! Ti ricontattiamo presto.';
+          st.style.color = '#4ade80';
+          f.reset();
+        } else {
+          throw new Error(j.error || 'errore');
+        }
+      }).catch(function () {
+        st.textContent = 'Invio non riuscito. Riprova o scrivi a info@decastropt.com';
+        st.style.color = '#f87171';
+      }).finally(function () {
+        btn.disabled = false; btn.textContent = 'Invia richiesta';
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

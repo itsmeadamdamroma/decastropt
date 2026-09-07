@@ -252,6 +252,25 @@ export default async function handler(req, res) {
       html = assessmentResultsEmail(d);
       subject = 'I tuoi risultati assessment — Decastro PT';
       break;
+    case 'nutrition-lead':
+      if (!d.name || !d.contact) { res.status(400).json({error:'Missing: name, contact'}); return; }
+      recipient = NOTIFY_EMAIL;
+      html = wrap(`
+        ${label('NUTRIZIONE — NUOVA RICHIESTA')}
+        ${heading('Richiesta per la Dott.ssa Marta')}
+        ${ptext(`Nuova richiesta dal form nutrizione su <a href="${SITE_URL}/nutrizione.html" style="color:${AC};text-decoration:none;">decastropt.com/nutrizione</a>.`}
+        ${tbl([
+          ['Nome', d.name],
+          ['Email', d.email || '—'],
+          ['Telefono', d.phone || '—'],
+          ['Obiettivo', d.goal || '—'],
+          ['Messaggio', d.message ? String(d.message).replace(/</g,'&lt;').slice(0,2000) : '—'],
+          ['Fonte', 'decastropt.com/nutrizione']
+        ])}
+        ${d.email ? `<a href="mailto:${d.email}" style="display:inline-block;background:${AC};color:#000000;font-weight:600;font-size:14px;padding:16px 32px;text-decoration:none;margin:16px 0;font-family:${FH};text-transform:uppercase;letter-spacing:0.025em;border-radius:0;">Rispondi al cliente</a>` : ''}
+      `);
+      subject = `🥗 Nutrizione — nuova richiesta: ${d.name}`;
+      break;
     default:
       res.status(400).json({error:`Unknown: ${template}`});
       return;
