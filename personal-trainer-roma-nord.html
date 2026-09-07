@@ -104,44 +104,12 @@
   <!-- Clarity -->
   <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","decastropt");</script>
   <link rel="me" href="https://www.instagram.com/decastro_pt_lab/">
-</head>
+<script defer src="/decastro-header.js?v=1"></script>
 <body>
   <div class="noise-bg"></div>
 
   <!-- Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="nav-container">
-      <a href="/" class="nav-brand">Decastro.</a>
-      <nav class="nav-desktop-links">
-        <a href="/#metodo">Metodo</a>
-        <a href="/servizi.html">Servizi</a>
-        <a href="/#storie">Storie</a>
-        <a href="/blog/">Blog</a>
-        <a href="/risorse/">Risorse</a>
-        <a href="/chi-sono.html">Chi sono</a>
-        <a href="/#faq">FAQ</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="/assessment.html" class="nav-cta-btn">Richiedi scheda</a>
-        <button class="nav-burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false">
-          <svg class="icon-menu" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-          <svg class="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-        </button>
-      </div>
-    </div>
-    <nav class="nav-mobile-drawer" id="mobileDrawer" aria-hidden="true">
-      <a href="/#metodo">Metodo</a>
-      <a href="/servizi.html">Servizi</a>
-      <a href="/#storie">Storie</a>
-      <a href="/blog/">Blog</a>
-      <a href="/risorse/">Risorse</a>
-      <a href="/chi-sono.html">Chi sono</a>
-      <a href="/#faq">FAQ</a>
-      <a href="/assessment.html" class="drawer-cta">Richiedi scheda</a>
-    </nav>
-  </header>
-
-  <main class="page-container">
+  <div data-decastro-header></div><main class="page-container">
     <!-- Hero -->
     <section class="hero-section" style="padding-top:48px">
       <span class="page-badge">Personal trainer · Roma Nord</span>
@@ -383,35 +351,7 @@
     }
   </style>
 
-  <script>
-    (function(){
-      var header = document.getElementById('siteHeader');
-      var burger = document.getElementById('burgerBtn');
-      var drawer = document.getElementById('mobileDrawer');
-      function toggleScroll(){
-        if (!header) return;
-        header.classList.toggle('scrolled', window.scrollY > 40);
-      }
-      window.addEventListener('scroll', toggleScroll, {passive: true});
-      toggleScroll();
-      if (burger && drawer) {
-        burger.addEventListener('click', function(){
-          var open = drawer.classList.toggle('is-open');
-          burger.classList.toggle('is-open', open);
-          burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-          drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-        });
-        drawer.querySelectorAll('a').forEach(function(link){
-          link.addEventListener('click', function(){
-            drawer.classList.remove('is-open');
-            burger.classList.remove('is-open');
-            burger.setAttribute('aria-expanded','false');
-            drawer.setAttribute('aria-hidden','true');
-          });
-        });
-      }
-    })();
-  </script>
+  
   <script defer src="/i18n.js?v=10"></script>
   <script defer src="/cookie.js"></script>
   <script defer src="/legal-links.js"></script>

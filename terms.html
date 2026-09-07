@@ -69,7 +69,7 @@ a:hover{color:var(--text)}
 <!-- Instagram --><link rel="me" href="https://www.instagram.com/decastro_pt_lab/">
 <script>window.addEventListener("load",function(){var s=document.createElement("script");s.src="https://www.googletagmanager.com/gtag/js?id=G-9YEMG81CKK";s.async=1;document.head.appendChild(s);});</script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});gtag('js',new Date());gtag('config','G-9YEMG81CKK');</script>
-</head>
+<link rel="stylesheet" href="/shared-theme.css?v=4">
 <body>
 <style>
 /* Canonical header — 1:1 clone of homepage React nav (bundle fE) */
@@ -96,35 +96,7 @@ a:hover{color:var(--text)}
 @media(max-width:768px){.hd-desk{display:none!important}.hd-cta-desk{display:none!important}.hd-burger{display:block}}
 @media(min-width:640px){.hd-wrap{padding:0 32px;height:80px}.hd-logo{font-size:20px}}
 </style>
-<header class="hd-bar">
-  <div class="hd-wrap">
-    <a href="/" class="hd-logo">Decastro<span>.</span></a>
-    <nav class="hd-desk">
-      <a href="/#metodo">Metodo</a>
-      <a href="/servizi.html">Servizi</a>
-      <a href="/#storie">Storie</a>
-      <a href="/blog/">Blog</a>
-      <a href="/risorse/">Risorse</a>
-      <a href="/chi-sono.html">Chi sono</a>
-      <a href="/#faq">FAQ</a>
-    </nav>
-    <a href="/#contatti" class="hd-cta hd-cta-desk">Richiedi scheda</a>
-    <button class="hd-burger" data-burger aria-label="Menu">
-      <svg class="icon-menu" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-      <svg class="icon-x" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-    </button>
-  </div>
-  <div class="hd-menu" data-mobile-menu>
-    <a href="/#metodo">Metodo</a>
-    <a href="/servizi.html">Servizi</a>
-    <a href="/#storie">Storie</a>
-    <a href="/blog/">Blog</a>
-    <a href="/risorse/">Risorse</a>
-    <a href="/chi-sono.html">Chi sono</a>
-    <a href="/#faq">FAQ</a>
-    <a href="/#contatti" class="hd-menu-cta">Richiedi scheda</a>
-  </div>
-</header>
+<div data-decastro-header></div>
 <script>
 (function(){var b=document.querySelector('[data-burger]');var m=document.querySelector('[data-mobile-menu]');var h=document.querySelector('.hd-bar');if(!b||!m)return;function close(){m.classList.remove('open');b.classList.remove('open');}function open(){m.classList.add('open');b.classList.add('open');}b.addEventListener('click',function(){m.classList.contains('open')?close():open();});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});function s(){h.classList.toggle('scrolled',window.scrollY>40);}window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
