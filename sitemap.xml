@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://decastropt.com/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -333,6 +333,12 @@
   <url>
     <loc>https://decastropt.com/blog/titolo-seo-come-aumentare-la-tua-forza-massima-con-un-personal-trainer-a-roma.html</loc>
     <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://decastropt.com/blog/evoluzione-pack-il-percorso-personalizzato-per-raggiungere-i-tuoi-obiettivi.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
