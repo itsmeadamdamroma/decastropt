@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://decastropt.com/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -447,4 +447,10 @@
   <url><loc>https://decastropt.com/en/blog/zone-2-training.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://decastropt.com/en/blog/creatine-guide.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://decastropt.com/en/blog/sarcopenia-prevention.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://decastropt.com/blog/assessment-corporeo-roma-scopri-la-tua-potenziale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
