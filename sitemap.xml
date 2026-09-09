@@ -417,4 +417,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url><loc>https://decastropt.com/blog/scheda-full-body.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/blog/scheda-push-pull-legs.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/blog/scheda-palestra-glutei.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/blog/scheda-palestra-3-volte-settimana.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/blog/quante-volte-allenarsi.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/blog/scheda-allenamento-over-50.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/en/blog/strength-training-for-women-over-50.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/en/blog/workout-plan-3-days-a-week.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/en/blog/full-body-workout-plan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://decastropt.com/en/blog/glute-workout-plan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
