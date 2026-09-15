@@ -54,46 +54,13 @@ def log(msg):
     with open(LOG, "a") as f:
         f.write(line + "\n")
 
-# 1. Google Indexing API via JWT
+# 1. Google: la vera via è la sitemap (già registrata 15/9 via sitemaps.submit).
+# L'Indexing API URL_UPDATED è deprecata da Google: risponde 200 ma ignora il
+# payload (solo JobPosting/LiveStream restano validi). Non la richiamiamo più:
+# i vecchi log "Google Indexing API: 30 OK" erano falsi positivi.
 def google_index():
-    try:
-        from google.oauth2 import service_account
-        from google.auth.transport.requests import Request
-        import google.auth.transport.requests as tr
-        import urllib.request
-        
-        creds = service_account.Credentials.from_service_account_file(
-            SERVICE_ACCOUNT,
-            scopes=["https://www.googleapis.com/auth/indexing"]
-        )
-        creds.refresh(Request())
-        
-        ok = 0
-        err = 0
-        for url in URLS:
-            payload = json.dumps({"url": url, "type": "URL_UPDATED"}).encode()
-            req = urllib.request.Request(
-                "https://indexing.googleapis.com/v3/urlNotifications:publish",
-                data=payload,
-                headers={
-                    "Content-Type": "application/json",
-                    "Authorization": f"Bearer {creds.token}"
-                },
-                method="POST"
-            )
-            try:
-                with urllib.request.urlopen(req, timeout=15) as resp:
-                    if resp.status == 200:
-                        ok += 1
-                    else:
-                        err += 1
-            except Exception as e:
-                err += 1
-        log(f"Google Indexing API: {ok} OK, {err} errors out of {len(URLS)} URLs")
-        return ok, err
-    except Exception as e:
-        log(f"Google Indexing API: FAILED - {e}")
-        return 0, len(URLS)
+    log("Google: sitemap già registrata in GSC (108 URL, 0 errori) — indicizzazione in corso. Niente da pushare.")
+    return 1, 0
 
 # 2. IndexNow (Bing + Yandex)
 def indexnow():
