@@ -47,6 +47,11 @@
       "source": "/blog/personal-trainer-donna-roma-come-migliorare-la-sua-forma-fisica-con-un-professionista",
       "destination": "/blog/personal-trainer-donna-roma.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/titolo-seo-come-aumentare-la-tua-forza-massima-con-un-personal-trainer-a-roma.html",
+      "destination": "/blog/progressione-dei-carichi-quanto-pesa-la-scienza.html",
+      "permanent": true
     }
   ],
   "headers": [
